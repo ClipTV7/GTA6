@@ -28,7 +28,7 @@ Tu es **le Cerveau** du studio. Tu ne fais pas tout toi-même : tu **diriges** s
 3. **Script** : `scenariste` écrit `script.json`. Le Cerveau vérifie : chaque ligne a un statut + une source, les visuels existent dans `assets/official/`.
 4. **Rendu** : `monteur` lance `python3 studio/make.py clips/<slug>`. Le script refuse tout seul une ligne sans source ou un visuel hors `assets/official/`.
 5. **Conseil** : `critique` évalue le clip en LLM Council (`out/<slug>_council.md`). Le Cerveau ne transmet à l'utilisateur QUE le score d'appréciation (%) et un verdict honnête : ça vaut le coup de sortir ou pas. Sous 75 %, corriger et refaire (max 2 boucles).
-6. **Livraison** : `out/<slug>.mp4` + `out/<slug>_post.txt` (description anglaise, sources, crédits, rappel étiquette IA).
+6. **Livraison** : `out/<slug>.mp4` + `out/<slug>_post.txt`. À chaque vidéo validée, le Cerveau donne aussi DANS LE CHAT, prêts à copier : titre + description YouTube Shorts, et légende TikTok (avec hashtags).
 
 Agents en parallèle quand c'est possible (veilleur + eplucheur + iconographe ensemble). Le Cerveau ne transmet aux agents que le brief utile, pas tout l'historique.
 

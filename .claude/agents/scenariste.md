@@ -27,4 +27,8 @@ Règles :
 - `visual` : chemin relatif à `assets/official/` (une capture .jpg ou une boucle `loops/loop_N.mp4`). `focus` (0-1) = où centrer le recadrage vertical. `fit: "blur"` pour garder l'image entière.
 - `headline` : 1 à 4 mots en capitales, optionnel.
 - Aucun spoiler d'histoire.
+- Textes de publication (en anglais, mêmes règles de vérité) :
+  - `yt_title` : titre YouTube Shorts, max 90 caractères, accroche + 1 emoji max (#Shorts est ajouté automatiquement).
+  - `description` : 2-3 phrases factuelles pour YouTube, les rumeurs dites comme telles.
+  - `tiktok_caption` : 1 phrase choc + 1 question pour les commentaires, emoji OK (hashtags ajoutés automatiquement).
 Vérifie avec `python3 studio/make.py clips/<slug> --check` avant de rendre la main.

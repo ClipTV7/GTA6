@@ -306,19 +306,26 @@ def write_post(script, cfg, path):
     lines = script["lines"]
     srcs = list(dict.fromkeys(u for l in lines for u in (l.get("sources") or [l["source"]]) if u.startswith("http")))
     rumors = [l["text"] for l in lines if l["status"] == "RUMOR"]
-    txt = [f"TITLE: {script.get('title', script['slug'])}", "",
-           "DESCRIPTION:", script.get("description", lines[0]["text"]), ""]
-    if rumors:
-        txt += ["Unconfirmed (rumor): " + " / ".join(rumors), ""]
-    txt += ["Sources:"] + [f"- {s}" for s in srcs] + ["",
-            cfg["credit_text"] + ". Grand Theft Auto VI is a trademark of Take-Two Interactive.",
-            "Voiceover: AI-generated (cloned voice).", "",
-            " ".join(script.get("hashtags", ["#GTA6", "#GTAVI", "#GTA"])), "",
-            "=== CHECKLIST AVANT PUBLICATION ===",
-            "[ ] TikTok : activer « AI-generated content » (Plus d'options > Étiquette IA)",
-            "[ ] YouTube Shorts : « Contenu modifié ou synthétique » = OUI",
-            "[ ] Musique ajoutée dans l'app ? uniquement la bibliothèque libre de droits de la plateforme",
-            "[ ] Relire les infos RUMOR : toujours d'actualité ?"]
+    tags = script.get("hashtags", ["#GTA6", "#GTAVI", "#GTA"])
+    yt_title = script.get("yt_title", script.get("title", script["slug"]))
+    if "#shorts" not in yt_title.lower():
+        yt_title = (yt_title + " #Shorts")[:100]
+    desc = script.get("description", lines[0]["text"])
+    credit = cfg["credit_text"] + ". Grand Theft Auto VI is a trademark of Take-Two Interactive."
+    rumor_txt = ["Unconfirmed (rumor): " + " / ".join(rumors), ""] if rumors else []
+    tk = script.get("tiktok_caption", desc)
+    txt = ["===== YOUTUBE SHORTS =====",
+           "TITRE :", yt_title, "",
+           "DESCRIPTION :", desc, ""] + rumor_txt + ["Sources:"] + [f"- {u}" for u in srcs] + [
+           "", credit, "Voiceover: AI-generated.", "", " ".join(tags + ["#Shorts"]), "",
+           "===== TIKTOK =====",
+           "LÉGENDE :", f"{tk} {' '.join(tags)}", "",
+           "(TikTok n'affiche pas les liens : les sources sont dans la description YouTube.)", "",
+           "===== CHECKLIST AVANT PUBLICATION =====",
+           "[ ] TikTok : activer « Contenu généré par IA » (Plus d'options)",
+           "[ ] YouTube Shorts : « Contenu modifié ou synthétique » = OUI",
+           "[ ] Musique : uniquement la bibliothèque libre de droits de l'appli (ou aucune)",
+           "[ ] Infos RUMOR / dates : toujours d'actualité ?"]
     with open(path, "w", encoding="utf-8") as f:
         f.write("\n".join(txt) + "\n")
 
