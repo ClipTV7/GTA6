@@ -15,7 +15,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OFFICIAL = os.path.join(ROOT, "assets", "official")
 STATUSES = {"CONFIRMED", "RUMOR", "FALSE"}
 BADGE = {"RUMOR": ("RUMOR", "&H0000D4FF", "&H00000000"),      # jaune, texte noir
-         "FALSE": ("FAKE", "&H003539E5", "&H00FFFFFF")}       # rouge, texte blanc
+         "FALSE": ("FAKE CLAIM", "&H003539E5", "&H00FFFFFF")}       # rouge, texte blanc
 
 
 def die(msg):
@@ -250,6 +250,8 @@ def build_ass(words, segs, lines, cfg, path):
         if ln["status"] in BADGE:
             label, box, txt = BADGE[ln["status"]]
             ev(1, s, s + d, "Badge", r"{\pos(540,%d)\3c%s\1c%s}%s" % (520 if ln.get("headline") else 400, box, txt, label))
+            if ln["status"] == "FALSE":  # le badge vise l'affirmation, pas l'image officielle
+                ev(1, s, s + d, "Small", r"{\pos(540,%d)}Background: real GTA 6 image (Rockstar)" % (590 if ln.get("headline") else 470))
     # sous-titres 1 à 3 mots, mot prononcé en jaune
     chunks, cur = [], []
     for w in words:

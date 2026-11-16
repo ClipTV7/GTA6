@@ -13,9 +13,9 @@
     {
       "fact": "F042",
       "text": "A GTA 6 leak got over 8 million views. It was fake. 100% AI.",
-      "visual": "screenshots/Places/Vice City/Vice_City_07.jpg",
+      "visual": "screenshots/Places/Vice City/Vice_City_03.jpg",
       "focus": 0.5,
-      "headline": "8M VIEWS. ALL AI."
+      "headline": "FAKE LEAK. 8M VIEWS."
     },
     {
       "fact": "F042",
@@ -30,7 +30,10 @@
       "focus": 0.5
     },
     {
-      "fact": "F040",
+      "fact": [
+        "F040",
+        "F005"
+      ],
       "text": "Download GTA 6 for PC? That's a scam. No PC version has been announced, and those files carry malware.",
       "visual": "screenshots/People/Jason Duval/Jason_Duval_03.jpg",
       "focus": 0.5,
@@ -43,7 +46,10 @@
       "focus": 0.5
     },
     {
-      "fact": "F039",
+      "fact": [
+        "F039",
+        "F002"
+      ],
       "text": "Delayed again to 2027? Not true. Take-Two locked November 19th.",
       "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_05.jpg",
       "focus": 0.5
