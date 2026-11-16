@@ -55,7 +55,19 @@ def check(script, cfg, test_voice):
         tag = f"ligne {i}"
         # tableau de vérité : chaque ligne renvoie à un fait ; statut et source viennent du tableau
         fid = ln.get("fact")
-        if fid == "CTA":
+        if isinstance(fid, list):  # plusieurs faits sur une ligne : statut le plus prudent, toutes les sources
+            bad = [x for x in fid if x not in facts]
+            if bad:
+                errs.append(f"{tag} : faits inconnus {bad}")
+                continue
+            rank = {"CONFIRMED": 0, "RUMOR": 1, "FALSE": 2}
+            worst = max((facts[x] for x in fid), key=lambda r: rank[r["status"]])
+            ln["status"], ln["source"] = worst["status"], facts[fid[0]]["source"]
+            ln["sources"] = [facts[x]["source"] for x in fid]
+            fid = None
+        if fid is None and isinstance(ln.get("fact"), list):
+            pass
+        elif fid == "CTA":
             ln.setdefault("status", "CONFIRMED")
             ln.setdefault("source", "n/a")
         elif fid not in facts:
@@ -289,7 +301,7 @@ def render_segment(ln, dur, cfg, out):
 # ---------------------------------------------------------------- 6. post
 def write_post(script, cfg, path):
     lines = script["lines"]
-    srcs = list(dict.fromkeys(l["source"] for l in lines if l["source"].startswith("http")))
+    srcs = list(dict.fromkeys(u for l in lines for u in (l.get("sources") or [l["source"]]) if u.startswith("http")))
     rumors = [l["text"] for l in lines if l["status"] == "RUMOR"]
     txt = [f"TITLE: {script.get('title', script['slug'])}", "",
            "DESCRIPTION:", script.get("description", lines[0]["text"]), ""]

@@ -46,7 +46,11 @@
       "headline": "212 GB"
     },
     {
-      "fact": "F012",
+      "fact": [
+        "F012",
+        "F005",
+        "F001"
+      ],
       "text": "No PC. No online at launch. PS5 and Xbox Series only.",
       "visual": "screenshots/People/Jason Duval/Jason_Duval_01.jpg",
       "focus": 0.5,

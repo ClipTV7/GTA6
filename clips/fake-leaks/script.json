@@ -1,6 +1,6 @@
 {
   "slug": "fake-leaks",
-  "title": "This GTA 6 leak got 8M views. It was 100% AI.",
+  "title": "A GTA 6 leak got 8M views. It was 100% AI.",
   "description": "Fake leaks, fake trailers and malware: the GTA 6 hoaxes debunked, with sources.",
   "hashtags": [
     "#GTA6",
@@ -12,9 +12,9 @@
   "lines": [
     {
       "fact": "F042",
-      "text": "This GTA 6 leak got over 8 million views. It was fake. 100% AI.",
-      "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_03.jpg",
-      "focus": 0.75,
+      "text": "A GTA 6 leak got over 8 million views. It was fake. 100% AI.",
+      "visual": "screenshots/Places/Vice City/Vice_City_07.jpg",
+      "focus": 0.5,
       "headline": "8M VIEWS. ALL AI."
     },
     {
@@ -31,7 +31,7 @@
     },
     {
       "fact": "F040",
-      "text": "Download GTA 6 for PC? That's a scam. There's no PC version, and those files carry malware.",
+      "text": "Download GTA 6 for PC? That's a scam. No PC version has been announced, and those files carry malware.",
       "visual": "screenshots/People/Jason Duval/Jason_Duval_03.jpg",
       "focus": 0.5,
       "headline": "MALWARE"
@@ -50,7 +50,7 @@
     },
     {
       "fact": "F023",
-      "text": "And Trailer 3? Fake titles. Rockstar never released a video with that name.",
+      "text": "And Trailer 3? Those videos are fake. Rockstar never released a video with that name.",
       "visual": "screenshots/Places/Ambrosia/Ambrosia_01.jpg",
       "focus": 0.5
     },
