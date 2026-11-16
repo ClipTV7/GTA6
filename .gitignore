@@ -1,0 +1,6 @@
+out/
+.cache/
+clips/*/build/
+assets/official/screenshots/
+assets/official/loops/
+__pycache__/

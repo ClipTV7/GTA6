@@ -1,0 +1,65 @@
+{
+  "slug": "fake-leaks",
+  "title": "6 GTA 6 fakes that fooled millions",
+  "description": "Fake leaks, fake trailers and malware: the GTA 6 hoaxes debunked, with sources.",
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#GTA",
+    "#FakeLeak",
+    "#ViceCity"
+  ],
+  "lines": [
+    {
+      "fact": "F042",
+      "text": "Three days before GTA 6, 8 million people fell for a fake leak. It was AI.",
+      "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_03.jpg",
+      "focus": 0.6,
+      "headline": "8M FELL FOR IT"
+    },
+    {
+      "fact": "F042",
+      "text": "The creator admitted the whole thing was a hoax.",
+      "visual": "screenshots/Places/Vice City/Vice_City_05.jpg",
+      "focus": 0.5
+    },
+    {
+      "fact": "F043",
+      "text": "The Vice City bridge leak? Fake. Its creator showed how he made it.",
+      "visual": "screenshots/Places/Vice City/Vice_City_06.jpg",
+      "focus": 0.5
+    },
+    {
+      "fact": "F040",
+      "text": "Download GTA 6 for PC? That's a scam. There's no PC version, and those files carry malware.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_03.jpg",
+      "focus": 0.5,
+      "headline": "MALWARE"
+    },
+    {
+      "fact": "F041",
+      "text": "A leaker dropping the full game? False. He said himself there's no build.",
+      "visual": "screenshots/Places/Port Gellhorn/Port_Gellhorn_02.jpg",
+      "focus": 0.5
+    },
+    {
+      "fact": "F039",
+      "text": "Delayed again to 2027? Not true. Take-Two locked November 19th.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_05.jpg",
+      "focus": 0.5
+    },
+    {
+      "fact": "F023",
+      "text": "And Trailer 3? Fake titles. Rockstar never released a video with that name.",
+      "visual": "screenshots/Places/Ambrosia/Ambrosia_01.jpg",
+      "focus": 0.5
+    },
+    {
+      "fact": "CTA",
+      "text": "Follow for confirmed GTA 6 news. No fake leaks.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_06.jpg",
+      "focus": 0.5,
+      "headline": "FOLLOW FOR REAL NEWS"
+    }
+  ]
+}

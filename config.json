@@ -1,0 +1,26 @@
+{
+  "elevenlabs": {
+    "voice_id": "w8BNp6PHjEvdt4i5BFYX",
+    "model_id": "eleven_multilingual_v2",
+    "stability": 0.45,
+    "similarity_boost": 0.85,
+    "style": 0.35,
+    "speed": 1.15
+  },
+  "whisper_model": "small.en",
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "gap_seconds": 0.12,
+  "credit_text": "Images: \u00a9 Rockstar Games / Take-Two Interactive \u00b7 Unofficial fan content",
+  "ai_label_text": "AI-generated voice",
+  "font": "Inter Display Black",
+  "music": {
+    "file": null,
+    "volume_db": -22
+  },
+  "loudness_lufs": -14,
+  "daily_target": 3
+}

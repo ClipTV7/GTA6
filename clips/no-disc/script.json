@@ -1,0 +1,67 @@
+{
+  "slug": "no-disc",
+  "title": "Your GTA 6 box has NO disc inside",
+  "description": "The GTA 6 physical edition only contains a download code. Here's what's true, what's rumor and what's fake.",
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#GTA",
+    "#PS5",
+    "#Xbox"
+  ],
+  "lines": [
+    {
+      "fact": "F009",
+      "text": "Your GTA 6 box? There's no disc inside.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_02.jpg",
+      "focus": 0.5,
+      "headline": "NO DISC"
+    },
+    {
+      "fact": "F009",
+      "text": "It's confirmed. The box only has a download code.",
+      "visual": "screenshots/Places/Vice City/Vice_City_03.jpg",
+      "focus": 0.5,
+      "headline": "JUST A CODE"
+    },
+    {
+      "fact": "F010",
+      "text": "So you still need up to 212 gigs free on your console.",
+      "visual": "screenshots/Places/Vice City/Vice_City_04.jpg",
+      "focus": 0.5,
+      "headline": "212 GB"
+    },
+    {
+      "fact": "F037",
+      "text": "And some players reportedly got boxes with missing or already used codes.",
+      "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_02.jpg",
+      "focus": 0.6
+    },
+    {
+      "fact": "F045",
+      "text": "Does the box let you play early? No. That's false.",
+      "visual": "screenshots/Places/Leonida Keys/Leonida_Keys_02.jpg",
+      "focus": 0.5
+    },
+    {
+      "fact": "F044",
+      "text": "A disc version coming later? Also false. Rockstar never announced one.",
+      "visual": "screenshots/Places/Grassrivers/Grassrivers_01.jpg",
+      "focus": 0.5
+    },
+    {
+      "fact": "F001",
+      "text": "Everyone plays November 19th, on PS5 and Xbox Series.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_03.jpg",
+      "focus": 0.5,
+      "headline": "NOV 19"
+    },
+    {
+      "fact": "CTA",
+      "text": "Follow for confirmed GTA 6 news. No fake leaks.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_04.jpg",
+      "focus": 0.5,
+      "headline": "FOLLOW FOR REAL NEWS"
+    }
+  ]
+}

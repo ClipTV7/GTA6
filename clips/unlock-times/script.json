@@ -1,0 +1,69 @@
+{
+  "slug": "unlock-times",
+  "title": "GTA 6 unlocks in under 72 hours: when you can play",
+  "description": "GTA 6 unlocks at midnight local time, country by country. Here's what you need to know before Nov 19.",
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#GTA",
+    "#ViceCity",
+    "#Rockstar"
+  ],
+  "lines": [
+    {
+      "fact": "F001",
+      "text": "GTA 6 drops in under 72 hours. Here's exactly when you can play.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_01.jpg",
+      "focus": 0.5,
+      "headline": "UNDER 72 HOURS"
+    },
+    {
+      "fact": "F003",
+      "text": "It unlocks at midnight, local time, country by country.",
+      "visual": "screenshots/Places/Vice City/Vice_City_01.jpg",
+      "focus": 0.5,
+      "headline": "MIDNIGHT LOCAL"
+    },
+    {
+      "fact": "F003",
+      "text": "New Zealand gets it first.",
+      "visual": "screenshots/Places/Leonida Keys/Leonida_Keys_01.jpg",
+      "focus": 0.5,
+      "headline": "NEW ZEALAND FIRST"
+    },
+    {
+      "fact": "F004",
+      "text": "In the US, PlayStation unlocks November 18th at 9 PM Pacific. That's midnight Eastern.",
+      "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_01.jpg",
+      "focus": 0.8,
+      "headline": "9PM PT / 12AM ET"
+    },
+    {
+      "fact": "F010",
+      "text": "Preload is already live, and Rockstar says you need up to 212 gigs free.",
+      "visual": "screenshots/Places/Vice City/Vice_City_02.jpg",
+      "focus": 0.5,
+      "headline": "212 GB"
+    },
+    {
+      "fact": "F012",
+      "text": "No PC. No online at launch. PS5 and Xbox Series only.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_01.jpg",
+      "focus": 0.5,
+      "headline": "NO PC \u00b7 NO ONLINE"
+    },
+    {
+      "fact": "F035",
+      "text": "PC is reportedly coming early 2027, but Rockstar hasn't confirmed it.",
+      "visual": "screenshots/Places/Port Gellhorn/Port_Gellhorn_01.jpg",
+      "focus": 0.5
+    },
+    {
+      "fact": "CTA",
+      "text": "Follow for confirmed GTA 6 news. No fake leaks.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_02.jpg",
+      "focus": 0.5,
+      "headline": "FOLLOW FOR REAL NEWS"
+    }
+  ]
+}

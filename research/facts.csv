@@ -1,0 +1,49 @@
+id,status,credibility,claim_en,source,date,last_checked
+F001,CONFIRMED,,GTA 6 releases Thursday November 19 2026 on PS5 and Xbox Series X|S,https://www.rockstargames.com/newswire/article/9k2kaa1o3297k9/grand-theft-auto-vi-an-extended-look,2026-11-09,2026-11-16
+F002,CONFIRMED,,Take-Two reaffirmed the Nov 19 date in its Nov 9 earnings,https://www.notebookcheck.net/GTA-6-s-launch-date-is-officially-locked-and-Take-Two-has-8-billion-reasons-not-to-delay-it.1302765.0.html,2026-11-09,2026-11-16
+F003,CONFIRMED,,Unlock is at midnight local time region by region; New Zealand gets it first,https://www.vice.com/en/article/gta-6-release-date-launch-times-new-zealand-method/,2026-11,2026-11-16
+F004,CONFIRMED,,US PlayStation Store unlock: Nov 18 9 PM PT / midnight ET,https://www.vice.com/en/article/gta-6-release-date-launch-times-new-zealand-method/,2026-11,2026-11-16
+F005,CONFIRMED,,No PC / Switch 2 / mobile version announced,https://www.pcgamer.com/games/grand-theft-auto/asked-whether-grand-theft-auto-6-will-come-to-pc-take-two-ceo-strauss-zelnick-says-rockstar-will-make-more-announcements-in-due-time/,2026,2026-11-16
+F006,CONFIRMED,,US price: Standard $79.99 / Ultimate $99.99; no collector's edition,https://www.dexerto.com/gta/gta-6-price-ultimate-edition-pre-orders-live-3378744/,2026-06,2026-11-16
+F007,RUMOR,medium,EU price 79.99 EUR / UK 69.99 GBP (secondary sources only),https://www.gtaboss.gg/gta-6/guides/gta-6-preorder-guide,2026,2026-11-16
+F008,CONFIRMED,,Pre-orders opened June 25 2026; bonus Vintage Vice City Pack + 1 month GTA+,https://opencritic.com/news/33596/gta-6-pre-order-guide-price-bonuses-and-everything-else-you-need-to-know,2026-06-25,2026-11-16
+F009,CONFIRMED,,Physical edition has NO disc - only a download code in the box,https://www.vice.com/en/article/rockstar-faces-backlash-over-gta-6s-no-disc-physical-edition/,2026-11-12,2026-11-16
+F010,CONFIRMED,,Preload is live; Rockstar recommends up to 212 GB free space,https://gamerant.com/gta-6-file-size/,2026-11-03,2026-11-16
+F011,RUMOR,medium,PS5 package is 223 GB and firmware 14.22 is required (dataminers),https://videocardz.com/newz/gta-6-preload-reveals-223gb-package-and-mandatory-ps5-firmware-14-22-update,2026-11,2026-11-16
+F012,CONFIRMED,,Launch is single-player; no GTA 6 Online announced,https://www.pushsquare.com/news/2026/11/psa-gta-6-does-not-have-online-multiplayer-at-launch,2026-11,2026-11-16
+F013,CONFIRMED,,Zelnick: pre-orders tracking far in excess of initial expectations,https://finance.yahoo.com/markets/stocks/article/take-two-stock-rises-on-unprecedented-preorders-for-grand-theft-auto-vi-160644526.html,2026-11-10,2026-11-16
+F014,RUMOR,high,Sensor Tower estimate: 7.71M digital pre-orders (~$751M) as of Nov 3,https://www.ggrecon.com/articles/gta-6-pre-orders-sensor-tower/,2026-11,2026-11-16
+F015,RUMOR,medium,9.69M pre-orders (~$942M) - no primary Sensor Tower source found,https://www.gtaboom.com/sensor-tower-says-gta-6-is-the-most-pre-ordered-game-with-96-million-a92a,2026-11,2026-11-16
+F016,RUMOR,medium,About 90% of pre-orders are Ultimate Edition,https://www.shacknews.com/article/150356/grand-theft-auto-6-ultimate-preorder-percent,2026,2026-11-16
+F017,CONFIRMED,,Take-Two FY guidance raised to $7.98B-$8.18B,https://www.tweaktown.com/news/111755/gta-6-expected-to-help-drive-record-dollars8-1-billion-earnings-for-take-two/index.html,2026-11-09,2026-11-16
+F018,CONFIRMED,,Trailer 1 released Dec 4 2023 (a day early after a leak),https://www.techradar.com/gaming/consoles-pc/gta-6-trailer-revealed-by-rockstar-games-with-2025-release-date,2023-12-04,2026-11-16
+F019,CONFIRMED,,Delayed twice: fall 2025 -> May 26 2026 -> Nov 19 2026,https://www.videogameschronicle.com/news/grand-theft-auto-6-has-been-delayed-again-to-the-end-of-2026/,2025-11-06,2026-11-16
+F020,CONFIRMED,,Trailer 2 released May 6 2025,https://www.purexbox.com/news/2025/05/gta-6-characters-locations-and-screenshots-revealed-in-massive-info-blowout,2025-05-06,2026-11-16
+F021,CONFIRMED,,Extended Look (~26 min gameplay) premiered on Netflix Aug 27 2026,https://www.vice.com/en/article/gta-6-new-details-netflix-extended-look-previews/,2026-08-27,2026-11-16
+F022,CONFIRMED,,Launch Trailer released Oct 15 2026,https://www.rockstargames.com/VI/launch-trailer,2026-10-15,2026-11-16
+F023,FALSE,,"An official ""Trailer 3"" was released - no video has that name",https://www.rockstargames.com/VI,2026,2026-11-16
+F024,CONFIRMED,,Game Awards nominees announced Nov 17 12 PM ET; GTA 6 is eligible before release,https://www.nintendolife.com/news/2026/11/the-game-awards-2026-nominees-to-be-announced-next-week-zelda-and-gta-6-eligible,2026-11,2026-11-16
+F025,RUMOR,high,Review embargo lifts Nov 18 (NateTheHate / BlackBate),https://www.notebookcheck.net/GTA-6-review-embargo-time-leaks-with-some-sites-restricted-until-release-date.1432496.0.html,2026-11,2026-11-16
+F026,CONFIRMED,,Playable duo Jason Duval and Lucia Caminos; Lucia is released from Leonida Penitentiary,https://www.gamesradar.com/games/grand-theft-auto/gta-6s-lucia-and-jason-get-full-names-and-backstories-as-trailer-2-drops-and-rockstar-shares-loads-more-details-about-its-protagonists,2025-05-06,2026-11-16
+F027,CONFIRMED,,State of Leonida (Florida-inspired): Vice City / Leonida Keys / Grassrivers / Port Gellhorn / Ambrosia / Mount Kalaga,https://www.rockstargames.com/VI,2025-05-06,2026-11-16
+F028,CONFIRMED,,Rockstar devs in previews: map is roughly twice the size of GTA 5,https://www.ibtimes.co.uk/gta-6-leonida-map-twice-size-gta-5-1829061,2026-08,2026-11-16
+F029,RUMOR,low,"Map is ""3x Red Dead Redemption 2""",https://www.thetechbasket.com/gta-6-map-leonida-regions-size/,2026,2026-11-16
+F030,CONFIRMED,,Switch between Jason and Lucia almost anytime; relationship choices affect the story,https://www.vice.com/en/article/gta-6-new-details-netflix-extended-look-previews/,2026-08-27,2026-11-16
+F031,CONFIRMED,,Criminal Profile system rates you from Professional to Irredeemable,https://primagames.com/news/gta-6-details-reveal-massive-map-smarter-cops-and-600000-npc-animations,2026-08,2026-11-16
+F032,CONFIRMED,,RydeMe rideshare app acts as fast travel,https://www.vice.com/en/article/gta-6-new-details-netflix-extended-look-previews/,2026-08-27,2026-11-16
+F033,CONFIRMED,,Lana Del Rey and Morgan Wallen host Back Country Radio,https://www.pcgamer.com/games/grand-theft-auto/gta-6-radio-songs/,2026,2026-11-16
+F034,RUMOR,medium,About 100 missions across 5 chapters (reviewer via Insider Gaming),https://rockstarintel.com/gta-vi-game-length-potentially-leaked-by-reviewer/,2026-11,2026-11-16
+F035,RUMOR,medium,PC version in Q1 2027 (GamesBeat / 4 anonymous sources),https://endgametools.com/en/gta-6/news/gta-6-pc,2026-10-13,2026-11-16
+F036,RUMOR,medium,GTA 6 Online late 2027 (Bloomberg report),https://www.vice.com/en/article/gta-6-online-release-window-bloomberg/,2026,2026-11-16
+F037,RUMOR,medium,Some physical boxes arrive with missing or already-used codes,https://www.dexerto.com/gaming/gta-6-players-furious-as-physical-copies-reportedly-arrive-with-missing-or-already-used-codes-3428334/,2026-11,2026-11-16
+F038,RUMOR,low,You can read the code through the box with a flashlight,https://happygamer.com/gta-6-physical-copy-redeem-code-flashlight-173678/,2026-11,2026-11-16
+F039,FALSE,,GTA 6 delayed again to 2027,https://endgametools.com/en/gta-6/news/gta-6-release-date-latest-news,2026-11,2026-11-16
+F040,FALSE,,"""Download GTA 6 for PC"" / GTA 6 APK / playable leaked build (malware per ESET)",https://www.welivesecurity.com/en/cybersecurity/gta-vi-isnt-out-yet-scams-full-swing/,2026,2026-11-16
+F041,FALSE,,Cyberleek will release the full game (he wrote: no build),https://shattered.io/cyberleek-three-part-message-ends-gta-6-leaks-2026/,2026-10,2026-11-16
+F042,FALSE,,AI-generated GTA 6 gameplay leaks (8M+ views - creator admitted joke),https://www.gamespot.com/articles/ai-generated-gta-6-gameplay-leaks-are-going-viral-following-delay/1100-6536534/,2025-11,2026-11-16
+F043,FALSE,,Vice City bridge leak (creator showed how he faked it),https://www.notebookcheck.net/GTA-6-Vice-City-bridge-leak-confirmed-fake-as-creator-reveals-how-it-was-made.1252353.0.html,2026,2026-11-16
+F044,FALSE,,A disc version is coming in a few months,https://kotaku.com/there-remains-no-disc-based-version-of-grand-theft-auto-vi-despite-promising-email-from-rockstar-2000711186,2026-07,2026-11-16
+F045,FALSE,,The physical box lets you play early,https://comicbook.com/gaming/news/gta-6-grand-theft-auto-vi-rockstar-games-physical-copies-map-leak/,2026-11,2026-11-16
+F046,CONFIRMED,,"The viral ""Miami Beach real or GTA 6?"" clip is real GTA 6 footage reshared by Rockstar",https://kotaku.com/this-isnt-a-video-from-miami-its-a-gta-6-gameplay-clip-2000756038,2026-11-12,2026-11-16
+F047,CONFIRMED,,Zelnick: generative AI has no part in GTA 6,https://felloai.com/does-gta-6-use-ai/,2026-02,2026-11-16
+F048,CONFIRMED,,YouTube 24-hour GTA 6 launch livestream starting midnight ET Nov 19,https://blog.youtube/news-and-events/youtube-rockstar-games-gta-vi-launch/,2026-11,2026-11-16
