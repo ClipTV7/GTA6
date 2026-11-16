@@ -15,19 +15,22 @@
       "text": "One GTA 6 leak got over 8 million views. It was fake. 100% AI.",
       "visual": "screenshots/Places/Vice City/Vice_City_03.jpg",
       "focus": 0.5,
-      "headline": "FAKE LEAK. 8M VIEWS."
+      "headline": "FAKE LEAK. 8M VIEWS.",
+      "badge": "100% AI"
     },
     {
       "fact": "F042",
       "text": "The creator later admitted the whole thing was a hoax.",
       "visual": "screenshots/Places/Vice City/Vice_City_08.jpg",
-      "focus": 0.5
+      "focus": 0.5,
+      "badge": "HOAX"
     },
     {
       "fact": "F043",
       "text": "The Vice City bridge leak? Fake. Its creator showed how he made it.",
       "visual": "screenshots/Places/Vice City/Vice_City_17.jpg",
-      "focus": 0.5
+      "focus": 0.15,
+      "badge": "FAKE LEAK"
     },
     {
       "fact": [
