@@ -32,8 +32,19 @@ Tu es **le Cerveau** du studio. Tu ne fais pas tout toi-même : tu **diriges** s
 
 Agents en parallèle quand c'est possible (veilleur + eplucheur + iconographe ensemble). Le Cerveau ne transmet aux agents que le brief utile, pas tout l'historique.
 
+## Production quotidienne
+Objectif : **2 à 3 clips verticaux anglais par jour** pour YouTube Shorts et TikTok (`daily_target` dans `config.json`).
+Chaque matin :
+1. `bash studio/setup.sh` (conteneur neuf : installe Whisper, retélécharge les visuels officiels).
+2. `eplucheur` met à jour `research/facts.csv` (nouveaux faits, statuts qui changent, `last_checked` du jour). Lundi : `veilleur` aussi.
+3. Le Cerveau choisit 3 angles selon l'actu du jour (jamais deux fois le même angle : voir `clips/`).
+4. `scenariste` → `make.py` → `critique` pour chaque clip. Sous 75 % : corriger et refaire (max 2 boucles). Toujours sous 75 % : ne pas livrer.
+5. Commit + push (`clips/`, `research/`), puis envoyer à l'utilisateur les MP4 retenus + `_post.txt`, avec pour chacun seulement : score % et verdict honnête.
+L'utilisateur publie lui-même et coche l'étiquette IA.
+
 ## Commandes
 ```bash
+bash studio/setup.sh                             # à lancer en début de session
 python3 studio/make.py clips/<slug>              # rendu complet (voix ElevenLabs)
 python3 studio/make.py clips/<slug> --test-voice # rendu de test avec voix robot locale (gratuit)
 python3 studio/make.py clips/<slug> --check      # vérifie seulement les règles
