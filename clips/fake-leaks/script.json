@@ -1,6 +1,6 @@
 {
   "slug": "fake-leaks",
-  "title": "6 GTA 6 fakes that fooled millions",
+  "title": "This GTA 6 leak got 8M views. It was 100% AI.",
   "description": "Fake leaks, fake trailers and malware: the GTA 6 hoaxes debunked, with sources.",
   "hashtags": [
     "#GTA6",
@@ -12,14 +12,14 @@
   "lines": [
     {
       "fact": "F042",
-      "text": "Three days before GTA 6, 8 million people fell for a fake leak. It was AI.",
+      "text": "This GTA 6 leak got over 8 million views. It was fake. 100% AI.",
       "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_03.jpg",
-      "focus": 0.6,
-      "headline": "8M FELL FOR IT"
+      "focus": 0.75,
+      "headline": "8M VIEWS. ALL AI."
     },
     {
       "fact": "F042",
-      "text": "The creator admitted the whole thing was a hoax.",
+      "text": "The creator later admitted the whole thing was a hoax.",
       "visual": "screenshots/Places/Vice City/Vice_City_05.jpg",
       "focus": 0.5
     },

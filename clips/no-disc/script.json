@@ -50,18 +50,18 @@
       "focus": 0.5
     },
     {
-      "fact": "F001",
-      "text": "Everyone plays November 19th, on PS5 and Xbox Series.",
+      "fact": "F003",
+      "text": "It unlocks the night of November 18th to 19th, depending on where you live.",
       "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_03.jpg",
       "focus": 0.5,
-      "headline": "NOV 19"
+      "headline": "NOV 18-19"
     },
     {
       "fact": "CTA",
-      "text": "Follow for confirmed GTA 6 news. No fake leaks.",
+      "text": "Got the box? Keep your receipt. And follow for confirmed GTA 6 news.",
       "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_04.jpg",
       "focus": 0.5,
-      "headline": "FOLLOW FOR REAL NEWS"
+      "headline": "KEEP YOUR RECEIPT"
     }
   ]
 }
