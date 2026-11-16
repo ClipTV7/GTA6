@@ -12,7 +12,7 @@
   "lines": [
     {
       "fact": "F042",
-      "text": "A GTA 6 leak got over 8 million views. It was fake. 100% AI.",
+      "text": "One GTA 6 leak got over 8 million views. It was fake. 100% AI.",
       "visual": "screenshots/Places/Vice City/Vice_City_03.jpg",
       "focus": 0.5,
       "headline": "FAKE LEAK. 8M VIEWS."
@@ -20,13 +20,13 @@
     {
       "fact": "F042",
       "text": "The creator later admitted the whole thing was a hoax.",
-      "visual": "screenshots/Places/Vice City/Vice_City_05.jpg",
+      "visual": "screenshots/Places/Vice City/Vice_City_08.jpg",
       "focus": 0.5
     },
     {
       "fact": "F043",
       "text": "The Vice City bridge leak? Fake. Its creator showed how he made it.",
-      "visual": "screenshots/Places/Vice City/Vice_City_06.jpg",
+      "visual": "screenshots/Places/Vice City/Vice_City_17.jpg",
       "focus": 0.5
     },
     {
@@ -37,28 +37,32 @@
       "text": "Download GTA 6 for PC? That's a scam. No PC version has been announced, and those files carry malware.",
       "visual": "screenshots/People/Jason Duval/Jason_Duval_03.jpg",
       "focus": 0.5,
-      "headline": "MALWARE"
+      "headline": "MALWARE",
+      "badge": "FAKE DOWNLOAD"
     },
     {
       "fact": "F041",
       "text": "A leaker dropping the full game? False. He said himself there's no build.",
       "visual": "screenshots/Places/Port Gellhorn/Port_Gellhorn_02.jpg",
-      "focus": 0.5
+      "focus": 0.5,
+      "badge": "FAKE CLAIM"
     },
     {
       "fact": [
         "F039",
         "F002"
       ],
-      "text": "Delayed again to 2027? Not true. Take-Two locked November 19th.",
+      "text": "Delayed again to 2027? Not true. Take-Two has locked in November 19th.",
       "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_05.jpg",
-      "focus": 0.5
+      "focus": 0.5,
+      "badge": "FAKE: 2027 DELAY"
     },
     {
       "fact": "F023",
       "text": "And Trailer 3? Those videos are fake. Rockstar never released a video with that name.",
       "visual": "screenshots/Places/Ambrosia/Ambrosia_01.jpg",
-      "focus": 0.5
+      "focus": 0.5,
+      "badge": "FAKE TITLE"
     },
     {
       "fact": "CTA",

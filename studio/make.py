@@ -229,16 +229,16 @@ def build_ass(words, segs, lines, cfg, path):
         "Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, "
         "Shadow, Alignment, MarginL, MarginR, MarginV, Encoding",
         f"Style: Cap,{font},92,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,7,3,5,60,60,0,1",
-        f"Style: Head,{font},74,&H00000000,&H00000000,&H0000D4FF,&H00000000,-1,0,0,0,100,100,0,0,3,18,0,5,60,60,0,1",
+        f"Style: Head,{font},74,&H00000000,&H00000000,&H00FFFFFF,&H00000000,-1,0,0,0,100,100,0,0,3,18,0,5,60,60,0,1",
         f"Style: Badge,{font},50,&H00000000,&H00000000,&H0000D4FF,&H00000000,-1,0,0,0,100,100,2,0,3,12,0,5,60,60,0,1",
-        f"Style: Small,{font},30,&H30FFFFFF,&H30FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,0,5,60,60,0,1",
+        f"Style: Small,{font},22,&H40FFFFFF,&H30FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,0,5,60,60,0,1",
         "", "[Events]", "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text",
     ]
     ev = lambda layer, s, e, st, txt: out.append(
         f"Dialogue: {layer},{ass_time(s)},{ass_time(e)},{st},,0,0,0,,{txt}")
     # mentions permanentes (sous les onglets TikTok/YouTube, hors zones d'interface)
-    ev(0, 0, total, "Small", r"{\pos(540,215)}" + esc(cfg["ai_label_text"]))
-    ev(0, 0, total, "Small", r"{\pos(540,255)}" + esc(cfg["credit_text"]))
+    ev(0, 0, total, "Small", r"{\pos(540,222)}" + esc(cfg["ai_label_text"]))
+    ev(0, 0, total, "Small", r"{\pos(540,250)}" + esc(cfg["credit_text"]))
     # titres et badges par ligne
     for i, ln in enumerate(lines):
         s, d = segs[i]
@@ -249,6 +249,7 @@ def build_ass(words, segs, lines, cfg, path):
             ev(1, s, s + d, "Head", anim + esc(ln["headline"].upper()))
         if ln["status"] in BADGE:
             label, box, txt = BADGE[ln["status"]]
+            label = ln.get("badge", label)
             ev(1, s, s + d, "Badge", r"{\pos(540,%d)\3c%s\1c%s}%s" % (520 if ln.get("headline") else 400, box, txt, label))
             if ln["status"] == "FALSE":  # le badge vise l'affirmation, pas l'image officielle
                 ev(1, s, s + d, "Small", r"{\pos(540,%d)}Background: real GTA 6 image (Rockstar)" % (590 if ln.get("headline") else 470))
@@ -267,7 +268,7 @@ def build_ass(words, segs, lines, cfg, path):
         for wi, w in enumerate(ch):
             s = w["s"]
             e = ch[wi + 1]["s"] if wi + 1 < len(ch) else end_chunk
-            txt = " ".join((r"{\c&H0000D4FF&}" + esc(x["w"].upper()) + r"{\c&H00FFFFFF&}") if x is w
+            txt = " ".join((r"{\fscx115\fscy115}" + esc(x["w"].upper()) + r"{\fscx100\fscy100}") if x is w
                            else esc(x["w"].upper()) for x in ch)
             pop = r"{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}" if wi == 0 else ""
             ev(2, s, max(e, s + 0.05), "Cap", r"{\pos(540,1180)}" + pop + txt)
