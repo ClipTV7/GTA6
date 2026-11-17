@@ -94,6 +94,9 @@ def main():
 
     print(f"[1/5] voix ({cfg['_engine']})")
     wavs = make.make_voice(lines, cfg, work, a.test_voice)
+    if script.get("theme") == "news":  # 0,12 s d'avance : l'impact sonore tombe avant le premier mot
+        make.run(["ffmpeg", "-y", "-v", "error", "-i", wavs[0], "-af", "adelay=120", wavs[0] + ".tmp.wav"])
+        os.replace(wavs[0] + ".tmp.wav", wavs[0])
     print("[2/5] timing des mots (Whisper)")
     words, segs = make.word_timings(wavs, lines, cfg, gap)
 
@@ -129,7 +132,7 @@ def main():
             if at is None:
                 at = d * (j + 1) / (len(extra) + 1)
             bgs.append({"src": f, "at": max(0.3, at - 0.05)})
-            sfx_events.append(("whoosh", s + max(0.3, at - 0.05) - 0.12, 0.22))
+            sfx_events.append(("whoosh", s + max(0.3, at - 0.05) - 0.12, 0.35))
         srcs = ln.get("sources") or [ln.get("source", "")]
         hosts = list(dict.fromkeys((urlparse(u).hostname or "").replace("www.", "") for u in srcs if u.startswith("http")))
         scenes.append({
@@ -141,19 +144,21 @@ def main():
             "dim": float(ln.get("dim", 0.24)), "words": lw})
         # bruitages + mascottes (thème news)
         if i > 0:
-            sfx_events.append(("whoosh", s - 0.1, 0.32))
+            sfx_events.append(("whoosh", s - 0.1, 0.5))
         if sc["type"] == "slam":
             ems = {re.sub(r"[^a-z0-9]", "", e.lower()) for e in sc.get("em", [])}
-            sfx_events.append(("impact", s + (lw[0]["s"] - s if i else 0.0), 0.7))
+            sfx_events.append(("impact", max(0.0, s + (lw[0]["s"] - s if i else 0.0) - 0.1), 1.2))
             for w in lw:
                 if re.sub(r"[^a-z0-9]", "", w["w"].lower()) in ems:
-                    sfx_events.append(("impact", w["s"] - 0.03, 0.45))
+                    sfx_events.append(("impact", w["s"] - 0.03, 0.8))
         if sc["type"] == "cards":
             for it in sc.get("items", []):
-                k = re.sub(r"[^a-z0-9]", "", (it.get("word") or "").lower())
+                if it.get("pre"):
+                    continue
+                k = re.sub(r"[^a-z0-9]", "", (it.get("reveal_word") or it.get("word") or "").lower())
                 t0 = next((w["s"] for w in lw if k and re.sub(r"[^a-z0-9]", "", w["w"].lower()).startswith(k)), None)
                 if t0:
-                    sfx_events.append(("tick", t0 - 0.12, 0.35))
+                    sfx_events.append(("impact", t0 - 0.05, 0.9) if it.get("status") == "FALSE" else ("tick", t0 - 0.12, 1.2))
         if ln.get("sticker"):
             st = ln["sticker"]
             if st["name"] not in MASCOTS:
@@ -215,7 +220,7 @@ def main():
         for n, (name, t0, vol) in enumerate(ev, 1):
             cmd += ["-i", os.path.join(sd, name + ".wav")]
             ms = int(t0 * 1000)
-            fc.append(f"[{n}:a]adelay={ms}|{ms},volume={vol * 0.5:.3f}[e{n}]")
+            fc.append(f"[{n}:a]adelay={ms}|{ms},volume={vol:.3f}[e{n}]")
         fc.append("[0:a]" + "".join(f"[e{n}]" for n in range(1, len(ev) + 1)) +
                   f"amix=inputs={len(ev) + 1}:duration=first:normalize=0[a]")
         cmd += ["-filter_complex", ";".join(fc), "-map", "[a]", os.path.join(work, "voice_sfx.wav")]

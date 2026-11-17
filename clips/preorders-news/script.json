@@ -3,11 +3,11 @@
   "format": "explainer",
   "theme": "news",
   "tag": "GTA 6 NEWS",
-  "kicker": "PRE-ORDERS \u00b7 NOV 17",
+  "kicker": "PS & XBOX STORES \u00b7 NOV 17",
   "title": "GTA 6 pre-order record: what's real and what's not",
-  "yt_title": "GTA 6 broke the pre-order record\u2026 but the numbers? \ud83d\udcb0",
-  "description": "But how many? Sony and Microsoft confirmed GTA 6 is the most pre-ordered game in PlayStation Store and Microsoft Store history, without numbers. Take-Two's CEO only says pre-orders are tracking far in excess of expectations. Sensor Tower's 12M+ is an estimate (rumor); 15M / $1.45B has no primary source (rumor); 'Rockstar confirmed $1B' is false.",
-  "tiktok_caption": "GTA 6 broke the pre-order record \ud83d\udcb0 but most numbers going around are guesses. Did you pre-order? \ud83d\udc47",
+  "yt_title": "GTA 6 broke the PS & Xbox pre-order record\u2026 but how many? \ud83d\udcb0",
+  "description": "But how many? Sony and Microsoft confirmed GTA 6 is the most pre-ordered game in PlayStation Store and Microsoft Store history, without numbers. Take-Two's CEO only says pre-orders are tracking far in excess of expectations. Sensor Tower's 12M+ is an estimate (rumor); 15M / $1.45B is unverified, with no primary source (rumor); 'Rockstar confirmed $1B' is false.",
+  "tiktok_caption": "GTA 6 broke the PS & Xbox pre-order record \ud83d\udcb0 but how many? Most numbers going around are guesses. Did you pre-order? \ud83d\udc47",
   "hashtags": [
     "#GTA6",
     "#GTAVI",
@@ -18,7 +18,7 @@
   "lines": [
     {
       "fact": "F053",
-      "text": "GTA 6 broke the PlayStation and Xbox pre-order record. But how many?",
+      "text": "GTA 6 broke a pre-order record. But how many?",
       "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_02.jpg",
       "focus": 0.5,
       "dim": 0.12,
@@ -38,10 +38,13 @@
       }
     },
     {
-      "fact": "F013",
-      "text": "Take-Two won't give a number. Its CEO only says pre-orders are tracking way above expectations.",
-      "visual": "screenshots/People/Boobie Ike/Boobie_Ike_01.jpg",
-      "focus": 0.45,
+      "fact": [
+        "F013",
+        "F053"
+      ],
+      "text": "No official number. The CEO of Take-Two only says: way above expectations.",
+      "visual": "screenshots/Places/Vice City/Vice_City_11.jpg",
+      "focus": 0.5,
       "dim": 0.15,
       "headline": "THE OFFICIAL WORD",
       "scene": {
@@ -76,7 +79,7 @@
         "F055",
         "F056"
       ],
-      "text": "Record: confirmed. 12 million: estimate. 15 million: no source. A billion confirmed by Rockstar? Never happened.",
+      "text": "Bigger numbers online? Not verified. A billion confirmed by Rockstar? Never happened.",
       "visual": "screenshots/Places/Vice City/Vice_City_08.jpg",
       "visuals": [
         "screenshots/Places/Vice City/Vice_City_12.jpg"
@@ -93,29 +96,31 @@
           {
             "t": "Store pre-order record",
             "status": "CONFIRMED",
-            "word": "record"
+            "pre": true
           },
           {
             "t": "12M+ (estimate)",
             "status": "RUMOR",
-            "word": "12"
+            "pre": true
           },
           {
-            "t": "15M / $1.45B (no source)",
+            "t": "15M / $1.45B (not verified)",
             "status": "RUMOR",
-            "word": "15"
+            "word": "bigger",
+            "reveal_word": "not"
           },
           {
             "t": "$1B confirmed by Rockstar",
             "status": "FALSE",
-            "word": "billion"
+            "word": "billion",
+            "reveal_word": "never"
           }
         ]
       }
     },
     {
       "fact": "CTA",
-      "text": "Did you pre-order? Comment A or B.",
+      "text": "Did you pre-order? Comment yes or not yet.",
       "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_02.jpg",
       "focus": 0.5,
       "dim": 0.15,
@@ -124,12 +129,12 @@
         "type": "list",
         "title": "Did you pre-order?",
         "items": [
-          "Already pre-ordered",
+          "Yes",
           "Not yet"
         ],
-        "letters": true,
+        "letters": false,
         "active": "cycle",
-        "cta": "COMMENT A OR B \u2193"
+        "cta": "COMMENT BELOW \u2193"
       },
       "sticker": {
         "name": "sun",

@@ -198,7 +198,7 @@ def make_voice(lines, cfg, work, test_voice):
         text = ln["text"].strip()
         prev = lines[i - 1]["text"] if i else ""
         nxt = lines[i + 1]["text"] if i + 1 < len(lines) else ""
-        key = hashlib.sha1(json.dumps([text, prev, nxt, test_voice, cfg.get("_voice_id"),
+        key = hashlib.sha1(json.dumps(["v2-pauses", text, prev, nxt, test_voice, cfg.get("_voice_id"),
                                        cfg["elevenlabs"] if cfg.get("_engine") == "elevenlabs" else cfg.get("tts")],
                                       sort_keys=True).encode()).hexdigest()[:16]
         cached = os.path.join(cache, key + ".wav")
@@ -208,7 +208,20 @@ def make_voice(lines, cfg, work, test_voice):
                 run(["espeak-ng", "-v", "en-us", "-s", "170", "-w", tmp, text])
             elif cfg.get("_engine") == "kokoro":
                 tmp = cached + ".kokoro.wav"
-                tts_kokoro(text, cfg, tmp)
+                parts = [p for p in re.split(r"(?<=\?)\s+", text) if p.strip()]
+                if len(parts) > 1:  # vraie pause (0,35 s) après chaque question, avant la chute
+                    import numpy as np
+                    import soundfile as sf
+                    chunks, sr = [], 24000
+                    for n, part in enumerate(parts):
+                        pf = f"{cached}.p{n}.wav"
+                        tts_kokoro(part, cfg, pf)
+                        a, sr = sf.read(pf)
+                        os.remove(pf)
+                        chunks += [a, np.zeros(int(0.35 * sr))]
+                    sf.write(tmp, np.concatenate(chunks[:-1]), sr)
+                else:
+                    tts_kokoro(text, cfg, tmp)
             else:
                 tmp = cached + ".mp3"
                 tts_elevenlabs(text, prev, nxt, cfg, tmp)
@@ -241,6 +254,11 @@ def word_timings(wavs, lines, cfg, gap):
         result, _ = model.transcribe(audio, language="en", word_timestamps=True, beam_size=5)
         heard = [w for s in result for w in s.words]
         script_words = ln["text"].split()
+        nz = lambda x: re.sub(r"[^a-z0-9]", "", x.lower())
+        heard_join = "".join(("6" if nz(w.word) == "vi" else nz(w.word)) for w in heard)
+        missing = [w for w in script_words if nz(w) and nz(w).rstrip("s") not in heard_join]
+        if missing:  # contrôle automatique : un mot que Whisper n'entend pas est souvent mal prononcé
+            print(f"  [VOIX ?] ligne {i + 1} : Whisper n'entend pas « {' '.join(missing)} » (entendu : {' '.join(w.word.strip() for w in heard)})")
         if heard and len(heard) == len(script_words):
             times = [(w.start, w.end) for w in heard]
         else:  # Whisper a entendu autrement : on répartit le texte du script sur la parole détectée
