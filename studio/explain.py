@@ -84,9 +84,9 @@ def main():
         shutil.rmtree(work, ignore_errors=True)
     os.makedirs(os.path.join(work, "img"), exist_ok=True)
     gap = cfg["gap_seconds"]
-    cfg["_voice_id"] = make.voice_id_for(script, cfg) if not a.test_voice else "test"
+    make.resolve_voice(script, cfg, a.test_voice)
 
-    print("[1/5] voix" + (" (TEST robot)" if a.test_voice else " (ElevenLabs)"))
+    print(f"[1/5] voix ({cfg['_engine']})")
     wavs = make.make_voice(lines, cfg, work, a.test_voice)
     print("[2/5] timing des mots (Whisper)")
     words, segs = make.word_timings(wavs, lines, cfg, gap)

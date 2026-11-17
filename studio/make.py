@@ -116,7 +116,7 @@ def check(script, cfg, test_voice):
                 errs.append(f"{tag} : visuel introuvable : {v}")
             elif v in avoid:
                 errs.append(f"{tag} : visuel interdit (assets/official/AVOID.txt) : {v}")
-    if not test_voice and "PUT_YOUR" in cfg["elevenlabs"]["voice_id"]:
+    if not test_voice and (cfg.get("tts") or {}).get("engine", "elevenlabs") == "elevenlabs" and "PUT_YOUR" in cfg["elevenlabs"]["voice_id"]:
         errs.append("config.json : renseigne elevenlabs.voice_id (ton clone) ou utilise --test-voice")
     music = cfg["music"].get("file")
     if music:
@@ -158,6 +158,38 @@ def tts_elevenlabs(text, prev, nxt, cfg, out_mp3):
         die(f"ElevenLabs a refusé ({err.code}) : {err.read().decode()[:400]}")
 
 
+_KOKORO = None
+
+
+def tts_kokoro(text, cfg, out_wav):
+    """Voix libre (Kokoro, licence Apache 2.0) : gratuite, illimitée, calculée sur la machine."""
+    global _KOKORO
+    import soundfile as sf
+    from kokoro_onnx import Kokoro
+    kd = os.path.join(ROOT, ".cache", "kokoro")
+    if _KOKORO is None:
+        if not os.path.isfile(os.path.join(kd, "model.onnx")):
+            die("modèle Kokoro absent : lance bash studio/setup.sh")
+        _KOKORO = Kokoro(os.path.join(kd, "model.onnx"), os.path.join(kd, "voices.npz"))
+    k = cfg["tts"]
+    mix = k.get("kokoro_mix") or {k.get("kokoro_voice", "am_fenrir"): 1.0}
+    style = sum(w * _KOKORO.get_voice_style(v) for v, w in mix.items())
+    samples, sr = _KOKORO.create(text, voice=style, speed=k.get("kokoro_speed", 1.1), lang=k.get("kokoro_lang", "en-us"))
+    sf.write(out_wav, samples, sr)
+
+
+def resolve_voice(script, cfg, test_voice):
+    """Renseigne cfg['_engine'] et cfg['_voice_id'] (moteur de voix utilisé pour ce clip)."""
+    engine = "test" if test_voice else (cfg.get("tts") or {}).get("engine", "elevenlabs")
+    cfg["_engine"] = engine
+    if engine == "elevenlabs":
+        cfg["_voice_id"] = voice_id_for(script, cfg)
+    elif engine == "kokoro":
+        cfg["_voice_id"] = "kokoro:" + json.dumps(cfg["tts"].get("kokoro_mix") or cfg["tts"].get("kokoro_voice"), sort_keys=True)
+    else:
+        cfg["_voice_id"] = "test"
+
+
 def make_voice(lines, cfg, work, test_voice):
     cache = os.path.join(ROOT, ".cache", "tts")
     os.makedirs(cache, exist_ok=True)
@@ -166,13 +198,17 @@ def make_voice(lines, cfg, work, test_voice):
         text = ln["text"].strip()
         prev = lines[i - 1]["text"] if i else ""
         nxt = lines[i + 1]["text"] if i + 1 < len(lines) else ""
-        key = hashlib.sha1(json.dumps([text, prev, nxt, test_voice, cfg.get("_voice_id"), cfg["elevenlabs"]],
+        key = hashlib.sha1(json.dumps([text, prev, nxt, test_voice, cfg.get("_voice_id"),
+                                       cfg["elevenlabs"] if cfg.get("_engine") == "elevenlabs" else cfg.get("tts")],
                                       sort_keys=True).encode()).hexdigest()[:16]
         cached = os.path.join(cache, key + ".wav")
         if not os.path.isfile(cached):
             if test_voice:
                 tmp = cached + ".raw.wav"
                 run(["espeak-ng", "-v", "en-us", "-s", "170", "-w", tmp, text])
+            elif cfg.get("_engine") == "kokoro":
+                tmp = cached + ".kokoro.wav"
+                tts_kokoro(text, cfg, tmp)
             else:
                 tmp = cached + ".mp3"
                 tts_elevenlabs(text, prev, nxt, cfg, tmp)
@@ -362,9 +398,9 @@ def main():
     shutil.rmtree(work, ignore_errors=True)
     os.makedirs(work)
     lines, gap = script["lines"], cfg["gap_seconds"]
-    cfg["_voice_id"] = voice_id_for(script, cfg) if not a.test_voice else "test"
+    resolve_voice(script, cfg, a.test_voice)
 
-    print("[1/5] voix" + (" (TEST robot)" if a.test_voice else " (ElevenLabs)"))
+    print(f"[1/5] voix ({cfg['_engine']})")
     wavs = make_voice(lines, cfg, work, a.test_voice)
 
     print("[2/5] timing des mots (Whisper)")
