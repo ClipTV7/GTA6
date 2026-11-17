@@ -167,7 +167,7 @@ B.list=(sc,root)=>{const p=sc.scene;const panel=el('div','panel',null,root);el('
   return lt=>{enter(panel,lt,sc);rows.forEach((r,i)=>{const a=sc.index===0?1:ap(lt,.12+i*.1,.28);r.style.opacity=a;
       r.style.transform=`translateX(${(1-a)*-40}px)`;
       const on=p.active==='cycle'?(Math.floor(Math.max(0,lt-.6)/.55)%rows.length===i):p.active===i;r.classList.toggle('on',on)});
-    if(cta){cta.style.opacity=ap(lt,.7,.3);cta.style.transform=`scale(${1+.035*Math.sin(lt*7)})`}}};
+    if(cta){cta.style.opacity=ap(lt,.12,.28);cta.style.transform=`scale(${1+.035*Math.sin(lt*7)})`}}};
 B.split=(sc,root)=>{const p=sc.scene;const parts=['top','bottom'].map(k=>{const h=el('div','half '+(k==='top'?'top':'bot'),null,root);
     const im=el('img',null,null,h);im.src=p[k].img;const lab=el('div','hlabel',p[k].label,h);return {h,im,lab,t:wordAt(sc,p[k].word,k==='top'?.1:.3)}});
   el('div','divider',null,root);const sw=el('div','swap',
@@ -228,7 +228,8 @@ B.date=(sc,root)=>{const p=sc.scene;const panel=el('div','panel',null,root);el('
   return lt=>{enter(panel,lt,sc);const a=ap(lt,.2,.35);cal.style.transform=`scale(${.85+.15*a}) rotate(${(1-a)*-6}deg)`;cal.style.opacity=a;
     chips.forEach(c=>{const b=ap(lt,c.t-.05,.25);c.e.style.opacity=b;c.e.style.transform=`translateY(${(1-b)*20}px)`;c.e.classList.toggle('on',b>.99)})}};
 B.slam=(sc,root)=>{const p=sc.scene;const box=el('div','slam',null,root);const em=(p.em||[]).map(norm);
-  const spans=sc.words.map(w=>({s:el('span',em.includes(norm(w.w))?'em':null,w.w.replace(/[,.:;!?]+$/,''),box),t:w.s-sc.start}));
+  const spans=sc.words.map(w=>{const o={s:el('span',em.includes(norm(w.w))?'em':null,w.w.replace(/[,;:]+$/,''),box),t:w.s-sc.start};
+    if(/[.!?]$/.test(w.w))el('br',null,null,box);return o});
   return lt=>{spans.forEach(o=>{const a=sc.index===0&&o.t<.3?1:ap(lt,o.t-.08,.14);const on=a>0;
       o.s.style.opacity=on?1:.22;o.s.style.transform=`scale(${1+.35*(on?1-a:0)})`;o.s.style.filter=on&&a<1?`blur(${(1-a)*6}px)`:'none';
       o.s.classList.toggle('on',a>=1)})}};
@@ -244,9 +245,9 @@ B.cards=(sc,root)=>{const p=sc.scene;const panel=el('div','panel',null,root);if(
 B.stat=(sc,root)=>{const p=sc.scene;const panel=el('div','panel stat',null,root);if(p.title)el('div','ptitle',p.title,panel);
   const num=el('div','num','',panel);const lab=el('div','lab',p.label||'',panel);const sub=p.sub?el('div','sub',p.sub,panel):null;
   const t0=wordAt(sc,p.word,.12);
-  const tc=Math.min(t0,.25);return lt=>{enter(panel,lt,sc);const a=sc.index===0?1:eOut((lt-tc)/.7);const v=p.value*a;
+  const tc=Math.max(.15,t0-.7);return lt=>{enter(panel,lt,sc);const a=sc.index===0?1:eOut((lt-tc)/.7);const v=p.value*a;
     num.textContent=(p.prefix||'')+(p.decimals?v.toFixed(p.decimals):Math.round(v).toLocaleString('en-US'))+(p.suffix||'');
-    lab.style.opacity=ap(lt,t0+.2,.3);if(sub)sub.style.opacity=ap(lt,t0+.5,.3)}};
+    lab.style.opacity=ap(lt,tc+.5,.3);if(sub)sub.style.opacity=ap(lt,tc+.8,.3)}};
 B.quote=(sc,root)=>{const p=sc.scene;const panel=el('div','panel quote',null,root);if(p.title)el('div','ptitle',p.title,panel);
   const q=el('div','q','“'+p.text+'”',panel);const who=el('div','who','— '+p.who,panel);const t0=wordAt(sc,p.word,.15);
   return lt=>{enter(panel,lt,sc);q.style.opacity=ap(lt,.1,.3);who.style.opacity=ap(lt,t0,.3)}};
@@ -258,7 +259,7 @@ const S=D.scenes.map((sc,i)=>{sc.index=i;const root=el('div','scene',null,stage)
   let head=null;if(sc.headline){head=el('div','headline',sc.headline,root)}
   let rec=null;if(sc.status&&sc.receipt!==false){rec=el('div','receipt',null,root);
     const cls=sc.status==='CONFIRMED'?'ok':sc.status==='RUMOR'?'rumor':'fake';
-    el('div','chip '+cls,sc.badge||(sc.status==='CONFIRMED'?'✓ CONFIRMED':sc.status==='RUMOR'?'RUMOR':'FAKE CLAIM'),rec);
+    if(!sc.multi)el('div','chip '+cls,sc.badge||(sc.status==='CONFIRMED'?'✓ CONFIRMED':sc.status==='RUMOR'?'RUMOR':'FAKE CLAIM'),rec);
     if(sc.source)el('div','src',(sc.sources_label||'SOURCE: ')+sc.source,rec)}
   return {sc,root,upd,head,rec}});
 S.forEach(s=>{s.root.style.display='block';
@@ -290,7 +291,7 @@ window.render=function(t){
   s.upd(lt);
   const sp=sc.scene.type==='split';caps.style.top=sp?'660px':'1236px';if(s.rec)s.rec.style.top=sp?'574px':'1150px';
   caps.style.display=sc.scene.type==='slam'?'none':'block';
-  if(news){TG.firstChild.style.opacity=.35+.65*(.5+.5*Math.sin(t*7));PG.style.width=(clamp(t/D.total)*100)+'%'}
+  if(news){TG.firstChild.style.opacity=.35+.65*(.5+.5*Math.sin(t*7));PG.style.display='none'}
   // sous-titres
   let ci=-1;D.chunks.forEach((c,i)=>{if(t>=c.s&&t<c.e)ci=i});
   if(ci!==lastChunk){caps.innerHTML=ci<0?'':D.chunks[ci].words.map(w=>`<span>${w.w}</span>`).join('');lastChunk=ci;

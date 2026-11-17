@@ -19,7 +19,7 @@ TYPES = {"meter", "list", "split", "branch", "route", "bars", "grid", "date", "s
 MASCOTS = json.load(open(os.path.join(OFFICIAL, "loops", "MASCOTS.json"))) if os.path.isfile(os.path.join(OFFICIAL, "loops", "MASCOTS.json")) else {}
 SFX = {  # bruitages synthétisés maison (aucune licence tierce)
     "whoosh": "anoisesrc=color=pink:duration=0.45:amplitude=0.5,highpass=f=350,lowpass=f=5500,afade=t=in:st=0:d=0.2:curve=exp,afade=t=out:st=0.2:d=0.25",
-    "impact": "sine=frequency=58:duration=0.55,afade=t=out:st=0.03:d=0.5,volume=2.2",
+    "impact": "anoisesrc=color=brown:duration=0.4:amplitude=1,highpass=f=80,lowpass=f=2200,afade=t=out:st=0.005:d=0.38:curve=exp,volume=1.6",
     "tick": "sine=frequency=1900:duration=0.03,afade=t=out:st=0:d=0.03,volume=0.6"}
 
 
@@ -136,14 +136,15 @@ def main():
             "start": s, "dur": d, "bg": bg, "bgs": bgs, "headline": ln.get("headline"), "scene": sc,
             "status": None if ln.get("fact") == "CTA" else ln["status"], "badge": ln.get("badge"),
             "receipt": ln.get("receipt", True),
-            "source": " · ".join(hosts[:2]) if hosts else None, "sources_label": "SOURCES: " if len(hosts) > 1 else "SOURCE: ",
+            "source": (" · ".join(hosts[:2]) + (f" +{len(hosts) - 2}" if len(hosts) > 2 else "")) if hosts else None,
+            "sources_label": "SOURCES: " if len(hosts) > 1 else "SOURCE: ", "multi": isinstance(ln.get("fact"), list),
             "dim": float(ln.get("dim", 0.24)), "words": lw})
         # bruitages + mascottes (thème news)
         if i > 0:
             sfx_events.append(("whoosh", s - 0.1, 0.32))
         if sc["type"] == "slam":
             ems = {re.sub(r"[^a-z0-9]", "", e.lower()) for e in sc.get("em", [])}
-            sfx_events.append(("impact", s + (lw[0]["s"] - s if i else 0.0), 0.5))
+            sfx_events.append(("impact", s + (lw[0]["s"] - s if i else 0.0), 0.7))
             for w in lw:
                 if re.sub(r"[^a-z0-9]", "", w["w"].lower()) in ems:
                     sfx_events.append(("impact", w["s"] - 0.03, 0.45))

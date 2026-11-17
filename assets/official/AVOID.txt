@@ -9,3 +9,6 @@ screenshots/People/Jason and Lucia/Jason_and_Lucia_14.jpg
 screenshots/Places/Port Gellhorn/Port_Gellhorn_03.jpg
 screenshots/Places/Port Gellhorn/Port_Gellhorn_04.jpg
 screenshots/Places/Port Gellhorn/Port_Gellhorn_07.jpg
+screenshots/People/Boobie Ike/Boobie_Ike_04.jpg
+screenshots/People/DreQuan Priest/DreQuan_Priest_01.jpg
+screenshots/People/Real Dimez/Real_Dimez_02.jpg
