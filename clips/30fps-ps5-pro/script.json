@@ -1,0 +1,63 @@
+{
+  "slug": "30fps-ps5-pro",
+  "title": "GTA 6 is 30 FPS even on PS5 Pro",
+  "yt_title": "GTA 6 is 30 FPS\u2026 even on PS5 Pro \ud83d\ude2c",
+  "description": "Rockstar's target for GTA 6 is 30 FPS on every console, PS5 Pro included. The Pro gets PSSR upscaling and ray-traced shadows. A hidden 60 FPS mode is only a dataminer claim (unconfirmed). Out November 19 on PS5 and Xbox Series X|S.",
+  "tiktok_caption": "GTA 6 is 30 FPS even on PS5 Pro \ud83d\ude2c Deal breaker or not? \ud83d\udc47",
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#PS5Pro",
+    "#GTA",
+    "#Rockstar"
+  ],
+  "lines": [
+    {
+      "fact": "F051",
+      "text": "GTA 6 runs at 30 FPS. Even on PS5 Pro.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_07.jpg",
+      "headline": "30 FPS. EVEN ON PRO."
+    },
+    {
+      "fact": "F051",
+      "text": "That's Rockstar's own target, on every console.",
+      "visual": "screenshots/Places/Vice City/Vice_City_10.jpg"
+    },
+    {
+      "fact": "F051",
+      "text": "So what does the Pro get? PSSR upscaling, for a sharper image.",
+      "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_04.jpg",
+      "focus": 0.6,
+      "headline": "PSSR"
+    },
+    {
+      "fact": "F051",
+      "text": "And ray-traced shadows.",
+      "visual": "screenshots/Places/Vice City/Vice_City_16.jpg",
+      "headline": "RAY-TRACED SHADOWS"
+    },
+    {
+      "fact": "F052",
+      "text": "Dataminers claim a hidden 60 FPS mode is in the game files.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_04.jpg",
+      "headline": "60 FPS?"
+    },
+    {
+      "fact": "F052",
+      "text": "That's unconfirmed. Rockstar never announced it, so don't count on it.",
+      "visual": "screenshots/Places/Mount Kalaga National Park/Mount_Kalaga_National_Park_01.jpg"
+    },
+    {
+      "fact": "F001",
+      "text": "It's out November 19th, on PS5 and Xbox Series.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_08.jpg",
+      "headline": "NOV 19"
+    },
+    {
+      "fact": "CTA",
+      "text": "30 FPS. Deal breaker or not? Tell me below, and follow for confirmed GTA 6 news.",
+      "visual": "screenshots/Places/Leonida Keys/Leonida_Keys_04.jpg",
+      "headline": "DEAL BREAKER?"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "preorder-numbers",
+  "title": "GTA 6 pre-orders: real numbers vs fake numbers",
+  "yt_title": "Most pre-ordered game EVER\u2026 but how many? \ud83d\udcb0",
+  "description": "Sony and Microsoft confirmed GTA 6 is the most pre-ordered game in PlayStation Store and Microsoft Store history, without numbers. Sensor Tower's 12M+ is an estimate; 15M / $1.45B has no primary source. 'Rockstar confirmed $1B' is false: no official figure exists.",
+  "tiktok_caption": "GTA 6 is the most pre-ordered game EVER \ud83d\udcb0 But the numbers going around? Mostly guesses. Did you pre-order? \ud83d\udc47",
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#GTA",
+    "#PS5",
+    "#Xbox"
+  ],
+  "lines": [
+    {
+      "fact": "F053",
+      "text": "GTA 6 is the most pre-ordered game in PlayStation and Xbox store history.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_10.jpg",
+      "headline": "BIGGEST EVER"
+    },
+    {
+      "fact": "F053",
+      "text": "Sony and Microsoft said so. But they gave no numbers.",
+      "visual": "screenshots/Places/Vice City/Vice_City_13.jpg",
+      "headline": "NO NUMBERS"
+    },
+    {
+      "fact": "F054",
+      "text": "Sensor Tower reportedly estimates over 12 million digital pre-orders.",
+      "visual": "screenshots/People/Raul Bautista/Raul_Bautista_01.jpg",
+      "headline": "12M+?"
+    },
+    {
+      "fact": "F055",
+      "text": "Some sites claim 15 million, and 1.45 billion dollars. No primary source.",
+      "visual": "screenshots/Places/Port Gellhorn/Port_Gellhorn_04.jpg"
+    },
+    {
+      "fact": "F056",
+      "text": "Rockstar confirmed a billion in pre-orders? False. They published no figure.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_05.jpg",
+      "badge": "FAKE CLAIM"
+    },
+    {
+      "fact": "F013",
+      "text": "What Take-Two did say: pre-orders are far above expectations.",
+      "visual": "screenshots/Places/Leonida Keys/Leonida_Keys_05.jpg"
+    },
+    {
+      "fact": "F001",
+      "text": "We find out November 19th, on PS5 and Xbox Series.",
+      "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_06.jpg",
+      "focus": 0.6,
+      "headline": "NOV 19"
+    },
+    {
+      "fact": "CTA",
+      "text": "Did you pre-order? Tell me below, and follow for confirmed GTA 6 news.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_11.jpg",
+      "headline": "DID YOU?"
+    }
+  ]
+}

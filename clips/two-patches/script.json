@@ -1,0 +1,64 @@
+{
+  "slug": "two-patches",
+  "title": "GTA 6 already has 2 updates before launch",
+  "yt_title": "GTA 6 already has 2 updates\u2026 before launch \ud83e\udd2f",
+  "description": "GTA 6 isn't out yet but already got two updates: 1.002.000 (Nov 13) and 1.002.001 (Nov 16), with no patch notes from Rockstar. Sizes are dataminer reports (unconfirmed). Rockstar recommends up to 212 GB free; the viral 676 GB figure is fake.",
+  "tiktok_caption": "GTA 6 already has 2 updates and it's not even out \ud83e\udd2f Did yours download? \ud83d\udc47",
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#GTA",
+    "#PS5",
+    "#Xbox"
+  ],
+  "lines": [
+    {
+      "fact": "F049",
+      "text": "GTA 6 isn't even out, and it already has two updates.",
+      "visual": "screenshots/People/Cal Hampton/Cal_Hampton_01.jpg",
+      "headline": "2 UPDATES ALREADY"
+    },
+    {
+      "fact": "F049",
+      "text": "The first dropped November 13th. The second, November 16th.",
+      "visual": "screenshots/Places/Port Gellhorn/Port_Gellhorn_03.jpg",
+      "headline": "NOV 13 + NOV 16"
+    },
+    {
+      "fact": "F049",
+      "text": "And Rockstar hasn't published any patch notes.",
+      "visual": "screenshots/People/Brian Heder/Brian_Heder_01.jpg",
+      "headline": "NO PATCH NOTES"
+    },
+    {
+      "fact": "F050",
+      "text": "The latest is reportedly about 600 megs on PS5, and 1.6 gigs on Xbox.",
+      "visual": "screenshots/Places/Vice City/Vice_City_19.jpg"
+    },
+    {
+      "fact": "F010",
+      "text": "That comes on top of the preload. Rockstar recommends up to 212 gigs free.",
+      "visual": "screenshots/Places/Grassrivers/Grassrivers_02.jpg",
+      "headline": "212 GB"
+    },
+    {
+      "fact": "F066",
+      "text": "That viral 676 gig install size? Fake.",
+      "visual": "screenshots/Places/Ambrosia/Ambrosia_02.jpg",
+      "badge": "FAKE SIZE"
+    },
+    {
+      "fact": "F001",
+      "text": "Launch is November 19th, on PS5 and Xbox Series.",
+      "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_05.jpg",
+      "focus": 0.6,
+      "headline": "NOV 19"
+    },
+    {
+      "fact": "CTA",
+      "text": "Update before launch night, so you're not stuck downloading. Follow for confirmed GTA 6 news.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_09.jpg",
+      "headline": "UPDATE NOW"
+    }
+  ]
+}
