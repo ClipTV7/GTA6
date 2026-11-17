@@ -106,9 +106,10 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#000;color:#fff;
 .slam{position:absolute;left:60px;right:60px;top:420px;font-weight:900;font-size:118px;line-height:1.02;letter-spacing:-3px;text-transform:uppercase}
 .slam.low{top:auto;bottom:440px}
 .slam span{display:inline-block;margin:0 26px 8px 0;-webkit-text-stroke:16px #000;paint-order:stroke fill;transform-origin:20% 80%}
-.slam span.em.on{background:#fff;color:#000;-webkit-text-stroke:0;padding:0 16px;border-radius:14px}
+.slam span.em.on{background:#fff;color:#000;-webkit-text-stroke:0;border-radius:8px;box-shadow:0 0 0 9px #fff}
 .card{display:flex;align-items:center;gap:18px;padding:18px 20px;border-radius:16px;background:rgba(255,255,255,.08);
   border:2px solid rgba(255,255,255,.12);margin-top:12px}
+.compact .card{padding:11px 18px;margin-top:9px}.compact .card .ct{font-size:36px}
 .card .ct{font-weight:800;font-size:42px;letter-spacing:-.5px;line-height:1.1}
 .card .cn{flex:none;font-weight:900;font-size:30px;width:56px;height:56px;border-radius:50%;border:3px solid rgba(255,255,255,.6);
   display:flex;align-items:center;justify-content:center}
@@ -239,7 +240,7 @@ B.slam=(sc,root)=>{const p=sc.scene;const box=el('div','slam',null,root);const e
   return lt=>{spans.forEach(o=>{const a=(sc.index===0&&o.t<.3)||o.lit?1:ap(lt,o.t-.08,.14);const on=a>0;
       o.s.style.opacity=on?1:.22;o.s.style.transform=`scale(${1+.35*(on?1-a:0)})`;o.s.style.filter=on&&a<1?`blur(${(1-a)*6}px)`:'none';
       o.s.classList.toggle('on',a>=1)})}};
-B.cards=(sc,root)=>{const p=sc.scene;const panel=el('div','panel',null,root);if(p.title)el('div','ptitle',p.title,panel);
+B.cards=(sc,root)=>{const p=sc.scene;const panel=el('div','panel'+(p.items.length>4?' compact':''),null,root);if(p.title)el('div','ptitle',p.title,panel);
   const rows=p.items.map((it,i)=>{const r=el('div','card',null,panel);if(it.n!=null)el('div','cn',String(it.n),r);
     if(it.ok!=null)el('div','ic '+(it.ok?'yes':'no'),it.ok?'✓':'✗',r);el('div','ct',it.t,r);
     let st=null,cls=null,lab=null;if(it.status){cls=it.status==='CONFIRMED'?'ok':it.status==='RUMOR'?'rumor':'fake';
@@ -271,14 +272,15 @@ const S=D.scenes.map((sc,i)=>{sc.index=i;const root=el('div','scene',null,stage)
     if(!sc.multi)el('div','chip '+cls,sc.badge||(sc.status==='CONFIRMED'?'✓ CONFIRMED':sc.status==='RUMOR'?'RUMOR':'FAKE CLAIM'),rec);
     if(sc.source)el('div','src',(sc.sources_label||'SOURCE: ')+sc.source,rec)}
   return {sc,root,upd,head,rec}});
-S.forEach(s=>{s.root.style.display='block';
+window.layout=()=>S.forEach(s=>{s.root.style.display='block';
   if(s.head){let fs=56;while(s.head.scrollWidth>980&&fs>36){fs-=2;s.head.style.fontSize=fs+'px'}}
   const pn=s.root.querySelector('.panel');const PT=D.theme==='news'?(s.head?490:420):430,PH=D.theme==='news'?(s.head?630:700):700;
   if(pn){const h=pn.offsetHeight;pn.style.top=(PT+Math.max(0,(PH-h)/2))+'px'}
   const sl=s.root.querySelector('.slam');if(sl){[...sl.children].forEach(c=>c.style.opacity=1);let fs=118;sl.style.fontSize=fs+'px';
     const mh=sl.classList.contains('low')?430:660;while(sl.scrollHeight>mh&&fs>60){fs-=6;sl.style.fontSize=fs+'px'}
-    if(sl.classList.contains('low')&&s.rec)s.rec.dataset.low='1'}
+    if(sl.classList.contains('low')&&s.rec){s.rec.dataset.low='1';s.rec.dataset.top=Math.round(1920-440-sl.offsetHeight-118)}}
   s.root.style.display='none'});
+window.layout();
 const caps=el('div',null,null,stage);caps.id='caps';
 el('div','small',D.ai_label,stage).style.top='206px';
 el('div','small',D.credit,stage).style.top='236px';
@@ -300,7 +302,7 @@ window.render=function(t){
     s.head.style.transform=`${news?'':'translateX(-50%) '}scale(${sc.index===0?1:1+.14*(1-ap(lt,0,.24))})`}
   if(s.rec)s.rec.style.opacity=sc.index===0?1:ap(lt,.35,.3);
   s.upd(lt);
-  const sp=sc.scene.type==='split';caps.style.top=sp?'660px':'1236px';if(s.rec)s.rec.style.top=sp?'574px':(s.rec.dataset.low?'960px':'1150px');
+  const sp=sc.scene.type==='split';caps.style.top=sp?'660px':'1236px';if(s.rec)s.rec.style.top=sp?'574px':(s.rec.dataset.low?s.rec.dataset.top+'px':'1150px');
   caps.style.display=sc.scene.type==='slam'?'none':'block';
   if(news){TG.firstChild.style.opacity=.35+.65*(.5+.5*Math.sin(t*7));PG.style.display='none'}
   // sous-titres

@@ -14,6 +14,7 @@ const fs = require('fs');
   await page.evaluate(async () => {
     await document.fonts.ready;
     await Promise.all([...document.images].map(i => i.decode().catch(() => {})));
+    if (window.layout) window.layout();  // mise en page recalculée avec les vraies polices
   });
   const cdp = await page.context().newCDPSession(page);
   const shot = async (q) => Buffer.from((await cdp.send('Page.captureScreenshot',

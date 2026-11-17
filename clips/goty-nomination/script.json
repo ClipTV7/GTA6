@@ -1,0 +1,168 @@
+{
+  "slug": "goty-nomination",
+  "format": "explainer",
+  "theme": "news",
+  "tag": "BREAKING",
+  "kicker": "THE GAME AWARDS \u00b7 NOV 17",
+  "title": "GTA 6 is up for Game of the Year before release",
+  "yt_title": "GTA 6 is up for Game of the Year\u2026 and it's not even out \ud83c\udfc6",
+  "description": "GTA 6 is nominated for Game of the Year at The Game Awards 2026, the first game nominated before its release. It leads every game with 8 nominations (the TGA record is still 12). Lucia's actress, Manni L. Perez, is up for Best Performance. Did The Game Awards move their deadline for GTA 6? False: the cutoff is set the same way every year. Winners are revealed December 10. Will it win?",
+  "tiktok_caption": "GTA 6 got a Game of the Year nomination before it's even out \ud83c\udfc6 Will it win? Comment yes or no \ud83d\udc47",
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#TheGameAwards",
+    "#GOTY",
+    "#GTA"
+  ],
+  "lines": [
+    {
+      "fact": [
+        "F073",
+        "F077"
+      ],
+      "text": "GTA 6 is up for Game of the Year. And it's not even out.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_01.jpg",
+      "focus": 0.3,
+      "dim": 0.12,
+      "scene": {
+        "type": "slam",
+        "pos": "low",
+        "em": [
+          "year",
+          "out"
+        ],
+        "lit": [
+          "not",
+          "even",
+          "out"
+        ]
+      }
+    },
+    {
+      "fact": [
+        "F074",
+        "F083"
+      ],
+      "text": "Five other games stand in its way, and fans get a say too.",
+      "visual": "screenshots/Places/Vice City/Vice_City_15.jpg",
+      "dim": 0.2,
+      "headline": "GAME OF THE YEAR",
+      "scene": {
+        "type": "cards",
+        "title": "The 6 nominees",
+        "items": [
+          {
+            "t": "007 First Light"
+          },
+          {
+            "t": "Control Resonant"
+          },
+          {
+            "t": "Grand Theft Auto VI",
+            "hl": true
+          },
+          {
+            "t": "Phantom Blade Zero"
+          },
+          {
+            "t": "Resident Evil Requiem"
+          },
+          {
+            "t": "The Legend of Zelda: Ocarina of Time"
+          }
+        ]
+      }
+    },
+    {
+      "fact": [
+        "F075",
+        "F078",
+        "F084"
+      ],
+      "text": "It leads every game with 8 nominations. The record is still 12.",
+      "visual": "screenshots/Places/Leonida Keys/Leonida_Keys_01.jpg",
+      "dim": 0.15,
+      "headline": "MOST NOMINATED",
+      "scene": {
+        "type": "stat",
+        "title": "The Game Awards 2026",
+        "value": 8,
+        "label": "nominations",
+        "sub": "Most this year \u00b7 record: 12 (2025)",
+        "word": "8"
+      },
+      "sticker": {
+        "name": "flamingo",
+        "x": 70,
+        "y": 930,
+        "w": 190,
+        "word": "nominations"
+      }
+    },
+    {
+      "fact": "F076",
+      "text": "Lucia's actress is nominated too, for Best Performance.",
+      "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_13.jpg",
+      "focus": 0.35,
+      "dim": 0.15,
+      "headline": "BEST PERFORMANCE",
+      "scene": {
+        "type": "cards",
+        "title": "Nominee",
+        "items": [
+          {
+            "t": "Manni L. Perez (Lucia)",
+            "status": "CONFIRMED",
+            "hl": true,
+            "word": "actress"
+          }
+        ]
+      }
+    },
+    {
+      "fact": [
+        "F082",
+        "F080",
+        "F081"
+      ],
+      "text": "Did they bend the rules for GTA 6? Not true. It's the same deadline every year.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_08.jpg",
+      "dim": 0.22,
+      "headline": "REAL OR NOT?",
+      "scene": {
+        "type": "cards",
+        "focus": "current",
+        "items": [
+          {
+            "t": "Deadline moved for GTA 6",
+            "status": "FALSE",
+            "word": "deadline",
+            "reveal_word": "not"
+          },
+          {
+            "t": "Same cutoff every year (Nov 20 this year)",
+            "status": "CONFIRMED",
+            "word": "same"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "F079",
+      "text": "Winners drop December 10th. Will GTA 6 win it? Comment yes or no.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_01.jpg",
+      "focus": 0.3,
+      "dim": 0.12,
+      "scene": {
+        "type": "slam",
+        "pos": "low",
+        "em": [
+          "win",
+          "yes",
+          "no"
+        ]
+      }
+    }
+  ]
+}
