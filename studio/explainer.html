@@ -282,7 +282,7 @@ window.layout=()=>S.forEach(s=>{s.root.style.display='block';
   s.root.style.display='none'});
 window.layout();
 const caps=el('div',null,null,stage);caps.id='caps';
-el('div','small',D.ai_label,stage).style.top='206px';
+el('div','small',D.ai_label||'',stage).style.top='206px';
 el('div','small',D.credit,stage).style.top='236px';
 const news=D.theme==='news';let TG=null,PG=null;
 if(news){document.body.classList.add('news');const tr=el('div',null,null,stage);tr.id='tagrow';

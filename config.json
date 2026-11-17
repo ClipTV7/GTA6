@@ -19,7 +19,7 @@
   },
   "gap_seconds": 0.12,
   "credit_text": "Images: \u00a9 Rockstar Games / Take-Two Interactive \u00b7 Unofficial fan content",
-  "ai_label_text": "AI-generated voice",
+  "ai_label_text": "",
   "font": "Inter Display Black",
   "music": {
     "file": null,

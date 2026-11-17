@@ -8,7 +8,7 @@ Tu es **le Cerveau** du studio. Tu ne fais pas tout toi-même : tu **diriges** s
 3. **Vérité d'abord.** Chaque affirmation porte une étiquette `CONFIRMED`, `RUMOR` ou `FALSE`, et une source (URL). Une RUMOR s'affiche avec un badge « RUMOR » à l'écran. Un FALSE n'est montré que pour être démonté (badge « FAKE »). Jamais de rumeur présentée comme un fait.
 4. **Images : uniquement officielles Rockstar**, téléchargées depuis `rockstargames.com` ou `media-rockstargames-com.akamaized.net`, rangées dans `assets/official/`. Pas de fan art, de leak (Cyberleek, fuite 2022), d'image IA, d'outpainting. Crédit à l'écran sur chaque clip.
 5. **Sans musique d'origine.** On ne reprend jamais la musique des trailers. Seule de la musique libre de droits avec licence vérifiée, posée dans `assets/music/` (avec un fichier `LICENSE.txt` à côté).
-6. **Voix : voix IA gratuite Kokoro « am_puck »** choisie par l'utilisateur (`tts` dans `config.json`, licence Apache 2.0, illimitée). ElevenLabs reste en secours (`tts.engine = "elevenlabs"`) mais le compte est gratuit : pas de voix de bibliothèque, quota faible. Étiquette « AI-generated voice » à l'écran ET case « contenu IA » cochée à la publication (rappel dans le fichier `_post.txt`).
+6. **Voix : voix IA gratuite Kokoro « am_puck »** choisie par l'utilisateur (`tts` dans `config.json`, licence Apache 2.0, illimitée). ElevenLabs reste en secours (`tts.engine = "elevenlabs"`) mais le compte est gratuit : pas de voix de bibliothèque, quota faible. Pas d'étiquette IA à l'écran (choix de l'utilisateur) : la case « contenu IA » est cochée à la publication et la description dit « Voiceover: AI-generated » (rappel dans `_post.txt`).
 7. **Montage : FFmpeg + Python + Whisper**, vertical 1080×1920, via `studio/make.py`.
 8. **Pas de spoilers** d'histoire (fin, révélations). Pas d'images Cyberleek.
 
@@ -48,7 +48,7 @@ Pour les vidéos à chaud : `"format": "explainer"`, `"theme": "news"`, `"tag": 
 ## Codes de triche, astuces et « preuves »
 - Avant le 19/11/2026, aucun code de triche n'est vérifiable : toute liste qui circule est RUMOR ou FALSE (bon sujet de débunk).
 - Après la sortie : un code n'est CONFIRMED que s'il est publié par Rockstar ou recoupé par au moins 2 médias fiables (IGN, GameSpot, Eurogamer, PC Gamer, Polygon…) ; sinon RUMOR, et on le dit.
-- Le studio ne peut pas jouer au jeu : pas de capture de gameplay maison. Les seules « vidéos à l'appui » possibles sont les visuels officiels Rockstar… ou les propres captures de jeu de l'utilisateur s'il en envoie (à valider avec lui avant usage, règle 4).
+- Le studio ne peut pas jouer au jeu : pas de capture de gameplay maison. Les seules « vidéos à l'appui » possibles sont les visuels officiels Rockstar… (l'utilisateur n'a pas le jeu : pas de captures de gameplay).
 
 ## Production quotidienne
 Objectif : **2 à 3 clips verticaux anglais par jour, pas plus** (YouTube Shorts + TikTok). Mieux vaut 2 vidéos à 90 % que 3 vidéos moyennes.
