@@ -114,6 +114,8 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#000;color:#fff;
 .card .st{flex:none;margin-left:auto;font-weight:900;font-size:22px;letter-spacing:1.5px;padding:9px 12px 8px;border-radius:8px}
 .st.ok{background:#fff;color:#000}.st.rumor{background:var(--rumor);color:#000}.st.fake{background:var(--fake);color:#fff}
 .st.q{background:rgba(255,255,255,.18);color:#fff;min-width:46px;text-align:center}
+.card.hl .st.q{background:#000;color:#fff}
+.st.fake.stamp{border:4px solid #fff;box-shadow:0 0 0 4px var(--fake),0 10px 30px rgba(0,0,0,.6);transform-origin:50% 50%;font-size:26px}
 .card.hl{background:#fff;color:#000;border-color:#fff}.card.hl .st.ok{background:#000;color:#fff}.card.hl .cn{border-color:#000}
 .card .ic{flex:none;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:34px}
 .ic.yes{background:#fff;color:#000}.ic.no{background:var(--fake);color:#fff}
@@ -167,7 +169,8 @@ B.list=(sc,root)=>{const p=sc.scene;const panel=el('div','panel',null,root);el('
   const cta=p.cta?el('div','cta',p.cta,panel):null;
   return lt=>{enter(panel,lt,sc);rows.forEach((r,i)=>{const a=sc.index===0?1:ap(lt,.12+i*.1,.28);r.style.opacity=a;
       r.style.transform=`translateX(${(1-a)*-40}px)`;
-      const on=p.active==='cycle'?(Math.floor(Math.max(0,lt-.6)/.55)%rows.length===i):p.active===i;r.classList.toggle('on',on)});
+      let on;if(p.active==='words'){let cur=-1;(p.item_words||[]).forEach((w,j)=>{if(lt>=wordAt(sc,w,9e9))cur=j});on=cur===i}
+      else on=p.active==='cycle'?(Math.floor(Math.max(0,lt-.6)/.55)%rows.length===i):p.active===i;r.classList.toggle('on',on)});
     if(cta){cta.style.opacity=ap(lt,.12,.28);cta.style.transform=`scale(${1+.035*Math.sin(lt*7)})`}}};
 B.split=(sc,root)=>{const p=sc.scene;const parts=['top','bottom'].map(k=>{const h=el('div','half '+(k==='top'?'top':'bot'),null,root);
     const im=el('img',null,null,h);im.src=p[k].img;const lab=el('div','hlabel',p[k].label,h);return {h,im,lab,t:wordAt(sc,p[k].word,k==='top'?.1:.3)}});
@@ -242,7 +245,9 @@ B.cards=(sc,root)=>{const p=sc.scene;const panel=el('div','panel',null,root);if(
     const t=it.pre?0:wordAt(sc,it.word,.1+i*.14);return {r,it,st,cls,lab,t,rt:it.reveal_word?wordAt(sc,it.reveal_word,null):t}});
   return lt=>{enter(panel,lt,sc);let cur=-1;rows.forEach((o,i)=>{if(lt>=o.t-.1)cur=i});
     rows.forEach((o,i)=>{const a=sc.index===0||o.it.pre?1:ap(lt,o.t-.12,.25);o.r.style.opacity=.5+.5*a;o.r.style.transform=`translateX(${(1-a)*-24}px)`;
-      if(o.st){const rv=o.it.pre||lt>=o.rt-.05;o.st.className='st '+(rv?o.cls:'q');o.st.textContent=rv?o.lab:'?'}
+      if(o.st){const rv=o.it.pre||lt>=o.rt-.05;o.st.className='st '+(rv?o.cls:'q')+(rv&&o.cls==='fake'&&!o.it.pre?' stamp':'');o.st.textContent=rv?o.lab:'?';
+        if(rv&&o.cls==='fake'&&!o.it.pre){const k=lt-o.rt+.05,a=eOut(k/.14),sh=k<.12?Math.sin(k*90)*6*(1-k/.12):0;
+          o.st.style.transform=`translateX(${sh}px) scale(${2.6-.8*a}) rotate(-8deg)`}else o.st.style.transform='none'}
       o.r.classList.toggle('hl',p.focus==='current'?i===cur:!!o.it.hl&&a>=1)})}};
 B.stat=(sc,root)=>{const p=sc.scene;const panel=el('div','panel stat',null,root);if(p.title)el('div','ptitle',p.title,panel);
   const num=el('div','num','',panel);const lab=el('div','lab',p.label||'',panel);const sub=p.sub?el('div','sub',p.sub,panel):null;

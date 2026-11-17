@@ -218,7 +218,7 @@ def make_voice(lines, cfg, work, test_voice):
                         tts_kokoro(part, cfg, pf)
                         a, sr = sf.read(pf)
                         os.remove(pf)
-                        chunks += [a, np.zeros(int(0.35 * sr))]
+                        chunks += [a, np.zeros(int(0.2 * sr))]
                     sf.write(tmp, np.concatenate(chunks[:-1]), sr)
                 else:
                     tts_kokoro(text, cfg, tmp)
@@ -257,6 +257,9 @@ def word_timings(wavs, lines, cfg, gap):
         nz = lambda x: re.sub(r"[^a-z0-9]", "", x.lower())
         heard_join = "".join(("6" if nz(w.word) == "vi" else nz(w.word)) for w in heard)
         missing = [w for w in script_words if nz(w) and nz(w).rstrip("s") not in heard_join]
+        heard_txt = "".join(w.word for w in heard)
+        if ln["text"].count("?") > heard_txt.count("?"):  # une question dite comme une affirmation
+            print(f"  [INTONATION ?] ligne {i + 1} : {ln['text'].count('?')} question(s) écrite(s), {heard_txt.count('?')} entendue(s) : « {heard_txt.strip()} »")
         if missing:  # contrôle automatique : un mot que Whisper n'entend pas est souvent mal prononcé
             print(f"  [VOIX ?] ligne {i + 1} : Whisper n'entend pas « {' '.join(missing)} » (entendu : {' '.join(w.word.strip() for w in heard)})")
         if heard and len(heard) == len(script_words):

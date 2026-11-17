@@ -3,7 +3,7 @@
   "format": "explainer",
   "theme": "news",
   "tag": "GTA 6 NEWS",
-  "kicker": "PS & XBOX STORES \u00b7 NOV 17",
+  "kicker": "PS & XBOX STORES \u00b7 AS OF NOV 17",
   "title": "GTA 6 pre-order record: what's real and what's not",
   "yt_title": "GTA 6 broke the PS & Xbox pre-order record\u2026 but how many? \ud83d\udcb0",
   "description": "But how many? Sony and Microsoft confirmed GTA 6 is the most pre-ordered game in PlayStation Store and Microsoft Store history, without numbers. Take-Two's CEO only says pre-orders are tracking far in excess of expectations. Sensor Tower's 12M+ is an estimate (rumor); 15M / $1.45B is unverified, with no primary source (rumor); 'Rockstar confirmed $1B' is false.",
@@ -20,7 +20,7 @@
       "fact": "F053",
       "text": "GTA 6 broke a pre-order record. But how many?",
       "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_02.jpg",
-      "focus": 0.5,
+      "focus": 0.39,
       "dim": 0.12,
       "scene": {
         "type": "slam",
@@ -79,7 +79,7 @@
         "F055",
         "F056"
       ],
-      "text": "Bigger numbers online? Not verified. A billion confirmed by Rockstar? Never happened.",
+      "text": "Bigger numbers online? Not verified. Did Rockstar confirm a billion? Never.",
       "visual": "screenshots/Places/Vice City/Vice_City_08.jpg",
       "visuals": [
         "screenshots/Places/Vice City/Vice_City_12.jpg"
@@ -104,10 +104,9 @@
             "pre": true
           },
           {
-            "t": "15M / $1.45B (not verified)",
+            "t": "15M / $1.45B (unverified)",
             "status": "RUMOR",
-            "word": "bigger",
-            "reveal_word": "not"
+            "word": "bigger"
           },
           {
             "t": "$1B confirmed by Rockstar",
@@ -120,27 +119,22 @@
     },
     {
       "fact": "CTA",
-      "text": "Did you pre-order? Comment yes or not yet.",
+      "text": "So, how many? Comment your guess.",
       "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_02.jpg",
-      "focus": 0.5,
-      "dim": 0.15,
-      "headline": "YOUR TURN",
+      "focus": 0.39,
+      "dim": 0.12,
       "scene": {
-        "type": "list",
-        "title": "Did you pre-order?",
-        "items": [
-          "Yes",
-          "Not yet"
-        ],
-        "letters": false,
-        "active": "cycle",
-        "cta": "COMMENT BELOW \u2193"
+        "type": "slam",
+        "em": [
+          "many",
+          "guess"
+        ]
       },
       "sticker": {
         "name": "sun",
-        "x": 800,
-        "y": 300,
-        "w": 170
+        "x": 620,
+        "y": 1215,
+        "w": 300
       }
     }
   ]

@@ -83,6 +83,11 @@ def main():
     for i, ln in enumerate(lines, 1):
         if (ln.get("scene") or {}).get("type") not in TYPES:
             make.die(f"ligne {i} : scene.type doit être parmi {sorted(TYPES)}")
+        for it in (ln["scene"].get("items") or []) if ln["scene"].get("type") == "cards" else []:
+            if it.get("reveal_word") and it.get("status") != "FALSE":
+                make.die(f"ligne {i} : reveal_word n'est autorisé que sur une carte FALSE ({it['t']})")
+            if it.get("status") == "FALSE" and re.search(r"\b(fake|false|never|not true|hoax)\b", it["t"], re.I):
+                make.die(f"ligne {i} : le libellé de la carte FAKE donne déjà la réponse ({it['t']})")
     if a.check:
         return
     work = os.path.join(clip_dir, "build")
@@ -94,6 +99,13 @@ def main():
 
     print(f"[1/5] voix ({cfg['_engine']})")
     wavs = make.make_voice(lines, cfg, work, a.test_voice)
+    for i, ln in enumerate(lines):  # le tampon FAKE reste au moins 1,2 s à l'écran : silence ajouté après la ligne
+        hold = ln.get("hold")
+        if hold is None and any(it.get("status") == "FALSE" and it.get("reveal_word") for it in (ln["scene"].get("items") or [])):
+            hold = 1.0
+        if hold:
+            make.run(["ffmpeg", "-y", "-v", "error", "-i", wavs[i], "-af", f"apad=pad_dur={hold}", wavs[i] + ".tmp.wav"])
+            os.replace(wavs[i] + ".tmp.wav", wavs[i])
     if script.get("theme") == "news":  # 0,12 s d'avance : l'impact sonore tombe avant le premier mot
         make.run(["ffmpeg", "-y", "-v", "error", "-i", wavs[0], "-af", "adelay=120", wavs[0] + ".tmp.wav"])
         os.replace(wavs[0] + ".tmp.wav", wavs[0])
@@ -132,7 +144,7 @@ def main():
             if at is None:
                 at = d * (j + 1) / (len(extra) + 1)
             bgs.append({"src": f, "at": max(0.3, at - 0.05)})
-            sfx_events.append(("whoosh", s + max(0.3, at - 0.05) - 0.12, 0.35))
+            sfx_events.append(("whoosh", s + max(0.3, at - 0.05) - 0.15, 0.7))
         srcs = ln.get("sources") or [ln.get("source", "")]
         hosts = list(dict.fromkeys((urlparse(u).hostname or "").replace("www.", "") for u in srcs if u.startswith("http")))
         scenes.append({
@@ -144,7 +156,7 @@ def main():
             "dim": float(ln.get("dim", 0.24)), "words": lw})
         # bruitages + mascottes (thème news)
         if i > 0:
-            sfx_events.append(("whoosh", s - 0.1, 0.5))
+            sfx_events.append(("whoosh", s - 0.22, 1.0))
         if sc["type"] == "slam":
             ems = {re.sub(r"[^a-z0-9]", "", e.lower()) for e in sc.get("em", [])}
             sfx_events.append(("impact", max(0.0, s + (lw[0]["s"] - s if i else 0.0) - 0.1), 1.2))
