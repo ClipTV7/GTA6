@@ -18,7 +18,7 @@ Critères : accroche des 2 premières secondes, rythme, lisibilité, vérité (R
 
 ÉTAPE 3 – Président : accords, désaccords, angles morts, puis :
 - SCORE D'APPRÉCIATION : XX % (l'accroche compte double)
-- VERDICT : PUBLIER (≥ 75 % et aucune règle violée) / CORRIGER PUIS PUBLIER (60-74 %) / NE PAS PUBLIER (< 60 % ou règle violée)
+- VERDICT : PUBLIER (≥ 85 % et aucune règle violée ; objectif 90 %) / CORRIGER PUIS REPASSER (75-84 %) / NE PAS PUBLIER (< 75 % ou règle violée)
 - La seule correction à faire en premier.
 Si une image est sexualisée, choquante ou hors sujet, ajoute son chemin dans ta réponse pour que le Cerveau l'inscrive dans `assets/official/AVOID.txt`.
 Sois dur et honnête. Écris tout dans `out/<slug>_council.md` et renvoie au Cerveau uniquement : score, verdict, 1 phrase de justification, correction n°1.
