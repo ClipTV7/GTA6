@@ -102,8 +102,9 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#000;color:#fff;
 .tagk{font-weight:900;font-size:30px;letter-spacing:2px;padding:11px 16px 10px;border-radius:10px;border:3px solid #fff;color:#fff;
   background:rgba(0,0,0,.45)}
 #prog{position:absolute;left:0;top:0;height:10px;background:#fff;width:0;z-index:6}
-.news .headline{left:60px;top:376px;transform-origin:0 50%;font-size:50px}
-.slam{position:absolute;left:60px;right:60px;top:400px;font-weight:900;font-size:118px;line-height:1.02;letter-spacing:-3px;text-transform:uppercase}
+.news .headline{left:60px;top:396px;transform-origin:0 50%;font-size:50px}
+.slam{position:absolute;left:60px;right:60px;top:420px;font-weight:900;font-size:118px;line-height:1.02;letter-spacing:-3px;text-transform:uppercase}
+.slam.low{top:auto;bottom:440px}
 .slam span{display:inline-block;margin:0 26px 8px 0;-webkit-text-stroke:16px #000;paint-order:stroke fill;transform-origin:20% 80%}
 .slam span.em.on{background:#fff;color:#000;-webkit-text-stroke:0;padding:0 16px;border-radius:14px}
 .card{display:flex;align-items:center;gap:18px;padding:18px 20px;border-radius:16px;background:rgba(255,255,255,.08);
@@ -232,7 +233,7 @@ B.date=(sc,root)=>{const p=sc.scene;const panel=el('div','panel',null,root);el('
   return lt=>{enter(panel,lt,sc);const a=ap(lt,.2,.35);cal.style.transform=`scale(${.85+.15*a}) rotate(${(1-a)*-6}deg)`;cal.style.opacity=a;
     chips.forEach(c=>{const b=ap(lt,c.t-.05,.25);c.e.style.opacity=b;c.e.style.transform=`translateY(${(1-b)*20}px)`;c.e.classList.toggle('on',b>.99)})}};
 B.slam=(sc,root)=>{const p=sc.scene;const box=el('div','slam',null,root);const em=(p.em||[]).map(norm);
-  const spans=sc.words.map(w=>{const o={s:el('span',em.includes(norm(w.w))?'em':null,w.w.replace(/[,;:]+$/,''),box),t:w.s-sc.start};
+  if(p.pos==='low')box.classList.add('low');const spans=sc.words.map(w=>{const o={s:el('span',em.includes(norm(w.w))?'em':null,w.w.replace(/[;:]+$/,''),box),t:w.s-sc.start};
     if(/[.!?]$/.test(w.w))el('br',null,null,box);return o});
   return lt=>{spans.forEach(o=>{const a=sc.index===0&&o.t<.3?1:ap(lt,o.t-.08,.14);const on=a>0;
       o.s.style.opacity=on?1:.22;o.s.style.transform=`scale(${1+.35*(on?1-a:0)})`;o.s.style.filter=on&&a<1?`blur(${(1-a)*6}px)`:'none';
@@ -271,17 +272,19 @@ const S=D.scenes.map((sc,i)=>{sc.index=i;const root=el('div','scene',null,stage)
   return {sc,root,upd,head,rec}});
 S.forEach(s=>{s.root.style.display='block';
   if(s.head){let fs=56;while(s.head.scrollWidth>980&&fs>36){fs-=2;s.head.style.fontSize=fs+'px'}}
-  const pn=s.root.querySelector('.panel');const PT=D.theme==='news'?(s.head?470:400):430,PH=D.theme==='news'?(s.head?650:720):700;
+  const pn=s.root.querySelector('.panel');const PT=D.theme==='news'?(s.head?490:420):430,PH=D.theme==='news'?(s.head?630:700):700;
   if(pn){const h=pn.offsetHeight;pn.style.top=(PT+Math.max(0,(PH-h)/2))+'px'}
   const sl=s.root.querySelector('.slam');if(sl){[...sl.children].forEach(c=>c.style.opacity=1);let fs=118;sl.style.fontSize=fs+'px';
-    while(sl.scrollHeight>660&&fs>60){fs-=6;sl.style.fontSize=fs+'px'}}
+    const mh=sl.classList.contains('low')?430:660;while(sl.scrollHeight>mh&&fs>60){fs-=6;sl.style.fontSize=fs+'px'}
+    if(sl.classList.contains('low')&&s.rec)s.rec.dataset.low='1'}
   s.root.style.display='none'});
 const caps=el('div',null,null,stage);caps.id='caps';
 el('div','small',D.ai_label,stage).style.top='206px';
 el('div','small',D.credit,stage).style.top='236px';
 const news=D.theme==='news';let TG=null,PG=null;
 if(news){document.body.classList.add('news');const tr=el('div',null,null,stage);tr.id='tagrow';
-  TG=el('div','tagb','<span class="dot"></span>'+D.tag,tr);if(D.kicker)el('div','tagk',D.kicker,tr);PG=el('div',null,null,stage);PG.id='prog'}
+  TG=el('div','tagb','<span class="dot"></span>'+D.tag,tr);if(D.kicker)el('div','tagk',D.kicker,tr);PG=el('div',null,null,stage);PG.id='prog';
+  const sm=[...stage.querySelectorAll('.small')];sm[0].style.top='252px';sm[1].style.top='280px';tr.style.top='318px'}
 let lastChunk=-1;
 window.render=function(t){
   let cur=0;D.scenes.forEach((sc,i)=>{if(t>=sc.start-1e-6)cur=i});
@@ -296,7 +299,7 @@ window.render=function(t){
     s.head.style.transform=`${news?'':'translateX(-50%) '}scale(${sc.index===0?1:1+.14*(1-ap(lt,0,.24))})`}
   if(s.rec)s.rec.style.opacity=sc.index===0?1:ap(lt,.35,.3);
   s.upd(lt);
-  const sp=sc.scene.type==='split';caps.style.top=sp?'660px':'1236px';if(s.rec)s.rec.style.top=sp?'574px':'1150px';
+  const sp=sc.scene.type==='split';caps.style.top=sp?'660px':'1236px';if(s.rec)s.rec.style.top=sp?'574px':(s.rec.dataset.low?'960px':'1150px');
   caps.style.display=sc.scene.type==='slam'?'none':'block';
   if(news){TG.firstChild.style.opacity=.35+.65*(.5+.5*Math.sin(t*7));PG.style.display='none'}
   // sous-titres

@@ -12,6 +12,7 @@ from urllib.parse import urlparse
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import make  # noqa: E402
+FACTS = {}
 from PIL import Image  # noqa: E402
 
 ROOT, OFFICIAL, HERE = make.ROOT, make.OFFICIAL, os.path.dirname(os.path.abspath(__file__))
@@ -80,6 +81,8 @@ def main():
     slug, lines = script["slug"], script["lines"]
     make.check(script, cfg, a.test_voice)
     avoid = avoid_set()
+    global FACTS
+    FACTS = make.load_facts()
     for i, ln in enumerate(lines, 1):
         if (ln.get("scene") or {}).get("type") not in TYPES:
             make.die(f"ligne {i} : scene.type doit être parmi {sorted(TYPES)}")
@@ -102,7 +105,9 @@ def main():
     for i, ln in enumerate(lines):  # le tampon FAKE reste au moins 1,2 s à l'écran : silence ajouté après la ligne
         hold = ln.get("hold")
         if hold is None and any(it.get("status") == "FALSE" and it.get("reveal_word") for it in (ln["scene"].get("items") or [])):
-            hold = 1.0
+            hold = 0.45
+            if i + 1 < len(lines):
+                lines[i + 1].setdefault("jcut", 0.3)
         if hold:
             make.run(["ffmpeg", "-y", "-v", "error", "-i", wavs[i], "-af", f"apad=pad_dur={hold}", wavs[i] + ".tmp.wav"])
             os.replace(wavs[i] + ".tmp.wav", wavs[i])
@@ -144,7 +149,7 @@ def main():
             if at is None:
                 at = d * (j + 1) / (len(extra) + 1)
             bgs.append({"src": f, "at": max(0.3, at - 0.05)})
-            sfx_events.append(("whoosh", s + max(0.3, at - 0.05) - 0.15, 0.7))
+            pass  # coupe d'image : pas de whoosh (il masquait des mots)
         srcs = ln.get("sources") or [ln.get("source", "")]
         hosts = list(dict.fromkeys((urlparse(u).hostname or "").replace("www.", "") for u in srcs if u.startswith("http")))
         scenes.append({
@@ -152,11 +157,11 @@ def main():
             "status": None if ln.get("fact") == "CTA" else ln["status"], "badge": ln.get("badge"),
             "receipt": ln.get("receipt", True),
             "source": (" · ".join(hosts[:2]) + (f" +{len(hosts) - 2}" if len(hosts) > 2 else "")) if hosts else None,
-            "sources_label": "SOURCES: " if len(hosts) > 1 else "SOURCE: ", "multi": isinstance(ln.get("fact"), list),
+            "sources_label": "SOURCES: " if len(hosts) > 1 else "SOURCE: ",
+            "multi": isinstance(ln.get("fact"), list) and len({FACTS[f]["status"] for f in ln["fact"]}) > 1,
             "dim": float(ln.get("dim", 0.24)), "words": lw})
         # bruitages + mascottes (thème news)
-        if i > 0:
-            sfx_events.append(("whoosh", s - 0.22, 1.0))
+        # pas de whoosh entre les scènes : la voix enchaîne trop vite (contrôle Whisper du mix final)
         if sc["type"] == "slam":
             ems = {re.sub(r"[^a-z0-9]", "", e.lower()) for e in sc.get("em", [])}
             sfx_events.append(("impact", max(0.0, s + (lw[0]["s"] - s if i else 0.0) - 0.1), 1.2))
@@ -179,6 +184,12 @@ def main():
             t0 = next((w["s"] for w in lw if k and re.sub(r"[^a-z0-9]", "", w["w"].lower()).startswith(k)), s + 0.15)
             stickers.append({"file": os.path.join(OFFICIAL, "loops", MASCOTS[st["name"]]), "x": st.get("x", 60),
                              "y": st.get("y", 1300), "w": st.get("w", 300), "start": t0, "end": s + d})
+    for i, ln in enumerate(lines):
+        j = float(ln.get("jcut") or 0)
+        if i and j:
+            scenes[i]["start"] += j
+            scenes[i]["dur"] -= j
+            scenes[i - 1]["dur"] += j
     total = segs[-1][0] + segs[-1][1]
     data = {"scenes": scenes, "chunks": chunks_from(words), "total": total,
             "ai_label": cfg["ai_label_text"], "credit": cfg["credit_text"],
@@ -239,6 +250,16 @@ def main():
         make.run(cmd)
         os.replace(os.path.join(work, "voice_sfx.wav"), os.path.join(work, "voice.wav"))
 
+    if script.get("theme") == "news":  # le mix final (voix + bruitages) doit encore dire chaque mot du script
+        from faster_whisper import WhisperModel
+        import numpy as np
+        pcm = subprocess.run(["ffmpeg", "-v", "error", "-i", os.path.join(work, "voice.wav"), "-f", "s16le", "-ac", "1", "-ar", "16000", "-"],
+                             capture_output=True, check=True).stdout
+        res, _ = WhisperModel(cfg["whisper_model"], device="cpu", compute_type="int8").transcribe(
+            np.frombuffer(pcm, np.int16).astype(np.float32) / 32768.0, language="en")
+        heard = "".join(re.sub(r"[^a-z0-9]", "", s_.text.lower().replace(" vi ", " 6 ")) for s_ in res)
+        miss = [w for ln in lines for w in ln["text"].split() if re.sub(r"[^a-z0-9]", "", w.lower()).rstrip("s") not in heard]
+        print("  [MIX OK] Whisper entend tout le script dans le mix final" if not miss else f"  [MIX ?] mots masqués dans le mix : {' '.join(miss)}")
     print("[5/5] assemblage + mixage")
     os.makedirs(os.path.join(ROOT, "out"), exist_ok=True)
     out = os.path.join(ROOT, "out", f"{slug}.mp4")

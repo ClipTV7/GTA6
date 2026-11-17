@@ -258,8 +258,11 @@ def word_timings(wavs, lines, cfg, gap):
         heard_join = "".join(("6" if nz(w.word) == "vi" else nz(w.word)) for w in heard)
         missing = [w for w in script_words if nz(w) and nz(w).rstrip("s") not in heard_join]
         heard_txt = "".join(w.word for w in heard)
-        if ln["text"].count("?") > heard_txt.count("?"):  # une question dite comme une affirmation
-            print(f"  [INTONATION ?] ligne {i + 1} : {ln['text'].count('?')} question(s) écrite(s), {heard_txt.count('?')} entendue(s) : « {heard_txt.strip()} »")
+        hq = [(nz(w.word), w.word.strip().endswith("?")) for w in heard]
+        for sw in [w for w in script_words if w.endswith("?")]:  # chaque question doit être entendue comme une question
+            k = nz(sw)
+            if not any(h == k and q for h, q in hq):
+                print(f"  [INTONATION ?] ligne {i + 1} : « {sw} » n'est pas entendu comme une question : « {heard_txt.strip()} »")
         if missing:  # contrôle automatique : un mot que Whisper n'entend pas est souvent mal prononcé
             print(f"  [VOIX ?] ligne {i + 1} : Whisper n'entend pas « {' '.join(missing)} » (entendu : {' '.join(w.word.strip() for w in heard)})")
         if heard and len(heard) == len(script_words):

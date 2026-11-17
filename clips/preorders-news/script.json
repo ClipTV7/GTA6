@@ -27,14 +27,8 @@
         "em": [
           "record",
           "many"
-        ]
-      },
-      "sticker": {
-        "name": "crab",
-        "x": 560,
-        "y": 1205,
-        "w": 320,
-        "word": "broke"
+        ],
+        "pos": "low"
       }
     },
     {
@@ -70,6 +64,12 @@
         "label": "digital pre-orders",
         "sub": "Estimate through Nov 13",
         "word": "12"
+      },
+      "sticker": {
+        "name": "crab",
+        "x": 70,
+        "y": 950,
+        "w": 210
       }
     },
     {
@@ -79,7 +79,7 @@
         "F055",
         "F056"
       ],
-      "text": "Bigger numbers online? Not verified. Did Rockstar confirm a billion? Never.",
+      "text": "Did you see bigger numbers? Not verified. Did Rockstar confirm a billion? Never.",
       "visual": "screenshots/Places/Vice City/Vice_City_08.jpg",
       "visuals": [
         "screenshots/Places/Vice City/Vice_City_12.jpg"
@@ -128,13 +128,8 @@
         "em": [
           "many",
           "guess"
-        ]
-      },
-      "sticker": {
-        "name": "sun",
-        "x": 620,
-        "y": 1215,
-        "w": 300
+        ],
+        "pos": "low"
       }
     }
   ]
