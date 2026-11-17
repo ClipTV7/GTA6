@@ -32,6 +32,13 @@ Tu es **le Cerveau** du studio. Tu ne fais pas tout toi-même : tu **diriges** s
 
 Agents en parallèle quand c'est possible (veilleur + eplucheur + iconographe ensemble). Le Cerveau ne transmet aux agents que le brief utile, pas tout l'historique.
 
+## Format EXPLAINED (vulgarisation visuelle)
+L'info est expliquée À L'IMAGE par des schémas animés posés sur les visuels officiels Rockstar, avec à chaque scène le statut (CONFIRMED / RUMOR / FAKE CLAIM) et la source.
+- Rendu : `python3 studio/explain.py clips/<slug>` (`--stills 0,2,5` pour des captures de contrôle). Moteur : `studio/explainer.html` (Playwright image par image) + même voix, Whisper et garde-fous que `make.py`.
+- Chaque ligne du `script.json` a un `"scene"` : `meter` (jauge entre deux extrêmes), `list` (sommaire / sondage), `split` (deux persos ou deux choses face à face), `branch` (choix → conséquence), `route` (A → B), `bars` (comparaison de tailles/valeurs), `grid` (tuiles d'images officielles), `date` (calendrier + plateformes). Les animations se calent sur les mots (`*_word`).
+- Exemple complet : `clips/systems-explained/script.json`.
+- Règles en plus : un schéma ne montre QUE ce que dit le fait (pas de niveaux ou de chiffres inventés), titres courts, 30-37 s, la fin renvoie à l'accroche.
+
 ## Production quotidienne
 Objectif : **2 à 3 clips verticaux anglais par jour** pour YouTube Shorts et TikTok (`daily_target` dans `config.json`).
 Chaque matin :
@@ -46,6 +53,7 @@ L'utilisateur publie lui-même et coche l'étiquette IA.
 ```bash
 bash studio/setup.sh                             # à lancer en début de session
 python3 studio/make.py clips/<slug>              # rendu complet (voix ElevenLabs)
+python3 studio/explain.py clips/<slug>           # rendu format EXPLAINED (schémas animés)
 python3 studio/make.py clips/<slug> --test-voice # rendu de test avec voix robot locale (gratuit)
 python3 studio/make.py clips/<slug> --check      # vérifie seulement les règles
 python3 studio/fetch_assets.py                   # (re)télécharge les visuels officiels

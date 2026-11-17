@@ -33,3 +33,6 @@ Règles :
   - `description` : 2-3 phrases factuelles pour YouTube, les rumeurs dites comme telles.
   - `tiktok_caption` : 1 phrase choc + 1 question pour les commentaires, emoji OK (hashtags ajoutés automatiquement).
 Vérifie avec `python3 studio/make.py clips/<slug> --check` avant de rendre la main.
+
+## Format EXPLAINED
+Si le Cerveau demande le format EXPLAINED, ajoute à chaque ligne un `"scene"` (types : meter, list, split, branch, route, bars, grid, date ; voir `clips/systems-explained/script.json` et `studio/explainer.html`) et ajoute `"format": "explainer"`. Le schéma doit expliquer l'info de la ligne, sans rien ajouter que le fait ne dit pas. Rendu : `python3 studio/explain.py clips/<slug>`.
