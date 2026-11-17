@@ -93,6 +93,39 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#000;color:#fff;
 .chips{display:flex;gap:16px;justify-content:center;margin-top:34px}
 .pchip{font-weight:900;font-size:36px;padding:14px 22px 12px;border-radius:12px;border:3px solid #fff}
 .pchip.on{background:#fff;color:#000}
+
+/* ===== thème NEWS (actu chaude) ===== */
+#tagrow{position:absolute;left:60px;top:290px;display:flex;gap:12px;align-items:center;z-index:5}
+.tagb{display:flex;align-items:center;gap:12px;background:#E53935;color:#fff;font-weight:900;font-size:34px;letter-spacing:2px;
+  padding:12px 18px 11px;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.45)}
+.tagb .dot{width:16px;height:16px;border-radius:50%;background:#fff}
+.tagk{font-weight:900;font-size:30px;letter-spacing:2px;padding:11px 16px 10px;border-radius:10px;border:3px solid #fff;color:#fff;
+  background:rgba(0,0,0,.45)}
+#prog{position:absolute;left:0;top:0;height:10px;background:#fff;width:0;z-index:6}
+.news .headline{left:60px;top:376px;transform-origin:0 50%;font-size:50px}
+.slam{position:absolute;left:60px;right:60px;top:400px;font-weight:900;font-size:118px;line-height:1.02;letter-spacing:-3px;text-transform:uppercase}
+.slam span{display:inline-block;margin:0 26px 8px 0;-webkit-text-stroke:16px #000;paint-order:stroke fill;transform-origin:20% 80%}
+.slam span.em.on{background:#fff;color:#000;-webkit-text-stroke:0;padding:0 16px;border-radius:14px}
+.card{display:flex;align-items:center;gap:18px;padding:18px 20px;border-radius:16px;background:rgba(255,255,255,.08);
+  border:2px solid rgba(255,255,255,.12);margin-top:12px}
+.card .ct{font-weight:800;font-size:42px;letter-spacing:-.5px;line-height:1.1}
+.card .cn{flex:none;font-weight:900;font-size:30px;width:56px;height:56px;border-radius:50%;border:3px solid rgba(255,255,255,.6);
+  display:flex;align-items:center;justify-content:center}
+.card .st{flex:none;margin-left:auto;font-weight:900;font-size:22px;letter-spacing:1.5px;padding:9px 12px 8px;border-radius:8px}
+.st.ok{background:#fff;color:#000}.st.rumor{background:var(--rumor);color:#000}.st.fake{background:var(--fake);color:#fff}
+.card.hl{background:#fff;color:#000;border-color:#fff}.card.hl .st.ok{background:#000;color:#fff}.card.hl .cn{border-color:#000}
+.card .ic{flex:none;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:34px}
+.ic.yes{background:#fff;color:#000}.ic.no{background:var(--fake);color:#fff}
+.stat{text-align:center}
+.stat .num{font-weight:900;font-size:210px;line-height:.95;letter-spacing:-8px;margin-top:10px}
+.stat .lab{font-weight:900;font-size:46px;margin-top:6px}
+.stat .sub{font-weight:700;font-size:32px;color:var(--dim);margin-top:10px}
+.quote .q{font-weight:900;font-size:58px;line-height:1.12;letter-spacing:-1px;margin-top:18px}
+.quote .q b{background:#fff;color:#000;padding:0 10px;border-radius:8px}
+.quote .who{font-weight:800;font-size:32px;color:var(--dim);margin-top:24px}
+.pchipx{position:absolute;left:60px;top:1080px;font-weight:900;font-size:34px;letter-spacing:2px;padding:12px 18px 11px;border-radius:10px;background:#fff;color:#000}
+.bgwrap{position:absolute;inset:0;opacity:0}
+.bgwrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform-origin:50% 45%}
 </style></head>
 <body><div id="stage"></div>
 <script>
@@ -109,7 +142,9 @@ function wordAt(sc,key,fb){ // temps local du 1er mot qui commence par key
 function enter(node,lt,sc,delay=0){ // entrée du panneau (déjà visible sur la 1re image du clip)
   const a=sc.index===0?1:ap(lt,delay,.3);node.style.opacity=a;node.style.transform=`translateY(${(1-a)*36}px)`}
 const stage=document.getElementById('stage');
-const bgs=D.scenes.map(sc=>{const b=el('div','bg',null,stage);const im=el('img',null,null,b);im.src=sc.bg;return {b,im}});
+const BG=[];D.scenes.forEach((sc,i)=>{(sc.bgs&&sc.bgs.length?sc.bgs:[{src:sc.bg,at:0}]).forEach((g,j,arr)=>{
+  const b=el('div','bgwrap',null,stage);const im=el('img',null,null,b);im.src=g.src;
+  BG.push({b,im,scene:i,start:sc.start+g.at,end:j+1<arr.length?sc.start+arr[j+1].at:sc.start+sc.dur})})});
 const dim=el('div',null,null,stage);dim.id='dim';
 const shade=el('div',null,null,stage);shade.id='shade';
 const B={};
@@ -192,34 +227,70 @@ B.date=(sc,root)=>{const p=sc.scene;const panel=el('div','panel',null,root);el('
   const row=el('div','chips',null,panel);const chips=p.chips.map((c,i)=>({e:el('div','pchip',c.t,row),t:wordAt(sc,c.word,.5+i*.15)}));
   return lt=>{enter(panel,lt,sc);const a=ap(lt,.2,.35);cal.style.transform=`scale(${.85+.15*a}) rotate(${(1-a)*-6}deg)`;cal.style.opacity=a;
     chips.forEach(c=>{const b=ap(lt,c.t-.05,.25);c.e.style.opacity=b;c.e.style.transform=`translateY(${(1-b)*20}px)`;c.e.classList.toggle('on',b>.99)})}};
+B.slam=(sc,root)=>{const p=sc.scene;const box=el('div','slam',null,root);const em=(p.em||[]).map(norm);
+  const spans=sc.words.map(w=>({s:el('span',em.includes(norm(w.w))?'em':null,w.w.replace(/[,.:;!?]+$/,''),box),t:w.s-sc.start}));
+  return lt=>{spans.forEach(o=>{const a=sc.index===0&&o.t<.3?1:ap(lt,o.t-.08,.14);const on=a>0;
+      o.s.style.opacity=on?1:.22;o.s.style.transform=`scale(${1+.35*(on?1-a:0)})`;o.s.style.filter=on&&a<1?`blur(${(1-a)*6}px)`:'none';
+      o.s.classList.toggle('on',a>=1)})}};
+B.cards=(sc,root)=>{const p=sc.scene;const panel=el('div','panel',null,root);if(p.title)el('div','ptitle',p.title,panel);
+  const rows=p.items.map((it,i)=>{const r=el('div','card',null,panel);if(it.n!=null)el('div','cn',String(it.n),r);
+    if(it.ok!=null)el('div','ic '+(it.ok?'yes':'no'),it.ok?'✓':'✗',r);el('div','ct',it.t,r);
+    if(it.status){const c=it.status==='CONFIRMED'?'ok':it.status==='RUMOR'?'rumor':'fake';
+      el('div','st '+c,it.label||(it.status==='CONFIRMED'?'✓ CONFIRMED':it.status==='RUMOR'?'RUMOR':'FAKE'),r)}
+    return {r,it,t:wordAt(sc,it.word,.1+i*.14)}});
+  return lt=>{enter(panel,lt,sc);let cur=-1;rows.forEach((o,i)=>{if(lt>=o.t-.1)cur=i});
+    rows.forEach((o,i)=>{const a=sc.index===0?1:ap(lt,o.t-.12,.25);o.r.style.opacity=.25+.75*a;o.r.style.transform=`translateX(${(1-a)*-40}px)`;
+      o.r.classList.toggle('hl',p.focus==='current'?i===cur:!!o.it.hl&&a>=1)})}};
+B.stat=(sc,root)=>{const p=sc.scene;const panel=el('div','panel stat',null,root);if(p.title)el('div','ptitle',p.title,panel);
+  const num=el('div','num','',panel);const lab=el('div','lab',p.label||'',panel);const sub=p.sub?el('div','sub',p.sub,panel):null;
+  const t0=wordAt(sc,p.word,.12);
+  const tc=Math.min(t0,.25);return lt=>{enter(panel,lt,sc);const a=sc.index===0?1:eOut((lt-tc)/.7);const v=p.value*a;
+    num.textContent=(p.prefix||'')+(p.decimals?v.toFixed(p.decimals):Math.round(v).toLocaleString('en-US'))+(p.suffix||'');
+    lab.style.opacity=ap(lt,t0+.2,.3);if(sub)sub.style.opacity=ap(lt,t0+.5,.3)}};
+B.quote=(sc,root)=>{const p=sc.scene;const panel=el('div','panel quote',null,root);if(p.title)el('div','ptitle',p.title,panel);
+  const q=el('div','q','“'+p.text+'”',panel);const who=el('div','who','— '+p.who,panel);const t0=wordAt(sc,p.word,.15);
+  return lt=>{enter(panel,lt,sc);q.style.opacity=ap(lt,.1,.3);who.style.opacity=ap(lt,t0,.3)}};
+B.photo=(sc,root)=>{const p=sc.scene;const c=p.chip?el('div','pchipx',p.chip,root):null;
+  return lt=>{if(c){const a=ap(lt,.15,.25);c.style.opacity=a;c.style.transform=`translateX(${(1-a)*-30}px)`}}};
 /* ---------- scènes ---------- */
 const S=D.scenes.map((sc,i)=>{sc.index=i;const root=el('div','scene',null,stage);
   const upd=B[sc.scene.type](sc,root);
   let head=null;if(sc.headline){head=el('div','headline',sc.headline,root)}
-  let rec=null;if(sc.status){rec=el('div','receipt',null,root);
+  let rec=null;if(sc.status&&sc.receipt!==false){rec=el('div','receipt',null,root);
     const cls=sc.status==='CONFIRMED'?'ok':sc.status==='RUMOR'?'rumor':'fake';
     el('div','chip '+cls,sc.badge||(sc.status==='CONFIRMED'?'✓ CONFIRMED':sc.status==='RUMOR'?'RUMOR':'FAKE CLAIM'),rec);
-    if(sc.source)el('div','src','SOURCE: '+sc.source,rec)}
+    if(sc.source)el('div','src',(sc.sources_label||'SOURCE: ')+sc.source,rec)}
   return {sc,root,upd,head,rec}});
 S.forEach(s=>{s.root.style.display='block';
   if(s.head){let fs=56;while(s.head.scrollWidth>980&&fs>36){fs-=2;s.head.style.fontSize=fs+'px'}}
-  const pn=s.root.querySelector('.panel');if(pn){const h=pn.offsetHeight;pn.style.top=(430+Math.max(0,(700-h)/2))+'px'}
+  const pn=s.root.querySelector('.panel');const PT=D.theme==='news'?(s.head?470:400):430,PH=D.theme==='news'?(s.head?650:720):700;
+  if(pn){const h=pn.offsetHeight;pn.style.top=(PT+Math.max(0,(PH-h)/2))+'px'}
+  const sl=s.root.querySelector('.slam');if(sl){[...sl.children].forEach(c=>c.style.opacity=1);let fs=118;sl.style.fontSize=fs+'px';
+    while(sl.scrollHeight>660&&fs>60){fs-=6;sl.style.fontSize=fs+'px'}}
   s.root.style.display='none'});
 const caps=el('div',null,null,stage);caps.id='caps';
 el('div','small',D.ai_label,stage).style.top='206px';
 el('div','small',D.credit,stage).style.top='236px';
+const news=D.theme==='news';let TG=null,PG=null;
+if(news){document.body.classList.add('news');const tr=el('div',null,null,stage);tr.id='tagrow';
+  TG=el('div','tagb','<span class="dot"></span>'+D.tag,tr);if(D.kicker)el('div','tagk',D.kicker,tr);PG=el('div',null,null,stage);PG.id='prog'}
 let lastChunk=-1;
 window.render=function(t){
   let cur=0;D.scenes.forEach((sc,i)=>{if(t>=sc.start-1e-6)cur=i});
   S.forEach((s,i)=>{s.root.style.display=i===cur?'block':'none'});
-  bgs.forEach((b,i)=>{const sc=D.scenes[i];let o=0;if(i===cur)o=i===0?1:clamp((t-sc.start)/.18);else if(i===cur-1)o=1;
-    b.b.style.opacity=o;const k=clamp((t-sc.start)/sc.dur);b.im.style.transform=`scale(${1.02+.07*k}) translateY(${-14*k}px)`});
+  let kb=0;BG.forEach((g,i)=>{if(t>=g.start-1e-6)kb=i});
+  BG.forEach((g,i)=>{let o=0,whip=0;if(i===kb){const a=i===0?1:clamp((t-g.start)/.14);o=a;whip=news&&i>0?1-eOut((t-g.start)/.18):0}else if(i===kb-1)o=1;
+    g.b.style.opacity=o;const k=clamp((t-g.start)/Math.max(.5,g.end-g.start));
+    g.im.style.transform=`translateX(${whip*110}px) scale(${(news?1.04:1.02)+(news?.1:.07)*k}) translateY(${-14*k}px)`;
+    g.im.style.filter=whip>.01?`blur(${whip*12}px)`:'none'});
   const s=S[cur],sc=s.sc,lt=t-sc.start;dim.style.opacity=sc.dim;
   if(s.head){const a=sc.index===0?1:ap(lt,0,.22);s.head.style.opacity=a;
-    s.head.style.transform=`translateX(-50%) scale(${sc.index===0?1:1+.14*(1-ap(lt,0,.24))})`}
+    s.head.style.transform=`${news?'':'translateX(-50%) '}scale(${sc.index===0?1:1+.14*(1-ap(lt,0,.24))})`}
   if(s.rec)s.rec.style.opacity=sc.index===0?1:ap(lt,.35,.3);
   s.upd(lt);
   const sp=sc.scene.type==='split';caps.style.top=sp?'660px':'1236px';if(s.rec)s.rec.style.top=sp?'574px':'1150px';
+  caps.style.display=sc.scene.type==='slam'?'none':'block';
+  if(news){TG.firstChild.style.opacity=.35+.65*(.5+.5*Math.sin(t*7));PG.style.width=(clamp(t/D.total)*100)+'%'}
   // sous-titres
   let ci=-1;D.chunks.forEach((c,i)=>{if(t>=c.s&&t<c.e)ci=i});
   if(ci!==lastChunk){caps.innerHTML=ci<0?'':D.chunks[ci].words.map(w=>`<span>${w.w}</span>`).join('');lastChunk=ci;

@@ -1,0 +1,147 @@
+{
+  "slug": "preorders-news",
+  "format": "explainer",
+  "theme": "news",
+  "tag": "GTA 6 NEWS",
+  "kicker": "PRE-ORDERS",
+  "title": "GTA 6 pre-order record: what's real and what's not",
+  "yt_title": "GTA 6 broke the pre-order record\u2026 but the numbers? \ud83d\udcb0",
+  "description": "Real or not? Sony and Microsoft confirmed GTA 6 is the most pre-ordered game in PlayStation Store and Microsoft Store history, without numbers. Sensor Tower's 12M+ is an estimate; 15M / $1.45B has no primary source; 'Rockstar confirmed $1B' is false. Take-Two's CEO only says pre-orders are tracking far in excess of expectations.",
+  "tiktok_caption": "GTA 6 broke the pre-order record \ud83d\udcb0 but most numbers going around are guesses. Did you pre-order? \ud83d\udc47",
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#GTA",
+    "#PS5",
+    "#Xbox"
+  ],
+  "lines": [
+    {
+      "fact": "F053",
+      "text": "GTA 6 broke the PlayStation and Xbox pre-order record.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_02.jpg",
+      "focus": 0.5,
+      "dim": 0.2,
+      "scene": {
+        "type": "slam",
+        "em": [
+          "record"
+        ]
+      },
+      "sticker": {
+        "name": "crab",
+        "x": 630,
+        "y": 1205,
+        "w": 320,
+        "word": "broke"
+      }
+    },
+    {
+      "fact": "F054",
+      "text": "Sensor Tower reportedly estimates over 12 million digital pre-orders.",
+      "visual": "screenshots/Places/Vice City/Vice_City_10.jpg",
+      "visuals": [
+        "screenshots/Places/Vice City/Vice_City_15.jpg"
+      ],
+      "cut_words": [
+        "digital"
+      ],
+      "headline": "THE ESTIMATE",
+      "scene": {
+        "type": "stat",
+        "title": "Sensor Tower",
+        "value": 12,
+        "suffix": "M+",
+        "label": "digital pre-orders",
+        "sub": "Estimate through Nov 13",
+        "word": "12"
+      }
+    },
+    {
+      "fact": [
+        "F053",
+        "F054",
+        "F055",
+        "F056"
+      ],
+      "text": "Here's what's real. The store record is confirmed. 12 million is an estimate. 15 million has no source. And a billion confirmed by Rockstar? Never happened.",
+      "visual": "screenshots/Places/Vice City/Vice_City_08.jpg",
+      "visuals": [
+        "screenshots/Places/Vice City/Vice_City_12.jpg"
+      ],
+      "cut_words": [
+        "billion"
+      ],
+      "headline": "REAL OR NOT?",
+      "receipt": false,
+      "dim": 0.3,
+      "scene": {
+        "type": "cards",
+        "focus": "current",
+        "items": [
+          {
+            "t": "Store pre-order record",
+            "status": "CONFIRMED",
+            "word": "record"
+          },
+          {
+            "t": "12M+ digital pre-orders",
+            "status": "RUMOR",
+            "label": "ESTIMATE",
+            "word": "12"
+          },
+          {
+            "t": "15M and $1.45B",
+            "status": "RUMOR",
+            "label": "NO SOURCE",
+            "word": "15"
+          },
+          {
+            "t": "$1B confirmed by Rockstar",
+            "status": "FALSE",
+            "label": "FAKE",
+            "word": "billion"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "F013",
+      "text": "Take-Two's CEO only says pre-orders are tracking far in excess of expectations.",
+      "visual": "screenshots/Places/Vice City/Vice_City_11.jpg",
+      "focus": 0.45,
+      "headline": "THE OFFICIAL WORD",
+      "scene": {
+        "type": "quote",
+        "title": "Take-Two",
+        "text": "Tracking <b>far in excess</b> of our initial expectations",
+        "who": "Strauss Zelnick, Take-Two CEO",
+        "word": "ceo"
+      }
+    },
+    {
+      "fact": "CTA",
+      "text": "Did you pre-order? Tell me below, and follow for GTA 6 news with receipts.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_03.jpg",
+      "focus": 0.45,
+      "headline": "YOUR TURN",
+      "scene": {
+        "type": "list",
+        "title": "Did you pre-order?",
+        "items": [
+          "Yes, day one",
+          "Not yet"
+        ],
+        "letters": true,
+        "active": "cycle",
+        "cta": "COMMENT BELOW \u2193"
+      },
+      "sticker": {
+        "name": "sun",
+        "x": 50,
+        "y": 1345,
+        "w": 190
+      }
+    }
+  ]
+}

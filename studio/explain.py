@@ -15,7 +15,13 @@ import make  # noqa: E402
 from PIL import Image  # noqa: E402
 
 ROOT, OFFICIAL, HERE = make.ROOT, make.OFFICIAL, os.path.dirname(os.path.abspath(__file__))
-TYPES = {"meter", "list", "split", "branch", "route", "bars", "grid", "date"}
+TYPES = {"meter", "list", "split", "branch", "route", "bars", "grid", "date", "slam", "cards", "stat", "quote", "photo"}
+MASCOTS = json.load(open(os.path.join(OFFICIAL, "loops", "MASCOTS.json"))) if os.path.isfile(os.path.join(OFFICIAL, "loops", "MASCOTS.json")) else {}
+SFX = {  # bruitages synthétisés maison (aucune licence tierce)
+    "whoosh": "anoisesrc=color=pink:duration=0.45:amplitude=0.5,highpass=f=350,lowpass=f=5500,afade=t=in:st=0:d=0.2:curve=exp,afade=t=out:st=0.2:d=0.25",
+    "impact": "sine=frequency=58:duration=0.55,afade=t=out:st=0.03:d=0.5,volume=2.2",
+    "tick": "sine=frequency=1900:duration=0.03,afade=t=out:st=0:d=0.03,volume=0.6"}
+
 
 
 def avoid_set():
@@ -92,7 +98,7 @@ def main():
     words, segs = make.word_timings(wavs, lines, cfg, gap)
 
     print("[3/5] visuels officiels")
-    scenes = []
+    scenes, sfx_events, stickers = [], [], []
     for i, (ln, (s, d)) in enumerate(zip(lines, segs)):
         sc = json.loads(json.dumps(ln["scene"]))
         bg = f"img/bg_{i:02d}.jpg"
@@ -107,16 +113,58 @@ def main():
                 f = f"img/tile_{i:02d}_{j}.jpg"
                 crop(official(t["img"], avoid), os.path.join(work, f), 744, 336, float(t.get("focus", 0.5)))
                 t["img"] = f
-        src = (ln.get("sources") or [ln.get("source", "")])[0]
-        host = urlparse(src).hostname or ""
+        lw = [{"w": w["w"], "s": w["s"], "e": w["e"]} for w in words if w["line"] == i]
+        # fonds multiples (coupes rapides) : "visuals": [...], coupes sur "cut_words" ou réparties
+        bgs = [{"src": bg, "at": 0}]
+        extra = ln.get("visuals") or []
+        cut_words = ln.get("cut_words") or []
+        for j, v in enumerate(extra):
+            f = f"img/bg_{i:02d}_{j + 1}.jpg"
+            vv = v if isinstance(v, dict) else {"img": v}
+            crop(official(vv["img"], avoid), os.path.join(work, f), 1188, 2112, float(vv.get("focus", 0.5)))
+            at = None
+            if j < len(cut_words):
+                k = re.sub(r"[^a-z0-9]", "", cut_words[j].lower())
+                at = next((w["s"] - s for w in lw if re.sub(r"[^a-z0-9]", "", w["w"].lower()).startswith(k)), None)
+            if at is None:
+                at = d * (j + 1) / (len(extra) + 1)
+            bgs.append({"src": f, "at": max(0.3, at - 0.05)})
+            sfx_events.append(("whoosh", s + max(0.3, at - 0.05) - 0.12, 0.22))
+        srcs = ln.get("sources") or [ln.get("source", "")]
+        hosts = list(dict.fromkeys((urlparse(u).hostname or "").replace("www.", "") for u in srcs if u.startswith("http")))
         scenes.append({
-            "start": s, "dur": d, "bg": bg, "headline": ln.get("headline"), "scene": sc,
+            "start": s, "dur": d, "bg": bg, "bgs": bgs, "headline": ln.get("headline"), "scene": sc,
             "status": None if ln.get("fact") == "CTA" else ln["status"], "badge": ln.get("badge"),
-            "source": host.replace("www.", "") if host else None, "dim": float(ln.get("dim", 0.24)),
-            "words": [{"w": w["w"], "s": w["s"], "e": w["e"]} for w in words if w["line"] == i]})
+            "receipt": ln.get("receipt", True),
+            "source": " · ".join(hosts[:2]) if hosts else None, "sources_label": "SOURCES: " if len(hosts) > 1 else "SOURCE: ",
+            "dim": float(ln.get("dim", 0.24)), "words": lw})
+        # bruitages + mascottes (thème news)
+        if i > 0:
+            sfx_events.append(("whoosh", s - 0.1, 0.32))
+        if sc["type"] == "slam":
+            ems = {re.sub(r"[^a-z0-9]", "", e.lower()) for e in sc.get("em", [])}
+            sfx_events.append(("impact", s + (lw[0]["s"] - s if i else 0.0), 0.5))
+            for w in lw:
+                if re.sub(r"[^a-z0-9]", "", w["w"].lower()) in ems:
+                    sfx_events.append(("impact", w["s"] - 0.03, 0.45))
+        if sc["type"] == "cards":
+            for it in sc.get("items", []):
+                k = re.sub(r"[^a-z0-9]", "", (it.get("word") or "").lower())
+                t0 = next((w["s"] for w in lw if k and re.sub(r"[^a-z0-9]", "", w["w"].lower()).startswith(k)), None)
+                if t0:
+                    sfx_events.append(("tick", t0 - 0.12, 0.35))
+        if ln.get("sticker"):
+            st = ln["sticker"]
+            if st["name"] not in MASCOTS:
+                make.die(f"ligne {i + 1} : mascotte inconnue {st['name']} (voir assets/official/loops/MASCOTS.json)")
+            k = re.sub(r"[^a-z0-9]", "", (st.get("word") or "").lower())
+            t0 = next((w["s"] for w in lw if k and re.sub(r"[^a-z0-9]", "", w["w"].lower()).startswith(k)), s + 0.15)
+            stickers.append({"file": os.path.join(OFFICIAL, "loops", MASCOTS[st["name"]]), "x": st.get("x", 60),
+                             "y": st.get("y", 1300), "w": st.get("w", 300), "start": t0, "end": s + d})
     total = segs[-1][0] + segs[-1][1]
     data = {"scenes": scenes, "chunks": chunks_from(words), "total": total,
-            "ai_label": cfg["ai_label_text"], "credit": cfg["credit_text"]}
+            "ai_label": cfg["ai_label_text"], "credit": cfg["credit_text"],
+            "theme": script.get("theme", "explained"), "tag": script.get("tag", "BREAKING"), "kicker": script.get("kicker")}
     html = open(os.path.join(HERE, "explainer.html"), encoding="utf-8").read().replace("/*__DATA__*/", json.dumps(data))
     page = os.path.join(work, "index.html")
     open(page, "w", encoding="utf-8").write(html)
@@ -131,6 +179,20 @@ def main():
     r = subprocess.run(["node", os.path.join(HERE, "render_frames.js"), page, os.path.join(work, "video.mp4"), f"{total:.3f}"])
     if r.returncode != 0:
         make.die("le rendu des images a échoué")
+    if stickers:  # mascottes officielles animées (vidéo couleur en haut, masque alpha en bas)
+        cmd = ["ffmpeg", "-y", "-v", "error", "-i", os.path.join(work, "video.mp4")]
+        fc, prev = [], "[0:v]"
+        for n, st in enumerate(stickers, 1):
+            cmd += ["-stream_loop", "-1", "-i", st["file"]]
+            fc.append(f"[{n}:v]split[a{n}][b{n}];[a{n}]crop=iw:ih/2:0:0[c{n}];[b{n}]crop=iw:ih/2:0:ih/2,format=gray[m{n}];"
+                      f"[c{n}][m{n}]alphamerge,scale={st['w']}:-2,setpts=PTS-STARTPTS+{st['start']:.3f}/TB,"
+                      f"fade=t=in:st={st['start']:.3f}:d=0.2:alpha=1[s{n}];"
+                      f"{prev}[s{n}]overlay={st['x']}:{st['y']}:enable='between(t,{st['start']:.3f},{st['end']:.3f})'[v{n}]")
+            prev = f"[v{n}]"
+        cmd += ["-filter_complex", ";".join(fc), "-map", prev, "-t", f"{total:.3f}", "-c:v", "libx264", "-preset", "medium",
+                "-crf", "18", "-pix_fmt", "yuv420p", os.path.join(work, "video_st.mp4")]
+        make.run(cmd)
+        os.replace(os.path.join(work, "video_st.mp4"), os.path.join(work, "video.mp4"))
     vparts = []
     for i, (wav, (s, d)) in enumerate(zip(wavs, segs)):
         p = os.path.join(work, f"vpad_{i:02d}.wav")
@@ -140,6 +202,24 @@ def main():
         f.writelines(f"file '{p}'\n" for p in vparts)
     make.run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", os.path.join(work, "vconcat.txt"),
               os.path.join(work, "voice.wav")])
+    if sfx_events and script.get("theme") == "news":  # bruitages discrets sous la voix
+        sd = os.path.join(ROOT, ".cache", "sfx")
+        os.makedirs(sd, exist_ok=True)
+        for n, spec in SFX.items():
+            if not os.path.isfile(os.path.join(sd, n + ".wav")):
+                make.run(["ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", spec, "-ar", "44100", "-ac", "1", os.path.join(sd, n + ".wav")])
+        ev = [e for e in sfx_events if 0 <= e[1] < total][:40]
+        cmd = ["ffmpeg", "-y", "-v", "error", "-i", os.path.join(work, "voice.wav")]
+        fc = []
+        for n, (name, t0, vol) in enumerate(ev, 1):
+            cmd += ["-i", os.path.join(sd, name + ".wav")]
+            ms = int(t0 * 1000)
+            fc.append(f"[{n}:a]adelay={ms}|{ms},volume={vol * 0.5:.3f}[e{n}]")
+        fc.append("[0:a]" + "".join(f"[e{n}]" for n in range(1, len(ev) + 1)) +
+                  f"amix=inputs={len(ev) + 1}:duration=first:normalize=0[a]")
+        cmd += ["-filter_complex", ";".join(fc), "-map", "[a]", os.path.join(work, "voice_sfx.wav")]
+        make.run(cmd)
+        os.replace(os.path.join(work, "voice_sfx.wav"), os.path.join(work, "voice.wav"))
 
     print("[5/5] assemblage + mixage")
     os.makedirs(os.path.join(ROOT, "out"), exist_ok=True)
