@@ -1,0 +1,156 @@
+#!/usr/bin/env python3
+"""GTA6 Studio — format EXPLAINED : l'image vulgarise l'info (jauge, schéma, comparaison, carte des régions...)
+sur des visuels officiels Rockstar. Même voix, même Whisper, mêmes garde-fous que make.py.
+
+Usage :
+  python3 studio/explain.py clips/<slug>                  rendu complet
+  python3 studio/explain.py clips/<slug> --test-voice     voix robot locale (gratuit)
+  python3 studio/explain.py clips/<slug> --stills 0,2,5   captures fixes pour contrôle (après un rendu ou avec --test-voice)
+"""
+import argparse, json, os, re, shutil, subprocess, sys
+from urllib.parse import urlparse
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import make  # noqa: E402
+from PIL import Image  # noqa: E402
+
+ROOT, OFFICIAL, HERE = make.ROOT, make.OFFICIAL, os.path.dirname(os.path.abspath(__file__))
+TYPES = {"meter", "list", "split", "branch", "route", "bars", "grid", "date"}
+
+
+def avoid_set():
+    av = os.path.join(OFFICIAL, "AVOID.txt")
+    return {l.strip() for l in open(av, encoding="utf-8") if l.strip() and not l.startswith("#")} if os.path.isfile(av) else set()
+
+
+def official(rel, avoid):
+    p = os.path.realpath(os.path.join(OFFICIAL, rel))
+    if not p.startswith(os.path.realpath(OFFICIAL) + os.sep) or not os.path.isfile(p):
+        make.die(f"visuel non officiel ou introuvable : {rel}")
+    if rel in avoid:
+        make.die(f"visuel interdit (AVOID.txt) : {rel}")
+    return p
+
+
+def crop(src, out, w, h, focus=0.5):
+    im = Image.open(src).convert("RGB")
+    sw, sh = im.size
+    if sw / sh > w / h:
+        nw = int(sh * w / h)
+        x = int((sw - nw) * focus)
+        im = im.crop((x, 0, x + nw, sh))
+    else:
+        nh = int(sw * h / w)
+        im = im.crop((0, (sh - nh) // 2, sw, (sh - nh) // 2 + nh))
+    im.resize((w, h), Image.LANCZOS).save(out, quality=90)
+
+
+def chunks_from(words):
+    out, cur = [], []
+    for w in words:
+        if cur and (len(cur) == 3 or cur[-1]["line"] != w["line"] or re.search(r"[.,!?;:]$", cur[-1]["w"])):
+            out.append(cur)
+            cur = []
+        cur.append(w)
+    if cur:
+        out.append(cur)
+    res = []
+    for i, ch in enumerate(out):
+        nxt = out[i + 1][0]["s"] if i + 1 < len(out) and out[i + 1][0]["line"] == ch[0]["line"] else ch[-1]["e"] + 0.25
+        res.append({"s": ch[0]["s"], "e": nxt, "words": [{"w": re.sub(r"[<>&]", "", x["w"]), "s": x["s"]} for x in ch]})
+    return res
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("clip_dir")
+    ap.add_argument("--test-voice", action="store_true")
+    ap.add_argument("--check", action="store_true")
+    ap.add_argument("--stills", help="temps en secondes séparés par des virgules : captures de contrôle seulement")
+    a = ap.parse_args()
+    cfg = json.load(open(os.path.join(ROOT, "config.json")))
+    clip_dir = os.path.abspath(a.clip_dir)
+    script = json.load(open(os.path.join(clip_dir, "script.json")))
+    slug, lines = script["slug"], script["lines"]
+    make.check(script, cfg, a.test_voice)
+    avoid = avoid_set()
+    for i, ln in enumerate(lines, 1):
+        if (ln.get("scene") or {}).get("type") not in TYPES:
+            make.die(f"ligne {i} : scene.type doit être parmi {sorted(TYPES)}")
+    if a.check:
+        return
+    work = os.path.join(clip_dir, "build")
+    if not a.stills:
+        shutil.rmtree(work, ignore_errors=True)
+    os.makedirs(os.path.join(work, "img"), exist_ok=True)
+    gap = cfg["gap_seconds"]
+    cfg["_voice_id"] = make.voice_id_for(script, cfg) if not a.test_voice else "test"
+
+    print("[1/5] voix" + (" (TEST robot)" if a.test_voice else " (ElevenLabs)"))
+    wavs = make.make_voice(lines, cfg, work, a.test_voice)
+    print("[2/5] timing des mots (Whisper)")
+    words, segs = make.word_timings(wavs, lines, cfg, gap)
+
+    print("[3/5] visuels officiels")
+    scenes = []
+    for i, (ln, (s, d)) in enumerate(zip(lines, segs)):
+        sc = json.loads(json.dumps(ln["scene"]))
+        bg = f"img/bg_{i:02d}.jpg"
+        crop(official(ln["visual"], avoid), os.path.join(work, bg), 1188, 2112, float(ln.get("focus", 0.5)))
+        if sc["type"] == "split":
+            for k in ("top", "bottom"):
+                f = f"img/split_{i:02d}_{k}.jpg"
+                crop(official(sc[k]["img"], avoid), os.path.join(work, f), 1188, 1056, float(sc[k].get("focus", 0.5)))
+                sc[k]["img"] = f
+        if sc["type"] == "grid":
+            for j, t in enumerate(sc["tiles"]):
+                f = f"img/tile_{i:02d}_{j}.jpg"
+                crop(official(t["img"], avoid), os.path.join(work, f), 744, 336, float(t.get("focus", 0.5)))
+                t["img"] = f
+        src = (ln.get("sources") or [ln.get("source", "")])[0]
+        host = urlparse(src).hostname or ""
+        scenes.append({
+            "start": s, "dur": d, "bg": bg, "headline": ln.get("headline"), "scene": sc,
+            "status": None if ln.get("fact") == "CTA" else ln["status"], "badge": ln.get("badge"),
+            "source": host.replace("www.", "") if host else None, "dim": float(ln.get("dim", 0.34)),
+            "words": [{"w": w["w"], "s": w["s"], "e": w["e"]} for w in words if w["line"] == i]})
+    total = segs[-1][0] + segs[-1][1]
+    data = {"scenes": scenes, "chunks": chunks_from(words), "total": total,
+            "ai_label": cfg["ai_label_text"], "credit": cfg["credit_text"]}
+    html = open(os.path.join(HERE, "explainer.html"), encoding="utf-8").read().replace("/*__DATA__*/", json.dumps(data))
+    page = os.path.join(work, "index.html")
+    open(page, "w", encoding="utf-8").write(html)
+
+    if a.stills:
+        out = os.path.join(work, "still_%t.jpg")
+        make.run(["node", os.path.join(HERE, "render_frames.js"), page, out, "0", "stills:" + a.stills])
+        print("[OK] captures dans", work)
+        return
+
+    print(f"[4/5] animation ({total:.1f}s, {int(total * 30)} images)")
+    r = subprocess.run(["node", os.path.join(HERE, "render_frames.js"), page, os.path.join(work, "video.mp4"), f"{total:.3f}"])
+    if r.returncode != 0:
+        make.die("le rendu des images a échoué")
+    vparts = []
+    for i, (wav, (s, d)) in enumerate(zip(wavs, segs)):
+        p = os.path.join(work, f"vpad_{i:02d}.wav")
+        make.run(["ffmpeg", "-y", "-v", "error", "-i", wav, "-af", f"apad=whole_dur={d:.3f}", "-ar", "44100", "-ac", "1", p])
+        vparts.append(p)
+    with open(os.path.join(work, "vconcat.txt"), "w") as f:
+        f.writelines(f"file '{p}'\n" for p in vparts)
+    make.run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", os.path.join(work, "vconcat.txt"),
+              os.path.join(work, "voice.wav")])
+
+    print("[5/5] assemblage + mixage")
+    os.makedirs(os.path.join(ROOT, "out"), exist_ok=True)
+    out = os.path.join(ROOT, "out", f"{slug}.mp4")
+    make.run(["ffmpeg", "-y", "-v", "error", "-i", os.path.join(work, "video.mp4"), "-i", os.path.join(work, "voice.wav"),
+              "-filter_complex", f"[1:a]aformat=channel_layouts=stereo,loudnorm=I={cfg['loudness_lufs']}:TP=-1.5:LRA=9[a]",
+              "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
+              "-movflags", "+faststart", "-shortest", out])
+    make.write_post(script, cfg, os.path.join(ROOT, "out", f"{slug}_post.txt"))
+    print(f"\n[FINI] {out}  ({make.duration(out):.1f}s)")
+
+
+if __name__ == "__main__":
+    main()

@@ -8,3 +8,4 @@ screenshots/People/Jason and Lucia/Jason_and_Lucia_10.jpg
 screenshots/People/Jason and Lucia/Jason_and_Lucia_14.jpg
 screenshots/Places/Port Gellhorn/Port_Gellhorn_03.jpg
 screenshots/Places/Port Gellhorn/Port_Gellhorn_04.jpg
+screenshots/Places/Port Gellhorn/Port_Gellhorn_07.jpg
