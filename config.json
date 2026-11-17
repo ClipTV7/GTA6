@@ -5,7 +5,11 @@
     "stability": 0.45,
     "similarity_boost": 0.85,
     "style": 0.35,
-    "speed": 1.1
+    "speed": 1.1,
+    "voices": {
+      "main": "w8BNp6PHjEvdt4i5BFYX",
+      "breaking": null
+    }
   },
   "whisper_model": "small.en",
   "video": {

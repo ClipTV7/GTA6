@@ -133,13 +133,23 @@ def check(script, cfg, test_voice):
 
 
 # ---------------------------------------------------------------- 2. voix
+def voice_id_for(script, cfg):
+    """Voix du clip : "voice" dans script.json -> elevenlabs.voices[...] ; sinon la voix principale."""
+    e = cfg["elevenlabs"]
+    name = script.get("voice", "main")
+    vid = (e.get("voices") or {}).get(name) or (e["voice_id"] if name == "main" else None)
+    if not vid:
+        die(f"voix '{name}' non configurée dans config.json (elevenlabs.voices)")
+    return vid
+
+
 def tts_elevenlabs(text, prev, nxt, cfg, out_mp3):
     e = cfg["elevenlabs"]
     body = {"text": text, "model_id": e["model_id"], "previous_text": prev, "next_text": nxt,
             "voice_settings": {"stability": e["stability"], "similarity_boost": e["similarity_boost"],
                                "style": e["style"], "speed": e["speed"]}}
     req = urllib.request.Request(
-        f"https://api.elevenlabs.io/v1/text-to-speech/{e['voice_id']}?output_format=mp3_44100_128",
+        f"https://api.elevenlabs.io/v1/text-to-speech/{cfg['_voice_id']}?output_format=mp3_44100_128",
         data=json.dumps(body).encode(), headers={"Content-Type": "application/json"}, method="POST")
     try:
         with urllib.request.urlopen(req, timeout=120) as r, open(out_mp3, "wb") as f:
@@ -156,7 +166,7 @@ def make_voice(lines, cfg, work, test_voice):
         text = ln["text"].strip()
         prev = lines[i - 1]["text"] if i else ""
         nxt = lines[i + 1]["text"] if i + 1 < len(lines) else ""
-        key = hashlib.sha1(json.dumps([text, prev, nxt, test_voice, cfg["elevenlabs"]],
+        key = hashlib.sha1(json.dumps([text, prev, nxt, test_voice, cfg.get("_voice_id"), cfg["elevenlabs"]],
                                       sort_keys=True).encode()).hexdigest()[:16]
         cached = os.path.join(cache, key + ".wav")
         if not os.path.isfile(cached):
@@ -352,6 +362,7 @@ def main():
     shutil.rmtree(work, ignore_errors=True)
     os.makedirs(work)
     lines, gap = script["lines"], cfg["gap_seconds"]
+    cfg["_voice_id"] = voice_id_for(script, cfg) if not a.test_voice else "test"
 
     print("[1/5] voix" + (" (TEST robot)" if a.test_voice else " (ElevenLabs)"))
     wavs = make_voice(lines, cfg, work, a.test_voice)
