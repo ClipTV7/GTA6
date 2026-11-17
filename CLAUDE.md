@@ -44,9 +44,9 @@ Objectif : **2 à 3 clips verticaux anglais par jour** pour YouTube Shorts et Ti
 Chaque matin :
 1. `bash studio/setup.sh` (conteneur neuf : installe Whisper, retélécharge les visuels officiels).
 2. `eplucheur` met à jour `research/facts.csv` (nouveaux faits, statuts qui changent, `last_checked` du jour). Lundi : `veilleur` aussi.
-3. Le Cerveau choisit 3 angles selon l'actu du jour (jamais deux fois le même angle : voir `clips/`).
-4. `scenariste` → `make.py` → `critique` pour chaque clip. Sous 75 % : corriger et refaire (max 2 boucles). Toujours sous 75 % : ne pas livrer.
-5. Commit + push (`clips/`, `research/`), puis envoyer à l'utilisateur les MP4 retenus + `_post.txt`, avec pour chacun seulement : score % et verdict honnête.
+3. Le Cerveau choisit 3 angles selon l'actu du jour (jamais deux fois le même angle : voir `clips/`). **Au moins 1 des clips du jour est au format EXPLAINED** : l'angle qui se prête le mieux à un schéma (mécanique de jeu, comparaison, chiffres, carte, chronologie).
+4. `scenariste` → `make.py` (ou `explain.py` pour le format EXPLAINED) → `critique` pour chaque clip. Sous 75 % : corriger et refaire (max 2 boucles). Toujours sous 75 % : ne pas livrer. Format EXPLAINED : objectif 85 % (exigence de l'utilisateur), jusqu'à 3 passages du Conseil ; entre 75 et 85 %, livrer en le disant honnêtement.
+5. Commit + push (`clips/`, `research/`), puis envoyer à l'utilisateur les MP4 retenus + `_post.txt`, avec pour chacun : score %, verdict honnête, et dans le chat le titre + la description YouTube Shorts et la légende TikTok prêts à copier.
 L'utilisateur publie lui-même et coche l'étiquette IA.
 
 ## Commandes
