@@ -27,6 +27,7 @@ Règles :
 - `visual` : chemin relatif à `assets/official/` (une capture .jpg ou une boucle `loops/loop_N.mp4`). `focus` (0-1) = où centrer le recadrage vertical. `fit: "blur"` pour garder l'image entière.
 - `headline` : 1 à 4 mots en capitales, optionnel.
 - Aucun spoiler d'histoire.
+- Avant de choisir un visuel, REGARDE-le (planche contact via `montage`, ou Read sur l'image) : il doit coller au texte, montrer un visage ou un lieu lisible en 9:16, et ne rien avoir de sexualisé, de drogue ou de hors sujet. Jamais un fichier listé dans `assets/official/AVOID.txt`. L'image de la ligne 1 sert de miniature : la plus forte du clip, jamais la même que la ligne 1 d'un autre clip du jour.
 - Textes de publication (en anglais, mêmes règles de vérité) :
   - `yt_title` : titre YouTube Shorts, max 90 caractères, accroche + 1 emoji max (#Shorts est ajouté automatiquement).
   - `description` : 2-3 phrases factuelles pour YouTube, les rumeurs dites comme telles.

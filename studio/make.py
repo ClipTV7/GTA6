@@ -49,6 +49,8 @@ def check(script, cfg, test_voice):
     facts = load_facts()
     today = datetime.date.today()
     lines = script.get("lines") or []
+    av = os.path.join(OFFICIAL, "AVOID.txt")
+    avoid = {l.strip() for l in open(av, encoding="utf-8") if l.strip() and not l.startswith("#")} if os.path.isfile(av) else set()
     if not 3 <= len(lines) <= 14:
         errs.append(f"{len(lines)} lignes : il en faut entre 3 et 14")
     for i, ln in enumerate(lines, 1):
@@ -112,6 +114,8 @@ def check(script, cfg, test_voice):
                 errs.append(f"{tag} : visuel hors de assets/official (interdit) : {v}")
             elif not os.path.isfile(p):
                 errs.append(f"{tag} : visuel introuvable : {v}")
+            elif v in avoid:
+                errs.append(f"{tag} : visuel interdit (assets/official/AVOID.txt) : {v}")
     if not test_voice and "PUT_YOUR" in cfg["elevenlabs"]["voice_id"]:
         errs.append("config.json : renseigne elevenlabs.voice_id (ton clone) ou utilise --test-voice")
     music = cfg["music"].get("file")

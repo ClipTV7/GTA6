@@ -1,0 +1,10 @@
+# Visuels officiels à NE PAS utiliser (sexualisés, drogue, hors sujet ou crop dangereux en 9:16).
+# Ajoutés par le Conseil / le Cerveau. Un chemin par ligne, relatif à assets/official/.
+screenshots/Places/Vice City/Vice_City_06.jpg
+screenshots/Places/Vice City/Vice_City_07.jpg
+screenshots/Places/Vice City/Vice_City_18.jpg
+screenshots/People/Jason and Lucia/Jason_and_Lucia_07.jpg
+screenshots/People/Jason and Lucia/Jason_and_Lucia_10.jpg
+screenshots/People/Jason and Lucia/Jason_and_Lucia_14.jpg
+screenshots/Places/Port Gellhorn/Port_Gellhorn_03.jpg
+screenshots/Places/Port Gellhorn/Port_Gellhorn_04.jpg

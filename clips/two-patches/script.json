@@ -15,13 +15,14 @@
     {
       "fact": "F049",
       "text": "GTA 6 isn't even out, and it already has two updates.",
-      "visual": "screenshots/People/Cal Hampton/Cal_Hampton_01.jpg",
-      "headline": "2 UPDATES ALREADY"
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_09.jpg",
+      "headline": "PATCHED TWICE. NOT EVEN OUT.",
+      "focus": 0.6
     },
     {
       "fact": "F049",
       "text": "The first dropped November 13th. The second, November 16th.",
-      "visual": "screenshots/Places/Port Gellhorn/Port_Gellhorn_03.jpg",
+      "visual": "screenshots/Places/Vice City/Vice_City_15.jpg",
       "headline": "NOV 13 + NOV 16"
     },
     {
@@ -45,7 +46,8 @@
       "fact": "F066",
       "text": "That viral 676 gig install size? Fake.",
       "visual": "screenshots/Places/Ambrosia/Ambrosia_02.jpg",
-      "badge": "FAKE SIZE"
+      "badge": "FAKE SIZE",
+      "headline": "676 GB"
     },
     {
       "fact": "F001",
