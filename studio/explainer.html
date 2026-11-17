@@ -121,10 +121,10 @@ B.meter=(sc,root)=>{const p=sc.scene;const panel=el('div','panel',null,root);el(
   const L=el('div','mlab',p.left,labs),R=el('div','mlab',p.right,labs);
   const hint=p.hint?el('div','mhint',p.hint,panel):null;
   const t0=wordAt(sc,p.from_word,.1),t1=wordAt(sc,p.to_word,.7);
-  return lt=>{enter(panel,lt,sc);const x=eInOut((lt-t0)/Math.max(.4,t1-t0));
+  const P0=t0/Math.max(1,Math.round(t0/1.2));return lt=>{enter(panel,lt,sc);const x=lt<t0?.5-.5*Math.cos(2*Math.PI*lt/P0):eInOut((lt-t0)/Math.max(.4,t1-t0));
     knob.style.left=(x*100)+'%';knob.style.transform=`scale(${x<.02?1+.08*Math.sin(lt*9):1})`;fill.style.width=(x*100)+'%';
     L.classList.toggle('on',x<.5);R.classList.toggle('on',x>.97);
-    if(hint)hint.style.opacity=ap(lt,t1+.2,.3)}};
+    if(hint)hint.style.opacity=ap(lt,t0,.3)}};
 B.list=(sc,root)=>{const p=sc.scene;const panel=el('div','panel',null,root);el('div','ptitle',p.title,panel);
   const rows=p.items.map((t,i)=>{const r=el('div','li',null,panel);el('div','num',p.letters?String.fromCharCode(65+i):String(i+1),r);
     el('div','lt',t,r);if(p.tags&&p.tags[i])el('div','tag',p.tags[i],r);return r});
@@ -171,7 +171,7 @@ B.route=(sc,root)=>{const p=sc.scene;const panel=el('div','panel',null,root);el(
     `<text x="640" y="118" fill="#fff" font-size="30" font-weight="900" text-anchor="middle" font-family="Inter Display">${p.to}</text></svg>`,panel);
   const path=wrap.querySelector('#rp'),car=wrap.querySelector('#car');const L=path.getTotalLength();
   const tGo=wordAt(sc,p.go_word||'fast',.45);
-  return lt=>{enter(panel,lt,sc);const a=eInOut((lt-tGo+.3)/1.3);const pt=path.getPointAtLength(L*a);
+  return lt=>{enter(panel,lt,sc);const a=lt<tGo?.16*clamp((lt-.4)/Math.max(.5,tGo-.4)):.16+.84*eOut((lt-tGo)/.35);const pt=path.getPointAtLength(L*a);
     car.setAttribute('transform',`translate(${pt.x},${pt.y})`)}};
 B.bars=(sc,root)=>{const p=sc.scene;const panel=el('div','panel',null,root);el('div','ptitle',p.title,panel);
   const max=Math.max(...p.rows.map(r=>r.value));
@@ -219,6 +219,7 @@ window.render=function(t){
     s.head.style.transform=`translateX(-50%) scale(${1+.14*(1-ap(lt,0,.24))})`}
   if(s.rec)s.rec.style.opacity=sc.index===0?1:ap(lt,.35,.3);
   s.upd(lt);
+  const sp=sc.scene.type==='split';caps.style.top=sp?'660px':'1236px';if(s.rec)s.rec.style.top=sp?'574px':'1150px';
   // sous-titres
   let ci=-1;D.chunks.forEach((c,i)=>{if(t>=c.s&&t<c.e)ci=i});
   if(ci!==lastChunk){caps.innerHTML=ci<0?'':D.chunks[ci].words.map(w=>`<span>${w.w}</span>`).join('');lastChunk=ci;
