@@ -245,7 +245,7 @@ def word_timings(wavs, lines, cfg, gap):
     words, segs, t0 = [], [], 0.0
     for i, (wav, ln) in enumerate(zip(wavs, lines)):
         d = duration(wav)
-        seg_len = d + gap + (0.5 if i == len(lines) - 1 else 0)
+        seg_len = d + gap + (0.3 if i == len(lines) - 1 else 0)
         segs.append((t0, seg_len))
         import numpy as np  # décodage via ffmpeg (évite les soucis de version PyAV)
         pcm = subprocess.run(["ffmpeg", "-v", "error", "-i", wav, "-f", "s16le", "-ac", "1", "-ar", "16000", "-"],
@@ -263,6 +263,10 @@ def word_timings(wavs, lines, cfg, gap):
             k = nz(sw)
             if not any(h == k and q for h, q in hq):
                 print(f"  [INTONATION ?] ligne {i + 1} : « {sw} » n'est pas entendu comme une question : « {heard_txt.strip()} »")
+        if heard and script_words and nz(heard[0].word) != nz(script_words[0]) and not (nz(script_words[0]) == "6" or nz(heard[0].word) == "vi"):
+            print(f"  [VOIX ?] ligne {i + 1} : premier mot « {script_words[0]} » entendu « {heard[0].word.strip()} » (p={heard[0].probability:.2f})")
+        elif heard and heard[0].probability < 0.4:
+            print(f"  [VOIX ?] ligne {i + 1} : premier mot « {script_words[0]} » peu net (p={heard[0].probability:.2f})")
         if missing:  # contrôle automatique : un mot que Whisper n'entend pas est souvent mal prononcé
             print(f"  [VOIX ?] ligne {i + 1} : Whisper n'entend pas « {' '.join(missing)} » (entendu : {' '.join(w.word.strip() for w in heard)})")
         if heard and len(heard) == len(script_words):

@@ -64,7 +64,7 @@ def chunks_from(words):
     res = []
     for i, ch in enumerate(out):
         nxt = out[i + 1][0]["s"] if i + 1 < len(out) and out[i + 1][0]["line"] == ch[0]["line"] else ch[-1]["e"] + 0.25
-        res.append({"s": ch[0]["s"], "e": nxt, "words": [{"w": re.sub(r"[<>&]", "", x["w"]), "s": x["s"]} for x in ch]})
+        res.append({"s": ch[0]["s"], "e": nxt, "line": ch[0]["line"], "words": [{"w": re.sub(r"[<>&]", "", x["w"]), "s": x["s"]} for x in ch]})
     return res
 
 
@@ -151,6 +151,9 @@ def main():
             bgs.append({"src": f, "at": max(0.3, at - 0.05)})
             pass  # coupe d'image : pas de whoosh (il masquait des mots)
         srcs = ln.get("sources") or [ln.get("source", "")]
+        if isinstance(ln.get("fact"), list):
+            rank = {"FALSE": 0, "RUMOR": 1, "CONFIRMED": 2}
+            srcs = [FACTS[f]["source"] for f in sorted(ln["fact"], key=lambda f: rank.get(FACTS[f]["status"], 3))]
         hosts = list(dict.fromkeys((urlparse(u).hostname or "").replace("www.", "") for u in srcs if u.startswith("http")))
         scenes.append({
             "start": s, "dur": d, "bg": bg, "bgs": bgs, "headline": ln.get("headline"), "scene": sc,

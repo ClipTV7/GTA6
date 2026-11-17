@@ -39,6 +39,12 @@ L'info est expliquée À L'IMAGE par des schémas animés posés sur les visuels
 - Exemple complet : `clips/systems-explained/script.json`.
 - Règles en plus : un schéma ne montre QUE ce que dit le fait (pas de niveaux ou de chiffres inventés), titres courts, 30-37 s, la fin renvoie à l'accroche.
 
+## Format NEWS (actu chaude) — validé à 91 % par le Conseil sur `clips/preorders-news`
+Pour les vidéos à chaud : `"format": "explainer"`, `"theme": "news"`, `"tag": "BREAKING"` (ou « GTA 6 NEWS »), `"kicker": "SUJET · DATE"`, rendu `python3 studio/explain.py`.
+- Scènes : `slam` (accroche en gros mots qui tombent sur la voix ; `em` = mots en surbrillance, `lit` = mots lisibles dès l'image 0, `pos: "low"` pour garder les visages), `stat` (compteur), `cards` (tableau vrai / rumeur / faux en quiz : badge « ? » puis statut révélé sur le mot ; `pre: true` = carte déjà vue ; `reveal_word` seulement sur une carte FALSE, sur le mot du démenti), `quote`, `photo`, + toutes les scènes EXPLAINED. Fonds multiples : `"visuals"` + `"cut_words"`. Mascottes officielles animées : `"sticker": {"name": "crab|sun|flamingo|alligator|palm|manatee|seaplanes|lowrider", "x", "y", "w", "word"}` (hors visages, hors sous-titres, hors colonne d'icônes à droite).
+- Règles d'écriture : accroche ≤ 8 mots avant le twist, question ou tension entendue avant 2 s ; 18-25 s ; chute (FAKE) à la fin puis fin qui reboucle sur l'accroche (« So, …? Comment your guess. ») ; questions qui commencent par un auxiliaire net (« Have you… », « Is… ») ; pas de lettre seule ni de nombre ambigu à l'oral (« fifteen » est entendu « fifty ») ; badges RUMOR / FAKE uniquement (pas de vocabulaire maison).
+- Le moteur vérifie tout seul : mots mal prononcés, premier mot de chaque ligne, intonation de chaque « ? », et le MIX FINAL (voix + bruitages) avec Whisper. Tout avertissement `[VOIX ?]`, `[INTONATION ?]` ou `[MIX ?]` doit être corrigé avant le Conseil.
+
 ## Production quotidienne
 Objectif : **2 à 3 clips verticaux anglais par jour** pour YouTube Shorts et TikTok (`daily_target` dans `config.json`).
 Chaque matin :

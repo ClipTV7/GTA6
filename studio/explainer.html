@@ -233,9 +233,10 @@ B.date=(sc,root)=>{const p=sc.scene;const panel=el('div','panel',null,root);el('
   return lt=>{enter(panel,lt,sc);const a=ap(lt,.2,.35);cal.style.transform=`scale(${.85+.15*a}) rotate(${(1-a)*-6}deg)`;cal.style.opacity=a;
     chips.forEach(c=>{const b=ap(lt,c.t-.05,.25);c.e.style.opacity=b;c.e.style.transform=`translateY(${(1-b)*20}px)`;c.e.classList.toggle('on',b>.99)})}};
 B.slam=(sc,root)=>{const p=sc.scene;const box=el('div','slam',null,root);const em=(p.em||[]).map(norm);
-  if(p.pos==='low')box.classList.add('low');const spans=sc.words.map(w=>{const o={s:el('span',em.includes(norm(w.w))?'em':null,w.w.replace(/[;:]+$/,''),box),t:w.s-sc.start};
+  const lit=(p.lit||[]).map(norm);if(p.pos==='low')box.classList.add('low');const spans=sc.words.map(w=>{const o={s:el('span',em.includes(norm(w.w))?'em':null,w.w.replace(/[;:]+$/,''),box),t:w.s-sc.start};
     if(/[.!?]$/.test(w.w))el('br',null,null,box);return o});
-  return lt=>{spans.forEach(o=>{const a=sc.index===0&&o.t<.3?1:ap(lt,o.t-.08,.14);const on=a>0;
+  spans.forEach(o=>o.lit=lit.includes(norm(o.s.textContent)));
+  return lt=>{spans.forEach(o=>{const a=(sc.index===0&&o.t<.3)||o.lit?1:ap(lt,o.t-.08,.14);const on=a>0;
       o.s.style.opacity=on?1:.22;o.s.style.transform=`scale(${1+.35*(on?1-a:0)})`;o.s.style.filter=on&&a<1?`blur(${(1-a)*6}px)`:'none';
       o.s.classList.toggle('on',a>=1)})}};
 B.cards=(sc,root)=>{const p=sc.scene;const panel=el('div','panel',null,root);if(p.title)el('div','ptitle',p.title,panel);
@@ -244,7 +245,7 @@ B.cards=(sc,root)=>{const p=sc.scene;const panel=el('div','panel',null,root);if(
     let st=null,cls=null,lab=null;if(it.status){cls=it.status==='CONFIRMED'?'ok':it.status==='RUMOR'?'rumor':'fake';
       lab=it.label||(it.status==='CONFIRMED'?'✓ CONFIRMED':it.status==='RUMOR'?'RUMOR':'FAKE');st=el('div','st q','?',r)}
     const t=it.pre?0:wordAt(sc,it.word,.1+i*.14);return {r,it,st,cls,lab,t,rt:it.reveal_word?wordAt(sc,it.reveal_word,null):t}});
-  return lt=>{enter(panel,lt,sc);let cur=-1;rows.forEach((o,i)=>{if(lt>=o.t-.1)cur=i});
+  return lt=>{enter(panel,lt,sc);let cur=-1;rows.forEach((o,i)=>{if(!o.it.pre&&lt>=o.t-.1)cur=i});
     rows.forEach((o,i)=>{const a=sc.index===0||o.it.pre?1:ap(lt,o.t-.12,.25);o.r.style.opacity=.5+.5*a;o.r.style.transform=`translateX(${(1-a)*-24}px)`;
       if(o.st){const rv=o.it.pre||lt>=o.rt-.05;o.st.className='st '+(rv?o.cls:'q')+(rv&&o.cls==='fake'&&!o.it.pre?' stamp':'');o.st.textContent=rv?o.lab:'?';
         if(rv&&o.cls==='fake'&&!o.it.pre){const k=lt-o.rt+.05,a=eOut(k/.14),sh=k<.12?Math.sin(k*90)*6*(1-k/.12):0;
@@ -306,6 +307,7 @@ window.render=function(t){
   let ci=-1;D.chunks.forEach((c,i)=>{if(t>=c.s&&t<c.e)ci=i});
   if(ci!==lastChunk){caps.innerHTML=ci<0?'':D.chunks[ci].words.map(w=>`<span>${w.w}</span>`).join('');lastChunk=ci;
     let fs=84;caps.style.whiteSpace='nowrap';caps.style.fontSize=fs+'px';const k=caps.children,cw=()=>k.length?k[k.length-1].offsetLeft+k[k.length-1].offsetWidth-k[0].offsetLeft+40:0;while(cw()>caps.clientWidth&&fs>56){fs-=4;caps.style.fontSize=fs+'px'}if(cw()>caps.clientWidth)caps.style.whiteSpace='normal'}
+  if(ci>=0&&D.chunks[ci].line!==cur){caps.style.visibility='hidden'}else caps.style.visibility='visible';
   if(ci>=0){const c=D.chunks[ci];[...caps.children].forEach((sp,j)=>{const w=c.words[j];const on=t>=w.s&&(j===c.words.length-1||t<c.words[j+1].s);
       const pop=j===0?1+.1*(1-ap(t-c.s,0,.12)):1;sp.style.transform=`scale(${(on?1.05:1)*pop})`;sp.style.opacity=on?1:.82})}
 };

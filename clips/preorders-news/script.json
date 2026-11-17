@@ -5,7 +5,7 @@
   "tag": "GTA 6 NEWS",
   "kicker": "PS & XBOX STORES \u00b7 AS OF NOV 17",
   "title": "GTA 6 pre-order record: what's real and what's not",
-  "yt_title": "GTA 6 broke the PS & Xbox pre-order record\u2026 but how many? \ud83d\udcb0",
+  "yt_title": "GTA 6 broke the PS & Xbox pre-order record\u2026 but that $1B claim? FAKE \ud83d\udcb0",
   "description": "But how many? Sony and Microsoft confirmed GTA 6 is the most pre-ordered game in PlayStation Store and Microsoft Store history, without numbers. Take-Two's CEO only says pre-orders are tracking far in excess of expectations. Sensor Tower's 12M+ is an estimate (rumor); 15M / $1.45B is unverified, with no primary source (rumor); 'Rockstar confirmed $1B' is false.",
   "tiktok_caption": "GTA 6 broke the PS & Xbox pre-order record \ud83d\udcb0 but how many? Most numbers going around are guesses. Did you pre-order? \ud83d\udc47",
   "hashtags": [
@@ -28,7 +28,11 @@
           "record",
           "many"
         ],
-        "pos": "low"
+        "pos": "low",
+        "lit": [
+          "how",
+          "many"
+        ]
       }
     },
     {
@@ -36,7 +40,7 @@
         "F013",
         "F053"
       ],
-      "text": "No official number. The CEO of Take-Two only says: way above expectations.",
+      "text": "No official number. The CEO of Take-Two basically says: way above expectations.",
       "visual": "screenshots/Places/Vice City/Vice_City_11.jpg",
       "focus": 0.5,
       "dim": 0.15,
@@ -69,7 +73,8 @@
         "name": "crab",
         "x": 70,
         "y": 950,
-        "w": 210
+        "w": 210,
+        "word": "digital"
       }
     },
     {
@@ -79,7 +84,7 @@
         "F055",
         "F056"
       ],
-      "text": "Did you see bigger numbers? Not verified. Did Rockstar confirm a billion? Never.",
+      "text": "Have you seen bigger numbers? Not verified. Did Rockstar confirm a billion? Never.",
       "visual": "screenshots/Places/Vice City/Vice_City_08.jpg",
       "visuals": [
         "screenshots/Places/Vice City/Vice_City_12.jpg"
