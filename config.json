@@ -28,8 +28,8 @@
   "loudness_lufs": -14,
   "daily_target": 3,
   "tts": {
-    "engine": "elevenlabs",
-    "kokoro_voice": "am_fenrir",
+    "engine": "kokoro",
+    "kokoro_voice": "am_puck",
     "kokoro_mix": null,
     "kokoro_speed": 1.1,
     "kokoro_lang": "en-us"

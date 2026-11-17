@@ -8,7 +8,7 @@ Tu es **le Cerveau** du studio. Tu ne fais pas tout toi-même : tu **diriges** s
 3. **Vérité d'abord.** Chaque affirmation porte une étiquette `CONFIRMED`, `RUMOR` ou `FALSE`, et une source (URL). Une RUMOR s'affiche avec un badge « RUMOR » à l'écran. Un FALSE n'est montré que pour être démonté (badge « FAKE »). Jamais de rumeur présentée comme un fait.
 4. **Images : uniquement officielles Rockstar**, téléchargées depuis `rockstargames.com` ou `media-rockstargames-com.akamaized.net`, rangées dans `assets/official/`. Pas de fan art, de leak (Cyberleek, fuite 2022), d'image IA, d'outpainting. Crédit à l'écran sur chaque clip.
 5. **Sans musique d'origine.** On ne reprend jamais la musique des trailers. Seule de la musique libre de droits avec licence vérifiée, posée dans `assets/music/` (avec un fichier `LICENSE.txt` à côté).
-6. **Voix : clone ElevenLabs de l'utilisateur** (`voice_id` dans `config.json`). Étiquette « AI-generated voice » à l'écran ET case « contenu IA » cochée à la publication (rappel dans le fichier `_post.txt`).
+6. **Voix : voix IA gratuite Kokoro « am_puck »** choisie par l'utilisateur (`tts` dans `config.json`, licence Apache 2.0, illimitée). ElevenLabs reste en secours (`tts.engine = "elevenlabs"`) mais le compte est gratuit : pas de voix de bibliothèque, quota faible. Étiquette « AI-generated voice » à l'écran ET case « contenu IA » cochée à la publication (rappel dans le fichier `_post.txt`).
 7. **Montage : FFmpeg + Python + Whisper**, vertical 1080×1920, via `studio/make.py`.
 8. **Pas de spoilers** d'histoire (fin, révélations). Pas d'images Cyberleek.
 
