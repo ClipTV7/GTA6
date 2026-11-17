@@ -112,7 +112,7 @@ def main():
         scenes.append({
             "start": s, "dur": d, "bg": bg, "headline": ln.get("headline"), "scene": sc,
             "status": None if ln.get("fact") == "CTA" else ln["status"], "badge": ln.get("badge"),
-            "source": host.replace("www.", "") if host else None, "dim": float(ln.get("dim", 0.34)),
+            "source": host.replace("www.", "") if host else None, "dim": float(ln.get("dim", 0.24)),
             "words": [{"w": w["w"], "s": w["s"], "e": w["e"]} for w in words if w["line"] == i]})
     total = segs[-1][0] + segs[-1][1]
     data = {"scenes": scenes, "chunks": chunks_from(words), "total": total,

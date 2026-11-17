@@ -24,7 +24,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#000;color:#fff;
 .chip.ok{background:#fff;color:#000}.chip.rumor{background:var(--rumor);color:#000}.chip.fake{background:var(--fake);color:#fff}
 .src{font-weight:700;font-size:24px;color:rgba(255,255,255,.8);letter-spacing:.5px;text-shadow:0 2px 6px rgba(0,0,0,.9)}
 /* sous-titres */
-#caps{position:absolute;left:30px;right:30px;white-space:nowrap;top:1236px;text-align:center;font-weight:900;font-size:84px;line-height:1.08;
+#caps{position:absolute;left:120px;right:120px;white-space:nowrap;text-wrap:balance;top:1236px;text-align:center;font-weight:900;font-size:84px;line-height:1.08;
   text-transform:uppercase;letter-spacing:-1px}
 #caps span{display:inline-block;-webkit-text-stroke:15px #000;paint-order:stroke fill;margin:0 20px;transform-origin:50% 65%}
 .small{position:absolute;left:0;right:0;text-align:center;font-weight:700;font-size:22px;color:rgba(255,255,255,.74);
@@ -216,14 +216,14 @@ window.render=function(t){
     b.b.style.opacity=o;const k=clamp((t-sc.start)/sc.dur);b.im.style.transform=`scale(${1.02+.07*k}) translateY(${-14*k}px)`});
   const s=S[cur],sc=s.sc,lt=t-sc.start;dim.style.opacity=sc.dim;
   if(s.head){const a=sc.index===0?1:ap(lt,0,.22);s.head.style.opacity=a;
-    s.head.style.transform=`translateX(-50%) scale(${1+.14*(1-ap(lt,0,.24))})`}
+    s.head.style.transform=`translateX(-50%) scale(${sc.index===0?1:1+.14*(1-ap(lt,0,.24))})`}
   if(s.rec)s.rec.style.opacity=sc.index===0?1:ap(lt,.35,.3);
   s.upd(lt);
   const sp=sc.scene.type==='split';caps.style.top=sp?'660px':'1236px';if(s.rec)s.rec.style.top=sp?'574px':'1150px';
   // sous-titres
   let ci=-1;D.chunks.forEach((c,i)=>{if(t>=c.s&&t<c.e)ci=i});
   if(ci!==lastChunk){caps.innerHTML=ci<0?'':D.chunks[ci].words.map(w=>`<span>${w.w}</span>`).join('');lastChunk=ci;
-    let fs=84;caps.style.fontSize=fs+'px';while(caps.scrollWidth>caps.clientWidth-10&&fs>56){fs-=4;caps.style.fontSize=fs+'px'}}
+    let fs=84;caps.style.whiteSpace='nowrap';caps.style.fontSize=fs+'px';const k=caps.children,cw=()=>k.length?k[k.length-1].offsetLeft+k[k.length-1].offsetWidth-k[0].offsetLeft+40:0;while(cw()>caps.clientWidth&&fs>56){fs-=4;caps.style.fontSize=fs+'px'}if(cw()>caps.clientWidth)caps.style.whiteSpace='normal'}
   if(ci>=0){const c=D.chunks[ci];[...caps.children].forEach((sp,j)=>{const w=c.words[j];const on=t>=w.s&&(j===c.words.length-1||t<c.words[j+1].s);
       const pop=j===0?1+.1*(1-ap(t-c.s,0,.12)):1;sp.style.transform=`scale(${(on?1.05:1)*pop})`;sp.style.opacity=on?1:.82})}
 };
