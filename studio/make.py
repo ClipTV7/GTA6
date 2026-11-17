@@ -198,7 +198,7 @@ def make_voice(lines, cfg, work, test_voice):
         text = ln["text"].strip()
         prev = lines[i - 1]["text"] if i else ""
         nxt = lines[i + 1]["text"] if i + 1 < len(lines) else ""
-        key = hashlib.sha1(json.dumps(["v3-onsets", text, prev, nxt, test_voice, cfg.get("_voice_id"),
+        key = hashlib.sha1(json.dumps(["v4-tails", text, prev, nxt, test_voice, cfg.get("_voice_id"),
                                        cfg["elevenlabs"] if cfg.get("_engine") == "elevenlabs" else cfg.get("tts")],
                                       sort_keys=True).encode()).hexdigest()[:16]
         cached = os.path.join(cache, key + ".wav")
@@ -228,7 +228,7 @@ def make_voice(lines, cfg, work, test_voice):
             # coupe les silences de début/fin, mono 44.1k
             run(["ffmpeg", "-y", "-v", "error", "-i", tmp, "-af",
                  "silenceremove=start_periods=1:start_threshold=-55dB:start_silence=0.06,areverse,"
-                 "silenceremove=start_periods=1:start_threshold=-55dB:start_silence=0.08,areverse",
+                 "silenceremove=start_periods=1:start_threshold=-42dB:start_silence=0.06,areverse",
                  "-ar", "44100", "-ac", "1", cached])
             os.remove(tmp)
         dst = os.path.join(work, f"voice_{i:02d}.wav")

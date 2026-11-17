@@ -104,10 +104,15 @@ def main():
     wavs = make.make_voice(lines, cfg, work, a.test_voice)
     for i, ln in enumerate(lines):  # le tampon FAKE reste au moins 1,2 s à l'écran : silence ajouté après la ligne
         hold = ln.get("hold")
-        if hold is None and any(it.get("status") == "FALSE" and it.get("reveal_word") for it in (ln["scene"].get("items") or [])):
-            hold = 0.45
-            if i + 1 < len(lines):
-                lines[i + 1].setdefault("jcut", 0.3)
+        toks = [re.sub(r"[^a-z0-9]", "", w.lower()) for w in ln["text"].split()]
+        for it in (ln["scene"].get("items") or []):
+            if hold is None and it.get("status") == "FALSE" and it.get("reveal_word"):
+                k = re.sub(r"[^a-z0-9]", "", it["reveal_word"].lower())
+                pos = next((n for n, t in enumerate(toks) if t.startswith(k)), len(toks))
+                if pos >= len(toks) - 2:  # démenti en fin de ligne : on tient le tampon (silence court + J-cut)
+                    hold = 0.45
+                    if i + 1 < len(lines):
+                        lines[i + 1].setdefault("jcut", 0.3)
         if hold:
             make.run(["ffmpeg", "-y", "-v", "error", "-i", wavs[i], "-af", f"apad=pad_dur={hold}", wavs[i] + ".tmp.wav"])
             os.replace(wavs[i] + ".tmp.wav", wavs[i])

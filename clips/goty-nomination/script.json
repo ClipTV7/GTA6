@@ -21,7 +21,7 @@
         "F073",
         "F077"
       ],
-      "text": "GTA 6 is up for Game of the Year. And it's not even out.",
+      "text": "GTA 6 is up for Game of the Year. It's not even out.",
       "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_01.jpg",
       "focus": 0.3,
       "dim": 0.12,
@@ -33,6 +33,12 @@
           "out"
         ],
         "lit": [
+          "gta",
+          "6",
+          "game",
+          "of",
+          "the",
+          "year",
           "not",
           "even",
           "out"
@@ -50,7 +56,7 @@
       "headline": "GAME OF THE YEAR",
       "scene": {
         "type": "cards",
-        "title": "The 6 nominees",
+        "title": "The 6 nominees \u00b7 fan vote: 10%",
         "items": [
           {
             "t": "007 First Light"
@@ -94,28 +100,28 @@
       },
       "sticker": {
         "name": "flamingo",
-        "x": 70,
-        "y": 930,
+        "x": 770,
+        "y": 400,
         "w": 190,
-        "word": "nominations"
+        "word": "record"
       }
     },
     {
       "fact": "F076",
-      "text": "Lucia's actress is nominated too, for Best Performance.",
+      "text": "Lucia's actress is now confirmed, and she's up for Best Performance.",
       "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_13.jpg",
       "focus": 0.35,
       "dim": 0.15,
       "headline": "BEST PERFORMANCE",
       "scene": {
         "type": "cards",
-        "title": "Nominee",
+        "title": "Best Performance nominee",
         "items": [
           {
             "t": "Manni L. Perez (Lucia)",
             "status": "CONFIRMED",
             "hl": true,
-            "word": "actress"
+            "word": "confirmed"
           }
         ]
       }
@@ -126,7 +132,7 @@
         "F080",
         "F081"
       ],
-      "text": "Did they bend the rules for GTA 6? Not true. It's the same deadline every year.",
+      "text": "Did they bend the rules for GTA 6? Not true. It's the same rule every year.",
       "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_08.jpg",
       "dim": 0.22,
       "headline": "REAL OR NOT?",
@@ -137,11 +143,11 @@
           {
             "t": "Deadline moved for GTA 6",
             "status": "FALSE",
-            "word": "deadline",
+            "word": "rules",
             "reveal_word": "not"
           },
           {
-            "t": "Same cutoff every year (Nov 20 this year)",
+            "t": "Same rule every year (Nov 20 this year)",
             "status": "CONFIRMED",
             "word": "same"
           }
