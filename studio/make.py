@@ -410,7 +410,8 @@ def write_post(script, cfg, path):
         yt_title = (yt_title + " #Shorts")[:100]
     desc = script.get("description", lines[0]["text"])
     credit = cfg["credit_text"] + ". Grand Theft Auto VI is a trademark of Take-Two Interactive."
-    rumor_txt = ["Unconfirmed (rumor): " + " / ".join(rumors), ""] if rumors else []
+    rumor_txt = ([script["rumor_note"], ""] if script.get("rumor_note") else
+                 (["Unconfirmed (rumor): " + " / ".join(rumors), ""] if rumors else []))
     tk = script.get("tiktok_caption", desc)
     txt = ["===== YOUTUBE SHORTS =====",
            "TITRE :", yt_title, "",

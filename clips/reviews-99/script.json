@@ -106,7 +106,7 @@
         "type": "quote",
         "title": "Recurring criticism",
         "text": "Frame-rate dips in the <b>busiest moments</b>",
-        "who": "GameSpot review",
+        "who": "Critics' consensus \u00b7 via Forbes",
         "word": "critics"
       }
     },
@@ -130,7 +130,7 @@
             "reveal_word": "not"
           },
           {
-            "t": "Ties Ocarina of Time at 99",
+            "t": "Ties Zelda: Ocarina (99)",
             "status": "CONFIRMED",
             "word": "ties"
           }
@@ -152,5 +152,6 @@
         ]
       }
     }
-  ]
+  ],
+  "rumor_note": "Unconfirmed (seen only in review roundups): IGN 10/10, The Guardian 5/5, Eurogamer 5/5."
 }
