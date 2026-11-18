@@ -2,7 +2,7 @@
   "slug": "gta5-vs-gta6",
   "format": "explainer",
   "title": "GTA 5 vs GTA 6: what actually changes",
-  "yt_title": "GTA 6 brings back the 6-star wanted level \u2b50 (and 4 more changes vs GTA 5)",
+  "yt_title": "GTA 6 brings back the 6-star wanted level \u2b50 (and 5 more changes vs GTA 5)",
   "description": "GTA 5 vs GTA 6, confirmed changes only: the wanted level goes back up to 6 stars, two leads instead of three, a map Rockstar says is nearly as big as GTA 4, GTA 5 and Red Dead Redemption 2 combined, an order of magnitude more interiors, no online mode at launch, and a $79.99 price vs $59.99 for GTA 5 in 2013. Which change matters most to you?",
   "tiktok_caption": "GTA 6 vs GTA 5: 6 wanted stars are back \u2b50 Which change matters most to you? \ud83d\udc47",
   "hashtags": [
@@ -15,33 +15,32 @@
   "lines": [
     {
       "fact": "F100",
-      "text": "GTA 5 capped your wanted level at five stars. GTA 6 goes back to six.",
+      "text": "Have you ever hit five stars in GTA 5? GTA 6 goes back up to six.",
       "visual": "screenshots/People/Jason Duval/Jason_Duval_11.jpg",
       "focus": 0.55,
       "dim": 0.14,
-      "headline": "WANTED LEVEL",
+      "headline": "1/6 \u00b7 WANTED LEVEL",
       "scene": {
-        "type": "meter",
+        "type": "stat",
         "title": "Max wanted level",
-        "left": "GTA 5 \u00b7 5\u2605",
-        "right": "GTA 6 \u00b7 6\u2605",
-        "from_word": "five",
-        "to_word": "six",
-        "hint": "Back up to six stars"
+        "value": 6,
+        "suffix": "\u2605",
+        "label": "GTA 5 stopped at 5\u2605",
+        "word": "have"
       }
     },
     {
       "fact": "F099",
       "text": "You play two leads now, Jason and Lucia, instead of three.",
       "visual": "screenshots/People/Jason Duval/Jason_Duval_05.jpg",
-      "headline": "2 LEADS, NOT 3",
+      "headline": "2/6 \u00b7 2 LEADS, NOT 3",
       "scene": {
         "type": "split",
         "switch_word": "instead",
         "top": {
           "img": "screenshots/People/Jason Duval/Jason_Duval_05.jpg",
           "label": "JASON",
-          "focus": 0.45,
+          "focus": 0.6,
           "word": "jason"
         },
         "bottom": {
@@ -57,7 +56,7 @@
       "text": "Rockstar says the map is nearly as big as GTA 4, GTA 5 and Red Dead 2 combined.",
       "visual": "screenshots/Places/Grassrivers/Grassrivers_05.jpg",
       "dim": 0.2,
-      "headline": "THE MAP",
+      "headline": "3/6 \u00b7 THE MAP",
       "scene": {
         "type": "bars",
         "title": "Land size, per Rockstar",
@@ -71,7 +70,7 @@
           {
             "label": "GTA 6",
             "value": 1,
-            "text": "nearly as big",
+            "text": "\u2248 nearly as big",
             "word": "nearly"
           }
         ]
@@ -79,17 +78,40 @@
     },
     {
       "fact": "F098",
-      "text": "Rockstar's Aaron Garbut says there are an order of magnitude more interiors.",
+      "text": "Rockstar's Aaron Garbut says GTA 6 has an order of magnitude more interiors.",
       "visual": "screenshots/People/Cal Hampton/Cal_Hampton_02.jpg",
       "focus": 0.45,
       "dim": 0.2,
-      "headline": "INTERIORS",
+      "headline": "4/6 \u00b7 INTERIORS",
       "scene": {
-        "type": "quote",
-        "title": "Rockstar",
-        "text": "An <b>order of magnitude</b> more interiors",
-        "who": "Aaron Garbut, Rockstar (to Edge)",
-        "word": "says"
+        "type": "grid",
+        "title": "Way more interiors \u00b7 per Rockstar",
+        "tiles": [
+          {
+            "img": "screenshots/People/Cal Hampton/Cal_Hampton_02.jpg",
+            "label": "Pool hall"
+          },
+          {
+            "img": "screenshots/People/Boobie Ike/Boobie_Ike_01.jpg",
+            "label": "Office"
+          },
+          {
+            "img": "screenshots/People/DreQuan Priest/DreQuan_Priest_04.jpg",
+            "label": "Studio"
+          },
+          {
+            "img": "screenshots/People/Brian Heder/Brian_Heder_02.jpg",
+            "label": "Bar"
+          },
+          {
+            "img": "screenshots/People/Raul Bautista/Raul_Bautista_01.jpg",
+            "label": "Hideout"
+          },
+          {
+            "img": "screenshots/Places/Vice City/Vice_City_13.jpg",
+            "label": "Club"
+          }
+        ]
       }
     },
     {
@@ -97,7 +119,7 @@
       "text": "GTA Online arrived two weeks after GTA 5. GTA 6 has no online date yet.",
       "visual": "screenshots/Places/Vice City/Vice_City_09.jpg",
       "dim": 0.2,
-      "headline": "ONLINE",
+      "headline": "5/6 \u00b7 ONLINE",
       "scene": {
         "type": "cards",
         "focus": "current",
@@ -117,11 +139,11 @@
     },
     {
       "fact": "F102",
-      "text": "And it costs twenty dollars more at launch.",
+      "text": "The standard edition also costs twenty dollars more at launch.",
       "visual": "screenshots/People/Boobie Ike/Boobie_Ike_01.jpg",
       "focus": 0.45,
       "dim": 0.2,
-      "headline": "THE PRICE",
+      "headline": "6/6 \u00b7 THE PRICE",
       "scene": {
         "type": "bars",
         "title": "Standard edition at launch",
@@ -155,7 +177,7 @@
           "6 wanted stars",
           "2 leads",
           "Giant map",
-          "No online yet"
+          "$20 more"
         ],
         "letters": true,
         "active": "cycle",

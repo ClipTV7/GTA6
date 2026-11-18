@@ -6,7 +6,7 @@
   "kicker": "CHEAT CODES \u00b7 NOV 18",
   "title": "GTA 6 cheat codes going around are fake",
   "yt_title": "Seen GTA 6 cheat codes online? They're FAKE \u274c",
-  "description": "Nobody can play GTA 6 before November 19 and Rockstar has published no cheat codes, so any 'working' GTA 6 cheat list is fake; many just recycle GTA 5 codes. Will cheats return? Probably, like every main GTA since GTA 3, but it's unconfirmed (rumor). Cheat code generators are scams.",
+  "description": "These lists came out before anyone could play GTA 6 and Rockstar has published no cheat codes, so any 'working' GTA 6 cheat list is fake; many just recycle GTA 5 codes. Will cheats return? Probably, like every main GTA since GTA 3, but it's unconfirmed (rumor). Cheat code generators are scams.",
   "tiktok_caption": "Seen GTA 6 cheat codes online? They're FAKE \u274c Which cheat do you want first? \ud83d\udc47",
   "hashtags": [
     "#GTA6",
@@ -36,35 +36,32 @@
       }
     },
     {
-      "fact": [
-        "F092",
-        "F001"
-      ],
-      "text": "Nobody can play before Thursday, so any working list is fake.",
+      "fact": "F092",
+      "text": "Those lists came out before anyone could play. Most are just old GTA 5 codes, so they're fake.",
       "visual": "screenshots/Places/Vice City/Vice_City_02.jpg",
       "dim": 0.2,
       "headline": "WHY?",
       "scene": {
         "type": "date",
-        "title": "Nobody plays before",
+        "title": "Lists came out before",
         "month": "NOVEMBER",
         "day": "19",
         "weekday": "THURSDAY",
         "chips": [
           {
             "t": "PS5",
-            "word": "play"
+            "word": "anyone"
           },
           {
             "t": "XBOX SERIES X|S",
-            "word": "thursday"
+            "word": "play"
           }
         ]
       }
     },
     {
       "fact": "F093",
-      "text": "Will GTA 6 have cheats? Probably, like every main GTA since GTA 3. It's still unconfirmed.",
+      "text": "Will GTA 6 have cheats? Probably. Every main GTA since GTA 3 had them. It's still unconfirmed.",
       "visual": "screenshots/People/Jason Duval/Jason_Duval_16.jpg",
       "dim": 0.22,
       "headline": "REAL OR NOT?",
@@ -83,7 +80,8 @@
             "word": "probably"
           }
         ]
-      }
+      },
+      "focus": 0.68
     },
     {
       "fact": "F092",
@@ -112,7 +110,8 @@
             "reveal_word": "scam"
           }
         ]
-      }
+      },
+      "focus": 0.68
     },
     {
       "fact": "CTA",

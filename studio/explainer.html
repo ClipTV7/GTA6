@@ -256,7 +256,7 @@ B.stat=(sc,root)=>{const p=sc.scene;const panel=el('div','panel stat',null,root)
   const num=el('div','num','',panel);const lab=el('div','lab',p.label||'',panel);const sub=p.sub?el('div','sub',p.sub,panel):null;
   const t0=wordAt(sc,p.word,.12);
   const tc=Math.max(.15,t0-.7);return lt=>{enter(panel,lt,sc);const a=sc.index===0?1:eOut((lt-tc)/.7);const v=p.value*a;
-    num.textContent=(p.prefix||'')+(lt<tc?'??':(p.decimals?v.toFixed(p.decimals):Math.round(v).toLocaleString('en-US')))+(p.suffix||'');
+    num.textContent=(p.prefix||'')+(lt<tc&&sc.index!==0?'??':(p.decimals?v.toFixed(p.decimals):Math.round(v).toLocaleString('en-US')))+(p.suffix||'');
     lab.style.opacity=ap(lt,tc+.5,.3);if(sub)sub.style.opacity=ap(lt,tc+.8,.3)}};
 B.quote=(sc,root)=>{const p=sc.scene;const panel=el('div','panel quote',null,root);if(p.title)el('div','ptitle',p.title,panel);
   const q=el('div','q','“'+p.text+'”',panel);const who=el('div','who','— '+p.who,panel);const t0=wordAt(sc,p.word,.15);
