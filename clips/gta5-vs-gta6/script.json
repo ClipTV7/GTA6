@@ -40,7 +40,7 @@
         "top": {
           "img": "screenshots/People/Jason Duval/Jason_Duval_05.jpg",
           "label": "JASON",
-          "focus": 0.6,
+          "focus": 0.15,
           "word": "jason"
         },
         "bottom": {
@@ -100,12 +100,13 @@
             "label": "Studio"
           },
           {
-            "img": "screenshots/People/Brian Heder/Brian_Heder_02.jpg",
-            "label": "Bar"
+            "img": "screenshots/People/Lucia Caminos/Lucia_Caminos_05.jpg",
+            "label": "Prison",
+            "focus": 0.55
           },
           {
             "img": "screenshots/People/Raul Bautista/Raul_Bautista_01.jpg",
-            "label": "Hideout"
+            "label": "Back room"
           },
           {
             "img": "screenshots/Places/Vice City/Vice_City_13.jpg",
@@ -126,12 +127,10 @@
         "items": [
           {
             "t": "GTA 5 \u00b7 GTA Online 2 weeks later",
-            "ok": true,
             "word": "arrived"
           },
           {
             "t": "GTA 6 \u00b7 no online date yet",
-            "ok": false,
             "word": "date"
           }
         ]

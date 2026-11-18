@@ -37,7 +37,7 @@
     },
     {
       "fact": "F092",
-      "text": "Those lists came out before anyone could play. Most are just old GTA 5 codes, so they're fake.",
+      "text": "Those lists came out before anyone could play. Many are just old GTA 5 codes. Fake.",
       "visual": "screenshots/Places/Vice City/Vice_City_02.jpg",
       "dim": 0.2,
       "headline": "WHY?",
@@ -111,7 +111,13 @@
           }
         ]
       },
-      "focus": 0.68
+      "focus": 0.68,
+      "visuals": [
+        "screenshots/People/Jason and Lucia/Jason_and_Lucia_17.jpg"
+      ],
+      "cut_words": [
+        "generators"
+      ]
     },
     {
       "fact": "CTA",
