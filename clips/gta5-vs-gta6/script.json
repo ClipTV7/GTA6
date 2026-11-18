@@ -1,0 +1,166 @@
+{
+  "slug": "gta5-vs-gta6",
+  "format": "explainer",
+  "title": "GTA 5 vs GTA 6: what actually changes",
+  "yt_title": "GTA 6 brings back the 6-star wanted level \u2b50 (and 4 more changes vs GTA 5)",
+  "description": "GTA 5 vs GTA 6, confirmed changes only: the wanted level goes back up to 6 stars, two leads instead of three, a map Rockstar says is nearly as big as GTA 4, GTA 5 and Red Dead Redemption 2 combined, an order of magnitude more interiors, no online mode at launch, and a $79.99 price vs $59.99 for GTA 5 in 2013. Which change matters most to you?",
+  "tiktok_caption": "GTA 6 vs GTA 5: 6 wanted stars are back \u2b50 Which change matters most to you? \ud83d\udc47",
+  "hashtags": [
+    "#GTA6",
+    "#GTA5",
+    "#GTAVI",
+    "#GTA",
+    "#Rockstar"
+  ],
+  "lines": [
+    {
+      "fact": "F100",
+      "text": "GTA 5 capped your wanted level at five stars. GTA 6 goes back to six.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_11.jpg",
+      "focus": 0.55,
+      "dim": 0.14,
+      "headline": "WANTED LEVEL",
+      "scene": {
+        "type": "meter",
+        "title": "Max wanted level",
+        "left": "GTA 5 \u00b7 5\u2605",
+        "right": "GTA 6 \u00b7 6\u2605",
+        "from_word": "five",
+        "to_word": "six",
+        "hint": "Back up to six stars"
+      }
+    },
+    {
+      "fact": "F099",
+      "text": "You play two leads now, Jason and Lucia, instead of three.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_05.jpg",
+      "headline": "2 LEADS, NOT 3",
+      "scene": {
+        "type": "split",
+        "switch_word": "instead",
+        "top": {
+          "img": "screenshots/People/Jason Duval/Jason_Duval_05.jpg",
+          "label": "JASON",
+          "focus": 0.45,
+          "word": "jason"
+        },
+        "bottom": {
+          "img": "screenshots/People/Lucia Caminos/Lucia_Caminos_12.jpg",
+          "label": "LUCIA",
+          "focus": 0.4,
+          "word": "lucia"
+        }
+      }
+    },
+    {
+      "fact": "F097",
+      "text": "Rockstar says the map is nearly as big as GTA 4, GTA 5 and Red Dead 2 combined.",
+      "visual": "screenshots/Places/Grassrivers/Grassrivers_05.jpg",
+      "dim": 0.2,
+      "headline": "THE MAP",
+      "scene": {
+        "type": "bars",
+        "title": "Land size, per Rockstar",
+        "note": "Rockstar to Edge magazine",
+        "rows": [
+          {
+            "label": "3 maps",
+            "value": 1,
+            "text": "GTA 4 + 5 + RDR2"
+          },
+          {
+            "label": "GTA 6",
+            "value": 1,
+            "text": "nearly as big",
+            "word": "nearly"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "F098",
+      "text": "Rockstar's Aaron Garbut says there are an order of magnitude more interiors.",
+      "visual": "screenshots/People/Cal Hampton/Cal_Hampton_02.jpg",
+      "focus": 0.45,
+      "dim": 0.2,
+      "headline": "INTERIORS",
+      "scene": {
+        "type": "quote",
+        "title": "Rockstar",
+        "text": "An <b>order of magnitude</b> more interiors",
+        "who": "Aaron Garbut, Rockstar (to Edge)",
+        "word": "says"
+      }
+    },
+    {
+      "fact": "F101",
+      "text": "GTA Online arrived two weeks after GTA 5. GTA 6 has no online date yet.",
+      "visual": "screenshots/Places/Vice City/Vice_City_09.jpg",
+      "dim": 0.2,
+      "headline": "ONLINE",
+      "scene": {
+        "type": "cards",
+        "focus": "current",
+        "items": [
+          {
+            "t": "GTA 5 \u00b7 GTA Online 2 weeks later",
+            "ok": true,
+            "word": "arrived"
+          },
+          {
+            "t": "GTA 6 \u00b7 no online date yet",
+            "ok": false,
+            "word": "date"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "F102",
+      "text": "And it costs twenty dollars more at launch.",
+      "visual": "screenshots/People/Boobie Ike/Boobie_Ike_01.jpg",
+      "focus": 0.45,
+      "dim": 0.2,
+      "headline": "THE PRICE",
+      "scene": {
+        "type": "bars",
+        "title": "Standard edition at launch",
+        "note": "Before inflation",
+        "rows": [
+          {
+            "label": "GTA 5",
+            "value": 59.99,
+            "text": "$59.99"
+          },
+          {
+            "label": "GTA 6",
+            "value": 79.99,
+            "text": "$79.99",
+            "word": "twenty"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "CTA",
+      "text": "Six stars, two leads, a giant map. What's the biggest change for you? Comment below.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_11.jpg",
+      "focus": 0.55,
+      "dim": 0.15,
+      "headline": "YOUR PICK?",
+      "scene": {
+        "type": "list",
+        "title": "Biggest change?",
+        "items": [
+          "6 wanted stars",
+          "2 leads",
+          "Giant map",
+          "No online yet"
+        ],
+        "letters": true,
+        "active": "cycle",
+        "cta": "COMMENT BELOW \u2193"
+      }
+    }
+  ]
+}

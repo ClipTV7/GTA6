@@ -239,6 +239,22 @@ def make_voice(lines, cfg, work, test_voice):
 
 
 # ---------------------------------------------------------------- 3. Whisper
+NUMW = dict(zip("zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty".split(),
+                [str(n) for n in range(21)]))
+ROMAN = {"iii": "3", "iv": "4", "v": "5", "vi": "6"}
+
+
+def canon(w, heard=False):
+    """Forme comparable d'un mot : chiffres = lettres (five = 5), GTA V = 5, $20 = 20 dollars."""
+    raw = w.strip().lower()
+    t = re.sub(r"[^a-z0-9]", "", raw)
+    if heard and raw.startswith("$") and t.isdigit():
+        return t + "dollars"
+    if heard and t in ROMAN:
+        return ROMAN[t]
+    return NUMW.get(t, t)
+
+
 def word_timings(wavs, lines, cfg, gap):
     from faster_whisper import WhisperModel
     model = WhisperModel(cfg["whisper_model"], device="cpu", compute_type="int8")
@@ -254,8 +270,8 @@ def word_timings(wavs, lines, cfg, gap):
         result, _ = model.transcribe(audio, language="en", word_timestamps=True, beam_size=5)
         heard = [w for s in result for w in s.words]
         script_words = ln["text"].split()
-        nz = lambda x: re.sub(r"[^a-z0-9]", "", x.lower())
-        heard_join = "".join(("6" if nz(w.word) == "vi" else nz(w.word)) for w in heard)
+        nz = lambda x: canon(x)
+        heard_join = "".join(canon(w.word, heard=True) for w in heard)
         missing = [w for w in script_words if nz(w) and nz(w).rstrip("s") not in heard_join]
         heard_txt = "".join(w.word for w in heard)
         hq = [(nz(w.word), w.word.strip().endswith("?")) for w in heard]

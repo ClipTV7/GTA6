@@ -106,6 +106,8 @@ def main():
         hold = ln.get("hold")
         toks = [re.sub(r"[^a-z0-9]", "", w.lower()) for w in ln["text"].split()]
         for it in (ln["scene"].get("items") or []):
+            if not isinstance(it, dict):
+                continue
             if hold is None and it.get("status") == "FALSE" and it.get("reveal_word"):
                 k = re.sub(r"[^a-z0-9]", "", it["reveal_word"].lower())
                 pos = next((n for n, t in enumerate(toks) if t.startswith(k)), len(toks))
@@ -265,10 +267,10 @@ def main():
                              capture_output=True, check=True).stdout
         res, _ = WhisperModel(cfg["whisper_model"], device="cpu", compute_type="int8").transcribe(
             np.frombuffer(pcm, np.int16).astype(np.float32) / 32768.0, language="en")
-        heard = "".join(re.sub(r"[^a-z0-9]", "", s_.text.lower().replace(" vi ", " 6 ")) for s_ in res)
+        heard = "".join(make.canon(x, heard=True) for s_ in res for x in s_.text.split())
         NUM = dict(zip("0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20".split(),
                        "zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty".split()))
-        tok = lambda w: re.sub(r"[^a-z0-9]", "", w.lower()).rstrip("s")
+        tok = lambda w: make.canon(w).rstrip("s")
         WRD = {v: k for k, v in NUM.items()}
         miss = [w for ln in lines for w in ln["text"].split()
                 if tok(w) not in heard and NUM.get(tok(w), "#") not in heard and WRD.get(tok(w), "#") not in heard]

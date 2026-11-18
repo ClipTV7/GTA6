@@ -1,0 +1,133 @@
+{
+  "slug": "cheat-codes-fake",
+  "format": "explainer",
+  "theme": "news",
+  "tag": "GTA 6 NEWS",
+  "kicker": "CHEAT CODES \u00b7 NOV 18",
+  "title": "GTA 6 cheat codes going around are fake",
+  "yt_title": "Seen GTA 6 cheat codes online? They're FAKE \u274c",
+  "description": "Nobody can play GTA 6 before November 19 and Rockstar has published no cheat codes, so any 'working' GTA 6 cheat list is fake; many just recycle GTA 5 codes. Will cheats return? Probably, like every main GTA since GTA 3, but it's unconfirmed (rumor). Cheat code generators are scams.",
+  "tiktok_caption": "Seen GTA 6 cheat codes online? They're FAKE \u274c Which cheat do you want first? \ud83d\udc47",
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#GTA",
+    "#CheatCodes",
+    "#GTA6Cheats"
+  ],
+  "lines": [
+    {
+      "fact": "F092",
+      "text": "Have you seen GTA 6 cheat codes online? They're fake.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_19.jpg",
+      "focus": 0.55,
+      "dim": 0.12,
+      "scene": {
+        "type": "slam",
+        "pos": "low",
+        "em": [
+          "fake"
+        ],
+        "lit": [
+          "cheat",
+          "codes",
+          "fake"
+        ]
+      }
+    },
+    {
+      "fact": [
+        "F092",
+        "F001"
+      ],
+      "text": "Nobody can play before Thursday, so any working list is fake.",
+      "visual": "screenshots/Places/Vice City/Vice_City_02.jpg",
+      "dim": 0.2,
+      "headline": "WHY?",
+      "scene": {
+        "type": "date",
+        "title": "Nobody plays before",
+        "month": "NOVEMBER",
+        "day": "19",
+        "weekday": "THURSDAY",
+        "chips": [
+          {
+            "t": "PS5",
+            "word": "play"
+          },
+          {
+            "t": "XBOX SERIES X|S",
+            "word": "thursday"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "F093",
+      "text": "Will GTA 6 have cheats? Probably, like every main GTA since GTA 3. It's still unconfirmed.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_16.jpg",
+      "dim": 0.22,
+      "headline": "REAL OR NOT?",
+      "scene": {
+        "type": "cards",
+        "focus": "current",
+        "items": [
+          {
+            "t": "Working GTA 6 cheat lists",
+            "status": "FALSE",
+            "pre": true
+          },
+          {
+            "t": "Cheats return in GTA 6",
+            "status": "RUMOR",
+            "word": "probably"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "F092",
+      "text": "Do cheat code generators work? No. They're a scam.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_16.jpg",
+      "dim": 0.22,
+      "headline": "REAL OR NOT?",
+      "scene": {
+        "type": "cards",
+        "focus": "current",
+        "items": [
+          {
+            "t": "Working GTA 6 cheat lists",
+            "status": "FALSE",
+            "pre": true
+          },
+          {
+            "t": "Cheats return in GTA 6",
+            "status": "RUMOR",
+            "pre": true
+          },
+          {
+            "t": "Cheat code generators",
+            "status": "FALSE",
+            "word": "generators",
+            "reveal_word": "scam"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "CTA",
+      "text": "So, which cheat do you want first? Comment below.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_19.jpg",
+      "focus": 0.55,
+      "dim": 0.12,
+      "scene": {
+        "type": "slam",
+        "pos": "low",
+        "em": [
+          "cheat",
+          "comment"
+        ]
+      }
+    }
+  ]
+}
