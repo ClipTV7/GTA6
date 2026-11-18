@@ -1,0 +1,156 @@
+{
+  "slug": "reviews-99",
+  "format": "explainer",
+  "theme": "news",
+  "tag": "BREAKING",
+  "kicker": "REVIEWS \u00b7 NOV 18",
+  "title": "GTA 6 reviews are in: 99 on Metacritic",
+  "yt_title": "GTA 6 reviews are in\u2026 99 on Metacritic \ud83e\udd2f",
+  "description": "GTA 6 reviews are in: Metascore 99 (about 146 critic reviews as of 12:30 UTC Nov 18, still moving) and 100% of critics recommend it on OpenCritic (Mighty). GameSpot gave it a 10/10; IGN, The Guardian and Eurogamer reportedly gave perfect scores too (reported by review roundups). Main criticism: frame-rate dips in the busiest moments. Is it a new Metacritic record? False: it ties The Legend of Zelda: Ocarina of Time at 99. Does it deserve a 99?",
+  "tiktok_caption": "GTA 6 reviews are in\u2026 99 on Metacritic \ud83e\udd2f Does it deserve it? \ud83d\udc47",
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#GTA",
+    "#Metacritic",
+    "#GTA6Review"
+  ],
+  "lines": [
+    {
+      "fact": "F105",
+      "text": "GTA 6 reviews are in. It scored a 99.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_03.jpg",
+      "focus": 0.45,
+      "dim": 0.12,
+      "scene": {
+        "type": "slam",
+        "pos": "low",
+        "em": [
+          "99"
+        ],
+        "lit": [
+          "reviews",
+          "99"
+        ]
+      }
+    },
+    {
+      "fact": "F106",
+      "text": "OpenCritic says 100 percent of critics recommend it.",
+      "visual": "screenshots/Places/Vice City/Vice_City_10.jpg",
+      "dim": 0.18,
+      "headline": "OPENCRITIC",
+      "scene": {
+        "type": "stat",
+        "title": "OpenCritic \u00b7 Mighty",
+        "value": 100,
+        "suffix": "%",
+        "label": "of critics recommend it",
+        "sub": "As of Nov 18, 12:30 UTC",
+        "word": "100"
+      },
+      "sticker": {
+        "name": "flamingo",
+        "x": 770,
+        "y": 400,
+        "w": 190,
+        "word": "recommend"
+      }
+    },
+    {
+      "fact": [
+        "F108",
+        "F109",
+        "F110",
+        "F111"
+      ],
+      "text": "GameSpot gave it a 10. Other big outlets reportedly gave perfect scores too.",
+      "visual": "screenshots/Places/Vice City/Vice_City_08.jpg",
+      "dim": 0.22,
+      "headline": "THE SCORES",
+      "scene": {
+        "type": "cards",
+        "focus": "current",
+        "items": [
+          {
+            "t": "GameSpot \u00b7 10/10",
+            "status": "CONFIRMED",
+            "word": "gamespot"
+          },
+          {
+            "t": "IGN \u00b7 10/10",
+            "status": "RUMOR",
+            "word": "other"
+          },
+          {
+            "t": "The Guardian \u00b7 5/5",
+            "status": "RUMOR",
+            "word": "outlets"
+          },
+          {
+            "t": "Eurogamer \u00b7 5/5",
+            "status": "RUMOR",
+            "word": "perfect"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "F115",
+      "text": "Is it perfect? Not quite. Critics flag frame rate dips in the busiest moments.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_11.jpg",
+      "focus": 0.55,
+      "dim": 0.2,
+      "headline": "THE CATCH",
+      "scene": {
+        "type": "quote",
+        "title": "Recurring criticism",
+        "text": "Frame-rate dips in the <b>busiest moments</b>",
+        "who": "GameSpot review",
+        "word": "critics"
+      }
+    },
+    {
+      "fact": [
+        "F116",
+        "F105"
+      ],
+      "text": "Is that a record on Metacritic? Not true. It ties Zelda: Ocarina of Time.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_08.jpg",
+      "dim": 0.22,
+      "headline": "REAL OR NOT?",
+      "scene": {
+        "type": "cards",
+        "focus": "current",
+        "items": [
+          {
+            "t": "New Metacritic record",
+            "status": "FALSE",
+            "word": "record",
+            "reveal_word": "not"
+          },
+          {
+            "t": "Ties Ocarina of Time at 99",
+            "status": "CONFIRMED",
+            "word": "ties"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "CTA",
+      "text": "Does it deserve a 99? Comment below.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_03.jpg",
+      "focus": 0.45,
+      "dim": 0.12,
+      "scene": {
+        "type": "slam",
+        "pos": "low",
+        "em": [
+          "99",
+          "comment"
+        ]
+      }
+    }
+  ]
+}

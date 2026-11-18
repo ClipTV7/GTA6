@@ -250,6 +250,10 @@ def canon(w, heard=False):
     t = re.sub(r"[^a-z0-9]", "", raw)
     if heard and raw.startswith("$") and t.isdigit():
         return t + "dollars"
+    if heard and raw.rstrip(".,!?").endswith("%") and t.isdigit():
+        return t + "percent"
+    if heard and raw.strip(".,!?") == "%":
+        return "percent"
     if heard and t in ROMAN:
         return ROMAN[t]
     return NUMW.get(t, t)
@@ -279,7 +283,7 @@ def word_timings(wavs, lines, cfg, gap):
             k = nz(sw)
             if not any(h == k and q for h, q in hq):
                 print(f"  [INTONATION ?] ligne {i + 1} : « {sw} » n'est pas entendu comme une question : « {heard_txt.strip()} »")
-        if heard and script_words and nz(heard[0].word) != nz(script_words[0]) and not (nz(script_words[0]) == "6" or nz(heard[0].word) == "vi"):
+        if heard and script_words and not nz(script_words[0]).startswith(nz(heard[0].word)) and not (nz(script_words[0]) == "6" or nz(heard[0].word) == "vi"):
             print(f"  [VOIX ?] ligne {i + 1} : premier mot « {script_words[0]} » entendu « {heard[0].word.strip()} » (p={heard[0].probability:.2f})")
         elif heard and heard[0].probability < 0.4:
             print(f"  [VOIX ?] ligne {i + 1} : premier mot « {script_words[0]} » peu net (p={heard[0].probability:.2f})")
