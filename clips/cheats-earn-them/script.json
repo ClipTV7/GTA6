@@ -1,0 +1,130 @@
+{
+  "slug": "cheats-earn-them",
+  "format": "explainer",
+  "theme": "news",
+  "tag": "GTA 6 NEWS",
+  "kicker": "CHEATS \u00b7 NOV 19",
+  "title": "GTA 6 has real cheats, but you have to earn them",
+  "yt_title": "GTA 6 has real cheats\u2026 but you have to EARN them \ud83c\udfae",
+  "description": "GTA 6 has cheats: D-pad codes on PS5 and Xbox that unlock only after you finish the main story, plus a challenge for each cheat (PC Gamer and GameSpot guides). The money cheat reportedly gives $250,000 (input reported by GameSpot: Up, Right, Down, Left, Up, Left, Down, Right; not yet confirmed by a second outlet). Old GTA 5 cheats (like PAINKILLER) do not work: GTA 6 has brand new codes. Which cheat will you unlock first?",
+  "rumor_note": "Unconfirmed (one reliable outlet so far): the money cheat input and its $250,000 amount.",
+  "tiktok_caption": "GTA 6 has real cheats\u2026 but you have to EARN them \ud83c\udfae Which one will you unlock first? \ud83d\udc47",
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#GTA6Cheats",
+    "#CheatCodes",
+    "#GTA"
+  ],
+  "lines": [
+    {
+      "fact": "F129",
+      "text": "GTA 6 has real cheats. But you have to earn them.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_15.jpg",
+      "focus": 0.45,
+      "dim": 0.12,
+      "scene": {
+        "type": "slam",
+        "pos": "low",
+        "em": [
+          "cheats",
+          "earn"
+        ],
+        "lit": [
+          "real",
+          "cheats",
+          "earn"
+        ]
+      }
+    },
+    {
+      "fact": "F129",
+      "text": "They only unlock after you finish the main story, plus a challenge for each cheat.",
+      "visual": "screenshots/Places/Vice City/Vice_City_02.jpg",
+      "dim": 0.2,
+      "headline": "HOW TO UNLOCK",
+      "scene": {
+        "type": "route",
+        "kicker": "Unlock path",
+        "title": "Story first",
+        "sub": "+ one challenge per cheat",
+        "from": "MAIN STORY",
+        "to": "CHEATS",
+        "go_word": "challenge"
+      }
+    },
+    {
+      "fact": "F130",
+      "text": "The money cheat reportedly gives you a quarter million dollars.",
+      "visual": "screenshots/People/Boobie Ike/Boobie_Ike_01.jpg",
+      "focus": 0.45,
+      "dim": 0.18,
+      "headline": "MONEY CHEAT",
+      "scene": {
+        "type": "stat",
+        "title": "Money cheat",
+        "value": 250000,
+        "prefix": "$",
+        "label": "\u2191 \u2192 \u2193 \u2190 \u2191 \u2190 \u2193 \u2192",
+        "sub": "D-pad input reported by GameSpot",
+        "word": "quarter"
+      },
+      "sticker": {
+        "name": "crab",
+        "x": 70,
+        "y": 930,
+        "w": 200,
+        "word": "million"
+      }
+    },
+    {
+      "fact": [
+        "F134",
+        "F129",
+        "F130"
+      ],
+      "text": "Can you use your old GTA 5 cheats? Never. GTA 6 has brand new codes.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_04.jpg",
+      "focus": 0.5,
+      "dim": 0.22,
+      "headline": "REAL OR NOT?",
+      "scene": {
+        "type": "cards",
+        "focus": "current",
+        "items": [
+          {
+            "t": "Cheats exist in GTA 6",
+            "status": "CONFIRMED",
+            "pre": true
+          },
+          {
+            "t": "Money cheat input",
+            "status": "RUMOR",
+            "pre": true
+          },
+          {
+            "t": "GTA 5 codes still work",
+            "status": "FALSE",
+            "word": "old",
+            "reveal_word": "never"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "CTA",
+      "text": "So, which cheat will you unlock first? Comment below.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_15.jpg",
+      "focus": 0.45,
+      "dim": 0.12,
+      "scene": {
+        "type": "slam",
+        "pos": "low",
+        "em": [
+          "cheat",
+          "comment"
+        ]
+      }
+    }
+  ]
+}

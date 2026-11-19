@@ -208,8 +208,8 @@ B.route=(sc,root)=>{const p=sc.scene;const panel=el('div','panel',null,root);el(
     '<path id="rp" d="M70 290 C220 290 200 120 360 150 S560 280 690 50" stroke="rgba(255,255,255,.95)" stroke-width="8" fill="none" stroke-linecap="round" stroke-dasharray="2 22"/>'+
     '<circle cx="70" cy="290" r="22" fill="#fff"/><circle cx="690" cy="50" r="26" fill="none" stroke="#fff" stroke-width="8"/>'+
     '<circle cx="690" cy="50" r="9" fill="#fff"/><g id="car"><circle r="30" fill="#fff"/><path d="M-14 6 h28 l-5 -14 h-18z" fill="#000"/><circle cx="-8" cy="9" r="5" fill="#000"/><circle cx="8" cy="9" r="5" fill="#000"/></g>'+
-    `<text x="70" y="250" fill="#fff" font-size="30" font-weight="900" text-anchor="middle" font-family="Inter Display">${p.from}</text>`+
-    `<text x="640" y="118" fill="#fff" font-size="30" font-weight="900" text-anchor="middle" font-family="Inter Display">${p.to}</text></svg>`,panel);
+    `<text x="40" y="250" fill="#fff" font-size="30" font-weight="900" text-anchor="start" font-family="Inter Display">${p.from}</text>`+
+    `<text x="730" y="118" fill="#fff" font-size="30" font-weight="900" text-anchor="end" font-family="Inter Display">${p.to}</text></svg>`,panel);
   const path=wrap.querySelector('#rp'),car=wrap.querySelector('#car');const L=path.getTotalLength();
   const tGo=wordAt(sc,p.go_word||'fast',.45);
   return lt=>{enter(panel,lt,sc);const a=lt<tGo?.16*clamp((lt-.4)/Math.max(.5,tGo-.4)):.16+.84*eOut((lt-tGo)/.35);const pt=path.getPointAtLength(L*a);
