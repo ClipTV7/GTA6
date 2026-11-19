@@ -78,7 +78,6 @@
       "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_09.jpg",
       "focus": 0.6,
       "dim": 0.15,
-      "headline": "THE VERDICT",
       "scene": {
         "type": "slam",
         "em": [
@@ -88,7 +87,8 @@
         "lit": [
           "digital",
           "foundry"
-        ]
+        ],
+        "pos": "low"
       }
     },
     {

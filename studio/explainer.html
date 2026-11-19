@@ -159,6 +159,7 @@ B.meter=(sc,root)=>{const p=sc.scene;const panel=el('div','panel',null,root);el(
   for(let i=1;i<10;i++){el('div','tick',null,tr).style.left=(i*10)+'%'}
   const knob=el('div','knob',null,m);const labs=el('div','mlabels',null,panel);
   const L=el('div','mlab',p.left,labs),R=el('div','mlab',p.right,labs);
+  [L,R].forEach(x=>{if(x.textContent.length>14)x.style.fontSize='30px'});
   const hint=p.hint?el('div','mhint',p.hint,panel):null;
   const t0=wordAt(sc,p.from_word,.1),t1=wordAt(sc,p.to_word,.7);
   const P0=t0/Math.max(1,Math.round(t0/1.2));return lt=>{enter(panel,lt,sc);const x=lt<t0?.5-.5*Math.cos(2*Math.PI*lt/P0):eInOut((lt-t0)/Math.max(.4,t1-t0));
@@ -259,7 +260,7 @@ B.stat=(sc,root)=>{const p=sc.scene;const panel=el('div','panel stat',null,root)
   const t0=wordAt(sc,p.word,.12);
   const tc=Math.max(.15,t0-.7);return lt=>{enter(panel,lt,sc);const a=sc.index===0?1:eOut((lt-tc)/.7);const v=p.value*a;
     num.textContent=(p.prefix||'')+(lt<tc&&sc.index!==0?'??':(p.decimals?v.toFixed(p.decimals):Math.round(v).toLocaleString('en-US')))+(p.suffix||'');
-    lab.style.opacity=ap(lt,tc+.5,.3);if(sub)sub.style.opacity=ap(lt,tc+.8,.3)}};
+    lab.style.opacity=sc.index===0?1:ap(lt,tc+.5,.3);if(sub)sub.style.opacity=sc.index===0?1:ap(lt,tc+.8,.3)}};
 B.quote=(sc,root)=>{const p=sc.scene;const panel=el('div','panel quote',null,root);if(p.title)el('div','ptitle',p.title,panel);
   const q=el('div','q','“'+p.text+'”',panel);const who=el('div','who','— '+p.who,panel);const t0=wordAt(sc,p.word,.15);
   return lt=>{enter(panel,lt,sc);q.style.opacity=ap(lt,.1,.3);who.style.opacity=ap(lt,t0,.3)}};
