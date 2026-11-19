@@ -253,7 +253,9 @@ B.cards=(sc,root)=>{const p=sc.scene;const panel=el('div','panel'+(p.items.lengt
           o.st.style.transform=`translateX(${sh}px) scale(${2.6-.8*a}) rotate(-8deg)`}else o.st.style.transform='none'}
       o.r.classList.toggle('hl',p.focus==='current'?i===cur:!!o.it.hl&&a>=1)})}};
 B.stat=(sc,root)=>{const p=sc.scene;const panel=el('div','panel stat',null,root);if(p.title)el('div','ptitle',p.title,panel);
-  const num=el('div','num','',panel);const lab=el('div','lab',p.label||'',panel);const sub=p.sub?el('div','sub',p.sub,panel):null;
+  const num=el('div','num','',panel);const lab=el('div','lab',p.label||'',panel);
+  const fullTxt=(p.prefix||'')+(p.decimals?Number(p.value).toFixed(p.decimals):Math.round(p.value).toLocaleString('en-US'))+(p.suffix||'');
+  if(fullTxt.length>5)num.style.fontSize=Math.max(110,Math.round(210*5/fullTxt.length))+'px';const sub=p.sub?el('div','sub',p.sub,panel):null;
   const t0=wordAt(sc,p.word,.12);
   const tc=Math.max(.15,t0-.7);return lt=>{enter(panel,lt,sc);const a=sc.index===0?1:eOut((lt-tc)/.7);const v=p.value*a;
     num.textContent=(p.prefix||'')+(lt<tc&&sc.index!==0?'??':(p.decimals?v.toFixed(p.decimals):Math.round(v).toLocaleString('en-US')))+(p.suffix||'');
