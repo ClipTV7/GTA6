@@ -3,8 +3,8 @@
   "format": "explainer",
   "title": "GTA 6 on Xbox Series S vs Series X",
   "yt_title": "GTA 6 on Series S: 720p \ud83d\ude2c Series S vs Series X explained",
-  "description": "Digital Foundry: Xbox Series S runs GTA 6 at about 720p and often below 30 fps (around 20 fps in the heaviest scenes), while Series X holds about 1440p at 30 fps; DF suggests another console if you can. Rockstar targets 30 fps on every console, PS5 Pro included. If you own the game on Xbox, Xbox Cloud Gaming streams it too, even on Xbox One. Which one are you playing on?",
-  "tiktok_caption": "GTA 6 on Series S runs at about 720p \ud83d\ude2c Which console are you playing on? \ud83d\udc47",
+  "description": "Digital Foundry: Xbox Series S runs GTA 6 at about 720p and often below 30 fps (around 20 fps in the heaviest scenes), while Series X holds about 1440p at 30 fps; DF suggests another console if you can. Rockstar targets 30 fps on every console, PS5 Pro included. If you own the game on Xbox, Xbox Cloud Gaming streams it too, even on Xbox One. Which one are you playing on? Sources: https://www.tweaktown.com/news/114779/gta-6-drops-to-720p-and-below-30-fps-on-one-console-gamers-ad https://www.vice.com/en/article/gta-6-30-fps-ps5-pro/ https://news.xbox.com/en-us/2026/11/10/grand-theft-auto-6-comes-to-xbox-cloud-gaming-november-19/",
+  "tiktok_caption": "GTA 6 on Series S runs at about 720p \ud83d\ude2c Is the Series S enough? \ud83d\udc47",
   "hashtags": [
     "#GTA6",
     "#GTAVI",
@@ -18,7 +18,7 @@
       "text": "Xbox Series S owners, is it enough for GTA 6? Digital Foundry measured about 720p.",
       "visual": "screenshots/People/Jason Duval/Jason_Duval_19.jpg",
       "focus": 0.55,
-      "dim": 0.15,
+      "dim": 0.05,
       "headline": "1/4 \u00b7 SERIES S",
       "scene": {
         "type": "stat",
@@ -26,7 +26,7 @@
         "value": 720,
         "suffix": "p",
         "label": "approx. resolution",
-        "sub": "Digital Foundry",
+        "sub": "Series X: ~1440p",
         "word": "xbox"
       }
     },
@@ -57,7 +57,7 @@
     },
     {
       "fact": "F128",
-      "text": "Frame rate is a bigger gap. The Series S can dip to about 20 in the heaviest scenes. The Series X holds 30. Digital Foundry even suggests another console if you can.",
+      "text": "Does the frame rate hold up? On Series S, it often drops below 30. The Series X holds 30.",
       "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_09.jpg",
       "focus": 0.6,
       "dim": 0.18,
@@ -65,11 +65,30 @@
       "scene": {
         "type": "meter",
         "title": "Frames per second",
-        "left": "SERIES S \u00b7 ~20",
+        "left": "SERIES S \u00b7 DIPS TO ~20",
         "right": "SERIES X \u00b7 30",
-        "from_word": "20",
-        "to_word": "30",
-        "hint": "Digital Foundry suggests another console if you can"
+        "from_word": "below",
+        "to_word": "holds",
+        "hint": "Digital Foundry measurements"
+      }
+    },
+    {
+      "fact": "F128",
+      "text": "Digital Foundry even suggests another console if you can.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_09.jpg",
+      "focus": 0.6,
+      "dim": 0.15,
+      "headline": "THE VERDICT",
+      "scene": {
+        "type": "slam",
+        "em": [
+          "another",
+          "console"
+        ],
+        "lit": [
+          "digital",
+          "foundry"
+        ]
       }
     },
     {
@@ -83,26 +102,26 @@
         "kicker": "Xbox Cloud Gaming",
         "title": "Stream it",
         "sub": "You must own the game",
-        "from": "XBOX ONE",
+        "from": "SERIES S \u00b7 XBOX ONE",
         "to": "GTA 6",
         "go_word": "cloud"
       }
     },
     {
       "fact": "CTA",
-      "text": "Which one are you playing on? Comment below.",
+      "text": "Is the Xbox Series S enough for GTA 6? Comment below.",
       "visual": "screenshots/People/Jason Duval/Jason_Duval_19.jpg",
       "focus": 0.55,
       "dim": 0.15,
       "headline": "YOUR SETUP?",
       "scene": {
         "type": "list",
-        "title": "Playing on\u2026",
+        "title": "Is the Series S enough?",
         "items": [
-          "Series S",
-          "Series X",
-          "PS5 / PS5 Pro",
-          "Cloud"
+          "Yes, it's fine",
+          "No, switching",
+          "I'm on Series X",
+          "PS5 or Cloud"
         ],
         "letters": true,
         "active": "cycle",
