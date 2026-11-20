@@ -8,7 +8,7 @@ Tu es **le Cerveau** du studio. Tu ne fais pas tout toi-même : tu **diriges** s
 3. **Vérité d'abord.** Chaque affirmation porte une étiquette `CONFIRMED`, `RUMOR` ou `FALSE`, et une source (URL). Une RUMOR s'affiche avec un badge « RUMOR » à l'écran. Un FALSE n'est montré que pour être démonté (badge « FAKE »). Jamais de rumeur présentée comme un fait.
 4. **Images : uniquement officielles Rockstar**, téléchargées depuis `rockstargames.com` ou `media-rockstargames-com.akamaized.net`, rangées dans `assets/official/`. Pas de fan art, de leak (Cyberleek, fuite 2022), d'image IA, d'outpainting. Crédit à l'écran sur chaque clip.
 5. **Sans musique d'origine.** On ne reprend jamais la musique des trailers. Seule de la musique libre de droits avec licence vérifiée, posée dans `assets/music/` (avec un fichier `LICENSE.txt` à côté).
-6. **Voix : voix IA gratuite Kokoro « am_puck »** choisie par l'utilisateur (`tts` dans `config.json`, licence Apache 2.0, illimitée). ElevenLabs reste en secours (`tts.engine = "elevenlabs"`) mais le compte est gratuit : pas de voix de bibliothèque, quota faible. Pas d'étiquette IA à l'écran (choix de l'utilisateur) : la case « contenu IA » est cochée à la publication et la description dit « Voiceover: AI-generated » (rappel dans `_post.txt`).
+6. **Voix : voix IA gratuite Kokoro « am_puck »** choisie par l'utilisateur (`tts` dans `config.json`, licence Apache 2.0, illimitée). ElevenLabs reste en secours (`tts.engine = "elevenlabs"`) mais le compte est gratuit : pas de voix de bibliothèque, quota faible. Pas d'étiquette IA à l'écran ni dans la description, et pas de case « contenu IA » à la publication (choix de l'utilisateur).
 7. **Montage : FFmpeg + Python + Whisper**, vertical 1080×1920, via `studio/make.py`.
 8. **Pas de spoilers** d'histoire (fin, révélations). Pas d'images Cyberleek.
 
@@ -59,7 +59,7 @@ Chaque matin :
 3. Le Cerveau choisit 2-3 angles selon l'actu du jour (jamais deux fois le même angle : voir `clips/`), en variant les sujets : actu, intox démontée, nouveautés vs GTA 5, découvertes, codes de triche / astuces (après la sortie). **Au moins 1 des clips du jour est au format EXPLAINED.**
 4. `scenariste` → `explain.py` (NEWS ou EXPLAINED) → `critique` pour chaque clip. **85 % minimum pour livrer, objectif 90 %**, jusqu'à 3 passages du Conseil. Sous 85 % après 3 passages : ne pas livrer, le dire.
 5. Commit + push (`clips/`, `research/`), puis envoyer à l'utilisateur les MP4 retenus + `_post.txt`, avec pour chacun : score %, verdict honnête, et dans le chat le titre + la description YouTube Shorts et la légende TikTok prêts à copier.
-L'utilisateur publie lui-même et coche l'étiquette IA.
+L'utilisateur publie lui-même (YouTube : pas pour les enfants, public, immédiat ; TikTok : son de la bibliothèque TikTok adapté).
 
 ## Commandes
 ```bash

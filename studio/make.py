@@ -420,13 +420,13 @@ def write_post(script, cfg, path):
     txt = ["===== YOUTUBE SHORTS =====",
            "TITRE :", yt_title, "",
            "DESCRIPTION :", desc, ""] + rumor_txt + ["Sources:"] + [f"- {u}" for u in srcs] + [
-           "", credit, "Voiceover: AI-generated.", "", " ".join(tags + ["#Shorts"]), "",
+           "", credit, "", " ".join(tags + ["#Shorts"]), "",
            "===== TIKTOK =====",
            "LÉGENDE :", f"{tk} {' '.join(tags)}", "",
            "(TikTok n'affiche pas les liens : les sources sont dans la description YouTube.)", "",
            "===== CHECKLIST AVANT PUBLICATION =====",
-           "[ ] TikTok : activer « Contenu généré par IA » (Plus d'options)",
-           "[ ] YouTube Shorts : « Contenu modifié ou synthétique » = OUI",
+           "[ ] YouTube : « Non, elle n'est pas conçue pour les enfants », visibilité Publique, publier maintenant",
+           "[ ] TikTok : ajouter un son de la bibliothèque TikTok adapté au sujet ou à l'ambiance, publier maintenant",
            "[ ] Musique : uniquement la bibliothèque libre de droits de l'appli (ou aucune)",
            "[ ] Infos RUMOR / dates : toujours d'actualité ?"]
     with open(path, "w", encoding="utf-8") as f:
