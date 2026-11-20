@@ -256,6 +256,9 @@ def canon(w, heard=False):
         return "percent"
     if heard and t in ROMAN:
         return ROMAN[t]
+    t = {"isnt": "isnot", "dont": "donot", "doesnt": "doesnot", "cant": "cannot", "wont": "willnot",
+         "didnt": "didnot", "hasnt": "hasnot", "havent": "havenot", "wasnt": "wasnot", "arent": "arenot",
+         "taketwo": "take2", "taketwos": "take2s"}.get(t, t)
     return NUMW.get(t, t)
 
 
@@ -276,7 +279,8 @@ def word_timings(wavs, lines, cfg, gap):
         script_words = ln["text"].split()
         nz = lambda x: canon(x)
         heard_join = "".join(canon(w.word, heard=True) for w in heard)
-        missing = [w for w in script_words if nz(w) and nz(w).rstrip("s") not in heard_join]
+        hj2 = heard_join.replace("dollars", "").replace("percent", "")
+        missing = [w for w in script_words if nz(w) and nz(w).rstrip("s") not in heard_join and nz(w).rstrip("s") not in hj2]
         heard_txt = "".join(w.word for w in heard)
         hq = [(nz(w.word), w.word.strip().endswith("?")) for w in heard]
         for sw in [w for w in script_words if w.endswith("?")]:  # chaque question doit être entendue comme une question

@@ -1,0 +1,122 @@
+{
+  "slug": "money-tips",
+  "format": "explainer",
+  "title": "Don't carry cash in GTA 6",
+  "yt_title": "Stop carrying cash in GTA 6 \ud83d\udcb8 (money tips that actually work)",
+  "description": "GTA 6 money tips, confirmed by GamesRadar, GameSpot and PC Gamer: pocket cash is lost if you get Wasted or Busted, so deposit it at ATMs into your BuckMe account. Bank cash carries dye packs: get a Dye Pack Jammer before bank jobs pay. Fastest money per the big guides: robberies (stores first, then banks) and selling stolen cars and goods. Pocket cash is reportedly capped at $20,000 (GamesRadar only, unconfirmed). Where do you keep your cash?",
+  "tiktok_caption": "Stop carrying cash in GTA 6 \ud83d\udcb8 Where do you keep yours? \ud83d\udc47",
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#GTA6Tips",
+    "#GTA",
+    "#GTA6Money"
+  ],
+  "lines": [
+    {
+      "fact": "F155",
+      "text": "Have you ever lost your cash in GTA 6? Get wasted or busted, and it's gone.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_07.jpg",
+      "focus": 0.5,
+      "dim": 0.14,
+      "headline": "1/5 \u00b7 POCKET CASH",
+      "scene": {
+        "type": "branch",
+        "root": "WASTED OR BUSTED",
+        "leaf": "POCKET CASH LOST",
+        "leaf_word": "gone"
+      }
+    },
+    {
+      "fact": "F155",
+      "text": "So bank it. Deposit your cash at an ATM, into your BuckMe account.",
+      "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_08.jpg",
+      "focus": 0.5,
+      "dim": 0.18,
+      "headline": "2/5 \u00b7 BANK IT",
+      "scene": {
+        "type": "route",
+        "kicker": "Keep it safe",
+        "title": "BuckMe",
+        "sub": "Deposit at any ATM",
+        "from": "POCKET",
+        "to": "BANK",
+        "go_word": "deposit"
+      }
+    },
+    {
+      "fact": "F156",
+      "text": "Pocket cash is reportedly capped at 20,000 dollars.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_02.jpg",
+      "focus": 0.5,
+      "dim": 0.2,
+      "headline": "3/5 \u00b7 THE CAP",
+      "scene": {
+        "type": "stat",
+        "title": "Pocket cash cap",
+        "value": 20,
+        "prefix": "$",
+        "suffix": "K",
+        "label": "per character",
+        "sub": "GamesRadar \u00b7 unconfirmed",
+        "word": "capped"
+      }
+    },
+    {
+      "fact": "F157",
+      "text": "Before any bank job, get a Dye Pack Jammer. Bank cash carries dye packs.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_15.jpg",
+      "focus": 0.45,
+      "dim": 0.2,
+      "headline": "4/5 \u00b7 DYE PACKS",
+      "scene": {
+        "type": "list",
+        "title": "Before a bank job",
+        "items": [
+          "Get a Dye Pack Jammer",
+          "Then hit the bank"
+        ],
+        "active": 0
+      }
+    },
+    {
+      "fact": "F158",
+      "text": "The fastest money, per the big guides: robberies, plus selling stolen cars and goods.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_12.jpg",
+      "focus": 0.5,
+      "dim": 0.2,
+      "headline": "5/5 \u00b7 FAST MONEY",
+      "scene": {
+        "type": "list",
+        "title": "Fastest money \u00b7 4 guides",
+        "items": [
+          "Store robberies",
+          "Bank jobs",
+          "Selling stolen cars",
+          "Selling stolen goods"
+        ],
+        "active": "cycle"
+      }
+    },
+    {
+      "fact": "CTA",
+      "text": "Where do you keep your cash? Comment below.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_07.jpg",
+      "focus": 0.5,
+      "dim": 0.14,
+      "headline": "YOUR MOVE?",
+      "scene": {
+        "type": "list",
+        "title": "Your cash is\u2026",
+        "items": [
+          "In my pocket",
+          "In BuckMe",
+          "Already spent"
+        ],
+        "letters": true,
+        "active": "cycle",
+        "cta": "COMMENT BELOW \u2193"
+      }
+    }
+  ]
+}

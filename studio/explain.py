@@ -272,8 +272,9 @@ def main():
                        "zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty".split()))
         tok = lambda w: make.canon(w).rstrip("s")
         WRD = {v: k for k, v in NUM.items()}
+        heard2 = heard.replace("dollars", "").replace("percent", "")
         miss = [w for ln in lines for w in ln["text"].split()
-                if tok(w) not in heard and NUM.get(tok(w), "#") not in heard and WRD.get(tok(w), "#") not in heard]
+                if tok(w) not in heard and tok(w) not in heard2 and NUM.get(tok(w), "#") not in heard and WRD.get(tok(w), "#") not in heard]
         print("  [MIX OK] Whisper entend tout le script dans le mix final" if not miss else f"  [MIX ?] mots masqués dans le mix : {' '.join(miss)}")
     print("[5/5] assemblage + mixage")
     os.makedirs(os.path.join(ROOT, "out"), exist_ok=True)

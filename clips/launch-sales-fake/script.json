@@ -1,0 +1,146 @@
+{
+  "slug": "launch-sales-fake",
+  "format": "explainer",
+  "theme": "news",
+  "tag": "GTA 6 NEWS",
+  "kicker": "LAUNCH SALES \u00b7 NOV 20",
+  "title": "GTA 6 made $2 billion on day one? Not official",
+  "yt_title": "GTA 6 made $2 BILLION on day one? It's not official \u274c",
+  "description": "The $1.84B and $2.36B day-one numbers are Sensor Tower estimates, not Rockstar or Take-Two figures (rumor). Sensor Tower estimates about 24.6M digital copies by the end of launch day. For scale, GTA 5 made about $800M on its first day in 2013 (Take-Two figure). Has Rockstar confirmed any number? No: Take-Two says official sales data is coming soon. How many copies do you think it sold?",
+  "rumor_note": "Unconfirmed (Sensor Tower estimates): ~24.6M digital copies and ~$2.36B by the end of Nov 19; ~$1.84B on launch morning.",
+  "tiktok_caption": "GTA 6 made $2 BILLION on day one? That's not official \u274c How many copies do you think it sold? \ud83d\udc47",
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#GTA",
+    "#Rockstar",
+    "#GTA6Sales"
+  ],
+  "lines": [
+    {
+      "fact": [
+        "F150",
+        "F147"
+      ],
+      "text": "Did GTA 6 make two billion on day one? That number is not official.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_02.jpg",
+      "focus": 0.5,
+      "dim": 0.12,
+      "scene": {
+        "type": "slam",
+        "pos": "low",
+        "em": [
+          "billion",
+          "not"
+        ],
+        "lit": [
+          "two",
+          "billion",
+          "not",
+          "official"
+        ]
+      }
+    },
+    {
+      "fact": "F147",
+      "text": "Sensor Tower reportedly estimates almost 25 million digital copies by the end of launch day.",
+      "visual": "screenshots/People/Raul Bautista/Raul_Bautista_01.jpg",
+      "focus": 0.55,
+      "dim": 0.18,
+      "headline": "THE ESTIMATE",
+      "scene": {
+        "type": "stat",
+        "title": "Sensor Tower \u00b7 estimate",
+        "value": 24.6,
+        "decimals": 1,
+        "suffix": "M",
+        "label": "digital copies",
+        "sub": "~$2.36B \u00b7 end of Nov 19",
+        "word": "almost"
+      },
+      "sticker": {
+        "name": "crab",
+        "x": 70,
+        "y": 930,
+        "w": 200,
+        "word": "copies"
+      }
+    },
+    {
+      "fact": [
+        "F148",
+        "F147"
+      ],
+      "text": "For scale, GTA 5 made about 800 million dollars on day one. GTA 6 reportedly nearly tripled that.",
+      "visual": "screenshots/Places/Vice City/Vice_City_10.jpg",
+      "dim": 0.2,
+      "headline": "FOR SCALE",
+      "scene": {
+        "type": "bars",
+        "title": "Day-one sales",
+        "note": "GTA 5: Take-Two (2013) \u00b7 GTA 6: Sensor Tower estimate",
+        "rows": [
+          {
+            "label": "GTA 5",
+            "value": 0.8,
+            "text": "~$800M"
+          },
+          {
+            "label": "GTA 6",
+            "value": 2.36,
+            "text": "~$2.36B?",
+            "word": "tripled"
+          }
+        ]
+      }
+    },
+    {
+      "fact": [
+        "F150",
+        "F149",
+        "F147"
+      ],
+      "text": "Has Rockstar confirmed any of it? Never. Take-Two says official sales data is coming soon.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_08.jpg",
+      "dim": 0.22,
+      "headline": "REAL OR NOT?",
+      "scene": {
+        "type": "cards",
+        "focus": "current",
+        "items": [
+          {
+            "t": "Sensor Tower estimates",
+            "status": "RUMOR",
+            "pre": true
+          },
+          {
+            "t": "Rockstar confirmed $2.36B",
+            "status": "FALSE",
+            "word": "rockstar",
+            "reveal_word": "never"
+          },
+          {
+            "t": "Official numbers coming soon",
+            "status": "CONFIRMED",
+            "word": "soon"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "CTA",
+      "text": "So, how many copies do you think it sold? Comment your guess.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_02.jpg",
+      "focus": 0.5,
+      "dim": 0.12,
+      "scene": {
+        "type": "slam",
+        "pos": "low",
+        "em": [
+          "copies",
+          "guess"
+        ]
+      }
+    }
+  ]
+}
