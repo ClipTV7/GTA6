@@ -5,8 +5,8 @@
   "tag": "GTA 6 NEWS",
   "kicker": "LAUNCH SALES \u00b7 NOV 20",
   "title": "GTA 6 made $2 billion on day one? Not official",
-  "yt_title": "GTA 6 made $2 BILLION on day one? It's not official \u274c",
-  "description": "The $1.84B and $2.36B day-one numbers are Sensor Tower estimates, not Rockstar or Take-Two figures (rumor). Sensor Tower estimates about 24.6M digital copies by the end of launch day. For scale, GTA 5 made about $800M on its first day in 2013 (Take-Two figure). Has Rockstar confirmed any number? No: Take-Two says official sales data is coming soon. How many copies do you think it sold?",
+  "yt_title": "GTA 6 made $2 BILLION on day one? It's only an estimate \u274c",
+  "description": "The $1.84B and $2.36B day-one numbers are Sensor Tower estimates, not Rockstar or Take-Two figures (rumor). Sensor Tower estimates about 24.6M digital copies by the end of launch day. For scale, GTA 5 made about $800M on its first day in 2013 (Take-Two figure). Has Rockstar confirmed any number? Not yet: Take-Two says official sales data is coming soon. How many copies do you think it sold?",
   "rumor_note": "Unconfirmed (Sensor Tower estimates): ~24.6M digital copies and ~$2.36B by the end of Nov 19; ~$1.84B on launch morning.",
   "tiktok_caption": "GTA 6 made $2 BILLION on day one? That's not official \u274c How many copies do you think it sold? \ud83d\udc47",
   "hashtags": [
@@ -60,9 +60,9 @@
       },
       "sticker": {
         "name": "crab",
-        "x": 70,
-        "y": 930,
-        "w": 200,
+        "x": 790,
+        "y": 350,
+        "w": 160,
         "word": "copies"
       }
     },
@@ -78,7 +78,7 @@
       "scene": {
         "type": "bars",
         "title": "Day-one sales",
-        "note": "GTA 5: Take-Two (2013) \u00b7 GTA 6: Sensor Tower estimate",
+        "note": "GTA 6 = Sensor Tower estimate \u00b7 GTA 5 = Take-Two",
         "rows": [
           {
             "label": "GTA 5",
@@ -89,7 +89,7 @@
             "label": "GTA 6",
             "value": 2.36,
             "text": "~$2.36B?",
-            "word": "tripled"
+            "word": "reportedly"
           }
         ]
       }
@@ -100,7 +100,7 @@
         "F149",
         "F147"
       ],
-      "text": "Has Rockstar confirmed any of it? Never. Take-Two says official sales data is coming soon.",
+      "text": "Have Rockstar or Take-Two confirmed it? Not yet. Take-Two says official sales data is coming soon.",
       "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_08.jpg",
       "dim": 0.22,
       "headline": "REAL OR NOT?",
@@ -117,10 +117,10 @@
             "t": "Rockstar confirmed $2.36B",
             "status": "FALSE",
             "word": "rockstar",
-            "reveal_word": "never"
+            "reveal_word": "yet"
           },
           {
-            "t": "Official numbers coming soon",
+            "t": "Official data coming soon",
             "status": "CONFIRMED",
             "word": "soon"
           }

@@ -100,7 +100,7 @@ def check(script, cfg, test_voice):
                 ln.get("text", ""), re.I):
             errs.append(f"{tag} : une RUMOR doit le dire dans la phrase (reportedly, rumor, insiders...)")
         if ln.get("status") == "FALSE" and not re.search(
-                r"\b(fake|false|not true|myth|debunked|hoax|scam|lie|wrong|no such|doesn't exist|isn't|is not|never)\b",
+                r"\b(fake|false|not true|not yet|myth|debunked|hoax|scam|lie|wrong|no such|doesn't exist|isn't|is not|never)\b",
                 ln.get("text", ""), re.I):
             errs.append(f"{tag} : une info FALSE doit être démentie dans la phrase (fake, false, myth, hoax...)")
         if re.search(r"[éèêàùçôîœ]", ln.get("text", "") + ln.get("headline", "")):

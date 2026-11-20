@@ -2,7 +2,7 @@
   "slug": "money-tips",
   "format": "explainer",
   "title": "Don't carry cash in GTA 6",
-  "yt_title": "Stop carrying cash in GTA 6 \ud83d\udcb8 (money tips that actually work)",
+  "yt_title": "Stop carrying cash in GTA 6 \ud83d\udcb8 (BuckMe, dye packs, fast money)",
   "description": "GTA 6 money tips, confirmed by GamesRadar, GameSpot and PC Gamer: pocket cash is lost if you get Wasted or Busted, so deposit it at ATMs into your BuckMe account. Bank cash carries dye packs: get a Dye Pack Jammer before bank jobs pay. Fastest money per the big guides: robberies (stores first, then banks) and selling stolen cars and goods. Pocket cash is reportedly capped at $20,000 (GamesRadar only, unconfirmed). Where do you keep your cash?",
   "tiktok_caption": "Stop carrying cash in GTA 6 \ud83d\udcb8 Where do you keep yours? \ud83d\udc47",
   "hashtags": [
@@ -15,16 +15,23 @@
   "lines": [
     {
       "fact": "F155",
-      "text": "Have you ever lost your cash in GTA 6? Get wasted or busted, and it's gone.",
+      "text": "Are you carrying cash in GTA 6? Get wasted or busted, and it's gone.",
       "visual": "screenshots/People/Jason Duval/Jason_Duval_07.jpg",
       "focus": 0.5,
       "dim": 0.14,
       "headline": "1/5 \u00b7 POCKET CASH",
       "scene": {
-        "type": "branch",
-        "root": "WASTED OR BUSTED",
-        "leaf": "POCKET CASH LOST",
-        "leaf_word": "gone"
+        "type": "slam",
+        "em": [
+          "wasted",
+          "busted",
+          "gone"
+        ],
+        "lit": [
+          "cash",
+          "gone"
+        ],
+        "pos": "low"
       }
     },
     {
@@ -46,7 +53,7 @@
     },
     {
       "fact": "F156",
-      "text": "Pocket cash is reportedly capped at 20,000 dollars.",
+      "text": "Pocket cash is reportedly capped at 20,000 dollars. If so, bank the rest.",
       "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_02.jpg",
       "focus": 0.5,
       "dim": 0.2,
@@ -64,7 +71,7 @@
     },
     {
       "fact": "F157",
-      "text": "Before any bank job, get a Dye Pack Jammer. Bank cash carries dye packs.",
+      "text": "Bank cash carries dye packs. So before any bank job, get a Dye Pack Jammer.",
       "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_15.jpg",
       "focus": 0.45,
       "dim": 0.2,
@@ -81,10 +88,10 @@
     },
     {
       "fact": "F158",
-      "text": "The fastest money, per the big guides: robberies, plus selling stolen cars and goods.",
-      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_12.jpg",
+      "text": "The fastest money, per four big guides: robberies, plus selling stolen cars and goods through fences.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_14.jpg",
       "focus": 0.5,
-      "dim": 0.2,
+      "dim": 0.16,
       "headline": "5/5 \u00b7 FAST MONEY",
       "scene": {
         "type": "list",
