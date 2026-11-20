@@ -3,7 +3,7 @@
   "format": "explainer",
   "title": "Don't carry cash in GTA 6",
   "yt_title": "Stop carrying cash in GTA 6 \ud83d\udcb8 (BuckMe, dye packs, fast money)",
-  "description": "GTA 6 money tips, confirmed by GamesRadar, GameSpot and PC Gamer: pocket cash is lost if you get Wasted or Busted, so deposit it at ATMs into your BuckMe account. Bank cash carries dye packs: get a Dye Pack Jammer before bank jobs pay. Fastest money per the big guides: robberies (stores first, then banks) and selling stolen cars and goods. Pocket cash is reportedly capped at $20,000 (GamesRadar only, unconfirmed). Where do you keep your cash?",
+  "description": "GTA 6 money tips: pocket cash is lost if you get Wasted or Busted, so deposit it at ATMs into your BuckMe account (GamesRadar, GameSpot, PC Gamer). Bank cash carries dye packs: get a Dye Pack Jammer before you hit a bank (GameSpot, VGC). Fastest money per four big guides: robberies (stores first, then banks) and selling stolen cars and goods through fences. Pocket cash is reportedly capped at $20,000 (GamesRadar only, unconfirmed). Where do you keep your cash?\n\nSources: https://www.gamesradar.com/games/grand-theft-auto/gta-6-money-buckme-bank-account-manage/ https://www.gamespot.com/articles/gta-6-safe-codes-and-robberies-guide/ https://www.gamespot.com/articles/best-ways-to-make-money-fast-in-gta-6/",
   "tiktok_caption": "Stop carrying cash in GTA 6 \ud83d\udcb8 Where do you keep yours? \ud83d\udc47",
   "hashtags": [
     "#GTA6",
@@ -97,12 +97,16 @@
         "type": "list",
         "title": "Fastest money \u00b7 4 guides",
         "items": [
-          "Store robberies",
-          "Bank jobs",
+          "Robberies: stores, then banks",
           "Selling stolen cars",
           "Selling stolen goods"
         ],
-        "active": "cycle"
+        "active": "words",
+        "item_words": [
+          "robberies",
+          "cars",
+          "goods"
+        ]
       }
     },
     {
