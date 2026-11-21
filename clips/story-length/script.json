@@ -1,0 +1,117 @@
+{
+  "slug": "story-length",
+  "format": "explainer",
+  "title": "How long is GTA 6 compared to GTA 5",
+  "yt_title": "Is GTA 6 TWICE as long as GTA 5? \u23f1\ufe0f",
+  "description": "How long is GTA 6? Reviewers clock the main story at about 45 to 80 hours depending on the outlet (Kotaku, VGC, GameSpot, GamesRadar), versus about 31.5 hours for GTA 5 (HowLongToBeat average). Rockstar North's Rob Nelson says his own playthrough took about 80 hours. The story has 90+ missions across five chapters (PC Gamer, GamesRadar), and 100+ hours with side content. No spoilers. Will you finish it in under 80 hours?",
+  "tiktok_caption": "Is GTA 6 TWICE as long as GTA 5? \u23f1\ufe0f How long will you take? \ud83d\udc47",
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#GTA5",
+    "#GTA",
+    "#HowLongToBeat"
+  ],
+  "lines": [
+    {
+      "fact": "F176",
+      "text": "Is GTA 6 twice as long as GTA 5? Reviewers clock the story at up to 80 hours.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_16.jpg",
+      "focus": 0.35,
+      "dim": 0.12,
+      "headline": "1/4 \u00b7 STORY LENGTH",
+      "scene": {
+        "type": "stat",
+        "title": "GTA 6 main story",
+        "value": 80,
+        "suffix": "h",
+        "label": "up to, per reviewers",
+        "sub": "45-80 h depending on the outlet",
+        "word": "is"
+      }
+    },
+    {
+      "fact": [
+        "F178",
+        "F176"
+      ],
+      "text": "GTA 5's story averages about 31 and a half hours.",
+      "visual": "screenshots/Places/Mount Kalaga National Park/Mount_Kalaga_National_Park_04.jpg",
+      "dim": 0.2,
+      "headline": "2/4 \u00b7 VS GTA 5",
+      "scene": {
+        "type": "bars",
+        "title": "Main story length",
+        "note": "GTA 5: HowLongToBeat average \u00b7 GTA 6: reviewers",
+        "rows": [
+          {
+            "label": "GTA 5",
+            "value": 31.5,
+            "text": "~31.5 h"
+          },
+          {
+            "label": "GTA 6",
+            "value": 80,
+            "text": "45-80 h",
+            "word": "half"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "F177",
+      "text": "Rockstar North's Rob Nelson says his own playthrough took about 80 hours.",
+      "visual": "screenshots/Places/Vice City/Vice_City_11.jpg",
+      "dim": 0.2,
+      "headline": "3/4 \u00b7 ROCKSTAR",
+      "scene": {
+        "type": "quote",
+        "title": "Rockstar North",
+        "text": "His own playthrough: about <b>80 hours</b>",
+        "who": "Rob Nelson (via GamesRadar, GameSpot)",
+        "word": "says"
+      }
+    },
+    {
+      "fact": [
+        "F141",
+        "F176"
+      ],
+      "text": "The story has more than 90 missions across five chapters, and side content pushes it past 100 hours.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_09.jpg",
+      "focus": 0.6,
+      "dim": 0.18,
+      "headline": "4/4 \u00b7 MISSIONS",
+      "scene": {
+        "type": "stat",
+        "title": "Main story",
+        "value": 90,
+        "suffix": "+",
+        "label": "missions \u00b7 5 chapters",
+        "sub": "100 h+ with side content",
+        "word": "90"
+      }
+    },
+    {
+      "fact": "CTA",
+      "text": "Will you finish it in under 80 hours? Comment below.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_16.jpg",
+      "focus": 0.35,
+      "dim": 0.12,
+      "headline": "YOUR PACE?",
+      "scene": {
+        "type": "list",
+        "title": "I'll finish it in\u2026",
+        "items": [
+          "Under 50 h",
+          "50 to 80 h",
+          "100 h+",
+          "Already done"
+        ],
+        "letters": true,
+        "active": "cycle",
+        "cta": "COMMENT BELOW \u2193"
+      }
+    }
+  ]
+}
