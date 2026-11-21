@@ -3,7 +3,7 @@
   "format": "explainer",
   "title": "How long is GTA 6 compared to GTA 5",
   "yt_title": "Is GTA 6 TWICE as long as GTA 5? \u23f1\ufe0f",
-  "description": "How long is GTA 6? Reviewers clock the main story at about 45 to 80 hours depending on the outlet (Kotaku, VGC, GameSpot, GamesRadar), versus about 31.5 hours for GTA 5 (HowLongToBeat average). Rockstar North's Rob Nelson says his own playthrough took about 80 hours. The story has 90+ missions across five chapters (PC Gamer, GamesRadar), and 100+ hours with side content. No spoilers. Will you finish it in under 80 hours?",
+  "description": "How long is GTA 6? Reviewers clock the main story at about 45 to 80 hours depending on the outlet (Kotaku, VGC, GameSpot, GamesRadar), versus about 31.5 hours for GTA 5 (HowLongToBeat average). Rockstar North's Rob Nelson says his own playthrough took about 80 hours. The story has 90+ missions across five chapters (PC Gamer, GamesRadar), and 100+ hours with side content. No spoilers. Is it twice as long for you? Comment your hours.",
   "tiktok_caption": "Is GTA 6 TWICE as long as GTA 5? \u23f1\ufe0f How long will you take? \ud83d\udc47",
   "hashtags": [
     "#GTA6",
@@ -51,9 +51,9 @@
           },
           {
             "label": "GTA 6",
-            "value": 80,
+            "value": 62.5,
             "text": "45-80 h",
-            "word": "double"
+            "word": "that's"
           }
         ]
       }
@@ -103,11 +103,16 @@
       "dim": 0.2,
       "headline": "4/5 \u00b7 ROCKSTAR",
       "scene": {
-        "type": "quote",
+        "type": "cards",
         "title": "Rockstar North",
-        "text": "About <b>80 hours</b>, incl. some optional goals",
-        "who": "Rob Nelson (via GamesRadar, GameSpot)",
-        "word": "says"
+        "items": [
+          {
+            "t": "Rob Nelson's playthrough: about 80 h (incl. some optional goals)",
+            "status": "CONFIRMED",
+            "hl": true,
+            "word": "says"
+          }
+        ]
       }
     },
     {
