@@ -254,6 +254,12 @@ def canon(w, heard=False):
         return t + "percent"
     if heard and raw.strip(".,!?") == "%":
         return "percent"
+    if heard and raw.strip(".,!?") == "+":
+        return "plus"
+    if heard and raw.rstrip(".,!?").endswith("+") and t.isdigit():
+        return t + "plus"
+    if heard and raw.startswith("-") and t.isdigit():
+        return "to" + t
     if heard and t in ROMAN:
         return ROMAN[t]
     t = {"isnt": "isnot", "dont": "donot", "doesnt": "doesnot", "cant": "cannot", "wont": "willnot",

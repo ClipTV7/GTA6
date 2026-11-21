@@ -76,6 +76,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#000;color:#fff;
 .bfill{position:absolute;left:0;top:0;bottom:0;border-radius:16px;background:#fff;display:flex;align-items:center;justify-content:flex-end;
   padding-right:18px;color:#000;font-weight:900;font-size:44px}
 .bfill.muted{background:rgba(255,255,255,.4)}
+.bval{position:absolute;top:0;bottom:0;display:flex;align-items:center;color:#fff;font-weight:900;font-size:40px;white-space:nowrap}
 .bnote{margin-top:34px;font-weight:800;font-size:32px;color:var(--dim)}
 /* grille */
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
@@ -218,10 +219,11 @@ B.route=(sc,root)=>{const p=sc.scene;const panel=el('div','panel',null,root);el(
 B.bars=(sc,root)=>{const p=sc.scene;const panel=el('div','panel',null,root);el('div','ptitle',p.title,panel);
   const max=Math.max(...p.rows.map(r=>r.value));
   const rows=p.rows.map((r,i)=>{const row=el('div','brow',null,panel);el('div','blabel',r.label,row);const tr=el('div','btrack',null,row);
-    const f=el('div','bfill'+(i<p.rows.length-1?' muted':''),r.text,tr);return {f,w:r.value/max,t:wordAt(sc,r.word,.15+i*.25)}});
+    const w=r.value/max,short=w<0.45;const f=el('div','bfill'+(i<p.rows.length-1?' muted':''),short?'':r.text,tr);
+    const v=short?el('div','bval',r.text,tr):null;return {f,v,w,t:wordAt(sc,r.word,.15+i*.25)}});
   const note=p.note?el('div','bnote',p.note,panel):null;
   return lt=>{enter(panel,lt,sc);rows.forEach((r,i)=>{const a=eOut((lt-(i===0?.3:r.t))/.7);r.f.style.width=(r.w*100*a)+'%';
-      r.f.style.color=a>.6?'#000':'transparent'});if(note)note.style.opacity=ap(lt,rows[rows.length-1].t+.4,.3)}};
+      r.f.style.color=a>.6?'#000':'transparent';if(r.v){r.v.style.left=`calc(${r.w*100*a}% + 14px)`;r.v.style.opacity=a>.6?1:0}});if(note)note.style.opacity=ap(lt,rows[rows.length-1].t+.4,.3)}};
 B.grid=(sc,root)=>{const p=sc.scene;const panel=el('div','panel',null,root);el('div','ptitle',p.title,panel);
   const g=el('div','grid',null,panel);
   const tiles=p.tiles.map((t,i)=>{const d=el('div','tile',null,g);const im=el('img',null,null,d);im.src=t.img;el('div','tl',t.label,d);

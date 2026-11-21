@@ -19,10 +19,10 @@
       "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_16.jpg",
       "focus": 0.35,
       "dim": 0.12,
-      "headline": "1/4 \u00b7 STORY LENGTH",
+      "headline": "1/5 \u00b7 STORY LENGTH",
       "scene": {
         "type": "stat",
-        "title": "GTA 6 main story",
+        "title": "GTA 6 story \u00b7 GTA 5: ~31.5 h",
         "value": 80,
         "suffix": "h",
         "label": "up to, per reviewers",
@@ -35,10 +35,10 @@
         "F178",
         "F176"
       ],
-      "text": "GTA 5's story averages about 31 and a half hours.",
+      "text": "GTA 5's story averages about 31 and a half hours. That's about double.",
       "visual": "screenshots/Places/Mount Kalaga National Park/Mount_Kalaga_National_Park_04.jpg",
       "dim": 0.2,
-      "headline": "2/4 \u00b7 VS GTA 5",
+      "headline": "2/5 \u00b7 VS GTA 5",
       "scene": {
         "type": "bars",
         "title": "Main story length",
@@ -53,21 +53,59 @@
             "label": "GTA 6",
             "value": 80,
             "text": "45-80 h",
-            "word": "half"
+            "word": "double"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "F176",
+      "text": "Kotaku's reviewers say 45 to 60 hours. VGC, about 60. GameSpot, 65 plus. GamesRadar, 60 to 80.",
+      "visual": "screenshots/Places/Leonida Keys/Leonida_Keys_01.jpg",
+      "dim": 0.2,
+      "headline": "3/5 \u00b7 BY OUTLET",
+      "scene": {
+        "type": "bars",
+        "title": "Main story, per outlet",
+        "note": "Reviewers' estimates",
+        "rows": [
+          {
+            "label": "Kotaku",
+            "value": 60,
+            "text": "45-60 h",
+            "word": "kotaku"
+          },
+          {
+            "label": "VGC",
+            "value": 60,
+            "text": "~60 h",
+            "word": "vgc"
+          },
+          {
+            "label": "GameSpot",
+            "value": 65,
+            "text": "65+ h",
+            "word": "gamespot"
+          },
+          {
+            "label": "GamesRadar",
+            "value": 80,
+            "text": "60-80 h",
+            "word": "gamesradar"
           }
         ]
       }
     },
     {
       "fact": "F177",
-      "text": "Rockstar North's Rob Nelson says his own playthrough took about 80 hours.",
+      "text": "Rockstar North's Rob Nelson says his own playthrough, with some optional goals, took about 80 hours.",
       "visual": "screenshots/Places/Vice City/Vice_City_11.jpg",
       "dim": 0.2,
-      "headline": "3/4 \u00b7 ROCKSTAR",
+      "headline": "4/5 \u00b7 ROCKSTAR",
       "scene": {
         "type": "quote",
         "title": "Rockstar North",
-        "text": "His own playthrough: about <b>80 hours</b>",
+        "text": "About <b>80 hours</b>, incl. some optional goals",
         "who": "Rob Nelson (via GamesRadar, GameSpot)",
         "word": "says"
       }
@@ -81,7 +119,7 @@
       "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_09.jpg",
       "focus": 0.6,
       "dim": 0.18,
-      "headline": "4/4 \u00b7 MISSIONS",
+      "headline": "5/5 \u00b7 MISSIONS",
       "scene": {
         "type": "stat",
         "title": "Main story",
@@ -94,19 +132,19 @@
     },
     {
       "fact": "CTA",
-      "text": "Will you finish it in under 80 hours? Comment below.",
+      "text": "Is it twice as long for you? Comment your hours.",
       "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_16.jpg",
       "focus": 0.35,
       "dim": 0.12,
       "headline": "YOUR PACE?",
       "scene": {
         "type": "list",
-        "title": "I'll finish it in\u2026",
+        "title": "Your hours?",
         "items": [
           "Under 50 h",
           "50 to 80 h",
-          "100 h+",
-          "Already done"
+          "80 to 100 h",
+          "100 h+"
         ],
         "letters": true,
         "active": "cycle",
