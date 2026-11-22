@@ -1,0 +1,151 @@
+{
+  "slug": "gtaplus-story",
+  "format": "explainer",
+  "theme": "news",
+  "tag": "GTA 6 NEWS",
+  "kicker": "GTA+ IN STORY MODE · NOV 22",
+  "title": "GTA 6 story mode now has paid perks",
+  "yt_title": "GTA 6 story mode now has PAID perks… here's the catch 💸",
+  "description": "GTA+ ($7.99 a month) now adds perks to GTA 6's single-player: a widebody '90 Annis Elegy and a Crosstown garage (from Chapter 3), 10% off at some shops, free rentals and transit, and 10% more when you sell your cars (GameSpot, GamesRadar, PC Gamer). The catch: the free pre-order month auto-renews at $7.99 unless you cancel (Push Square, Insider Gaming). Do the perks vanish if you cancel? Reportedly yes, but Rockstar hasn't confirmed it. Is GTA+ worth it for story mode?",
+  "rumor_note": "Rumor (one outlet, TrueAchievements): GTA+ story perks stop working if you cancel. Not confirmed by Rockstar.",
+  "tiktok_caption": "GTA 6 story mode now has PAID perks… here's the catch 💸 Worth it? 👇",
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#GTA",
+    "#GTAPlus",
+    "#Rockstar"
+  ],
+  "lines": [
+    {
+      "fact": "F186",
+      "text": "GTA 6 story mode now has paid perks. Here's the catch.",
+      "visual": "screenshots/Places/Vice City/Vice_City_24.jpg",
+      "focus": 0.4,
+      "dim": 0.12,
+      "scene": {
+        "type": "slam",
+        "pos": "low",
+        "em": [
+          "paid",
+          "catch"
+        ],
+        "lit": [
+          "story",
+          "paid",
+          "perks"
+        ]
+      }
+    },
+    {
+      "fact": "F186",
+      "text": "GTA Plus costs about eight dollars a month, and now adds a sports car and a garage to your story.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_20.jpg",
+      "focus": 0.5,
+      "dim": 0.2,
+      "headline": "GTA+ · STORY MODE",
+      "scene": {
+        "type": "stat",
+        "title": "GTA+ · per month",
+        "value": 7.99,
+        "decimals": 2,
+        "prefix": "$",
+        "label": "Widebody '90 Elegy + garage",
+        "sub": "Garage in Crosstown, from Chapter 3",
+        "word": "eight"
+      }
+    },
+    {
+      "fact": "F186",
+      "text": "Plus 10 percent off in some shops, free rentals, and 10 percent more when you sell your cars.",
+      "visual": "screenshots/Places/Leonida Keys/Leonida_Keys_05.jpg",
+      "focus": 0.5,
+      "dim": 0.22,
+      "headline": "THE PERKS",
+      "scene": {
+        "type": "list",
+        "title": "Also included",
+        "items": [
+          "10% off some shops",
+          "Free rentals + transit",
+          "+10% when you sell cars"
+        ],
+        "active": "words",
+        "item_words": [
+          "off",
+          "free",
+          "sell"
+        ]
+      },
+      "sticker": {
+        "name": "manatee",
+        "x": 800,
+        "y": 1010,
+        "w": 150,
+        "word": "rentals"
+      }
+    },
+    {
+      "fact": "F188",
+      "text": "Careful: your free preorder month renews automatically, unless you cancel.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_03.jpg",
+      "focus": 0.45,
+      "dim": 0.22,
+      "headline": "THE CATCH",
+      "scene": {
+        "type": "cards",
+        "focus": "current",
+        "items": [
+          {
+            "t": "Free pre-order month auto-renews at $7.99",
+            "status": "CONFIRMED",
+            "hl": true,
+            "word": "renews"
+          }
+        ]
+      }
+    },
+    {
+      "fact": [
+        "F187",
+        "F188"
+      ],
+      "text": "Will the perks vanish if you cancel? Reportedly, yes. Rockstar hasn't confirmed it.",
+      "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_10.jpg",
+      "focus": 0.45,
+      "dim": 0.22,
+      "headline": "REAL OR NOT?",
+      "scene": {
+        "type": "cards",
+        "focus": "current",
+        "items": [
+          {
+            "t": "Free month auto-renews",
+            "status": "CONFIRMED",
+            "pre": true
+          },
+          {
+            "t": "Perks vanish if you cancel",
+            "status": "RUMOR",
+            "word": "vanish"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "CTA",
+      "text": "So, is GTA Plus worth it for story mode? Comment below.",
+      "visual": "screenshots/Places/Vice City/Vice_City_24.jpg",
+      "focus": 0.4,
+      "dim": 0.12,
+      "scene": {
+        "type": "slam",
+        "pos": "low",
+        "em": [
+          "worth",
+          "comment"
+        ]
+      }
+    }
+  ]
+}

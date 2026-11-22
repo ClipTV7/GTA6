@@ -1,0 +1,146 @@
+{
+  "slug": "cops-heat",
+  "format": "explainer",
+  "title": "GTA 6 cops remember you: the Heat system explained",
+  "yt_title": "GTA 6 cops REMEMBER your face 👮 Heat explained",
+  "description": "GTA 6's new Heat system: red icons under your wanted stars show what the police know about you: your face, clothes, vehicle, weapon, accomplice or a security camera. Hide your weapon, change clothes, swap the car or split from your partner to wipe that Heat (GamesRadar, GameSpot, VGC). Rockstar's Rob Nelson says they wanted police with a more persistent memory. At six stars there's no way out: it only ends when you're caught or killed (GamesRadar, PC Gamer). No spoilers. What's your best escape? Comment below.",
+  "rumor_note": "Rumor (unofficial): star colors meaning different police states, inferred by GamesRadar from preview footage.",
+  "tiktok_caption": "GTA 6 cops REMEMBER your face 👮 What's your escape trick? 👇",
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#GTA",
+    "#Rockstar",
+    "#GTA6Tips"
+  ],
+  "lines": [
+    {
+      "fact": "F189",
+      "text": "Can GTA 6 cops remember your face? Yes. Rockstar wanted police with a more persistent memory.",
+      "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_14.jpg",
+      "focus": 0.5,
+      "dim": 0.15,
+      "headline": "1/4 · POLICE MEMORY",
+      "scene": {
+        "type": "quote",
+        "title": "Rockstar",
+        "text": "Police with a <b>more persistent memory</b>",
+        "who": "Rob Nelson, Rockstar North",
+        "word": "rockstar"
+      }
+    },
+    {
+      "fact": "F189",
+      "text": "Red icons under your stars show what they know: your face, your clothes, your car, your weapon, your partner, or a security camera.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_07.jpg",
+      "focus": 0.45,
+      "dim": 0.25,
+      "headline": "2/4 · THE HEAT",
+      "scene": {
+        "type": "list",
+        "title": "What cops know",
+        "items": [
+          "Face",
+          "Clothes",
+          "Vehicle",
+          "Weapon",
+          "Accomplice",
+          "CCTV camera"
+        ],
+        "active": "words",
+        "item_words": [
+          "face",
+          "clothes",
+          "car",
+          "weapon",
+          "partner",
+          "camera"
+        ]
+      }
+    },
+    {
+      "fact": "F189",
+      "text": "And each one can be wiped. Hide the weapon, change clothes, swap the car, or split up.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_15.jpg",
+      "focus": 0.4,
+      "dim": 0.25,
+      "headline": "3/4 · LOSE THE HEAT",
+      "scene": {
+        "type": "list",
+        "title": "How to wipe it",
+        "items": [
+          "Weapon → hide it",
+          "Clothes → change",
+          "Vehicle → swap",
+          "Partner → split up"
+        ],
+        "active": "words",
+        "item_words": [
+          "hide",
+          "change",
+          "swap",
+          "split"
+        ]
+      }
+    },
+    {
+      "fact": "F191",
+      "text": "The star colors reportedly mean something too. Gray would mean they know who you are. That's not official yet.",
+      "visual": "screenshots/Places/Vice City/Vice_City_17.jpg",
+      "focus": 0.5,
+      "dim": 0.22,
+      "headline": "STAR COLORS?",
+      "scene": {
+        "type": "cards",
+        "title": "Not confirmed",
+        "items": [
+          {
+            "t": "Star colors = what cops know",
+            "status": "RUMOR",
+            "word": "colors"
+          },
+          {
+            "t": "Gray stars = they know who you are",
+            "status": "RUMOR",
+            "word": "gray"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "F190",
+      "text": "But at six stars, nothing works. No disguise, no new car. It only ends when you're caught or killed.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_11.jpg",
+      "focus": 0.5,
+      "dim": 0.22,
+      "headline": "4/4 · SIX STARS",
+      "scene": {
+        "type": "branch",
+        "root": "6 STARS · HEAT CAN'T BE WIPED",
+        "leaf": "CAUGHT OR KILLED",
+        "leaf_word": "caught"
+      }
+    },
+    {
+      "fact": "CTA",
+      "text": "So, can you still lose them? Comment your best escape.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_09.jpg",
+      "focus": 0.6,
+      "dim": 0.15,
+      "headline": "YOUR ESCAPE?",
+      "scene": {
+        "type": "list",
+        "title": "Your escape?",
+        "items": [
+          "Change clothes",
+          "Swap the car",
+          "Hide the weapon",
+          "Split up"
+        ],
+        "letters": true,
+        "active": "cycle",
+        "cta": "COMMENT BELOW ↓"
+      }
+    }
+  ]
+}
