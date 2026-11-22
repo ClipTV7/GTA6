@@ -47,6 +47,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#000;color:#fff;
   justify-content:center;font-weight:900;font-size:30px}
 .li .lt{font-weight:800;font-size:46px;letter-spacing:-.5px}
 .li .tag{margin-left:auto;font-weight:900;font-size:22px;letter-spacing:2px;padding:8px 12px;border-radius:8px;background:#000;color:#fff}
+.lcompact .li{padding:10px 18px;margin-top:9px}.lcompact .li .num{width:50px;height:50px}.lcompact .li .lt{font-size:40px}
 .li.on{background:#fff;color:#000}.li.on .num{border-color:#000;background:#000;color:#fff}
 .cta{margin:26px auto 0;width:max-content;font-weight:900;font-size:34px;letter-spacing:2px;padding:14px 22px;border-radius:12px;
   background:#fff;color:#000}
@@ -167,7 +168,7 @@ B.meter=(sc,root)=>{const p=sc.scene;const panel=el('div','panel',null,root);el(
     knob.style.left=(x*100)+'%';knob.style.transform=`scale(${x<.02?1+.08*Math.sin(lt*9):1})`;fill.style.width=(x*100)+'%';
     L.classList.toggle('on',x<.5);R.classList.toggle('on',x>.97);
     if(hint)hint.style.opacity=ap(lt,t0,.3)}};
-B.list=(sc,root)=>{const p=sc.scene;const panel=el('div','panel',null,root);el('div','ptitle',p.title,panel);
+B.list=(sc,root)=>{const p=sc.scene;const panel=el('div','panel'+(p.items.length>5?' lcompact':''),null,root);el('div','ptitle',p.title,panel);
   const rows=p.items.map((t,i)=>{const r=el('div','li',null,panel);el('div','num',p.letters?String.fromCharCode(65+i):String(i+1),r);
     el('div','lt',t,r);if(p.tags&&p.tags[i])el('div','tag',p.tags[i],r);return r});
   const cta=p.cta?el('div','cta',p.cta,panel):null;

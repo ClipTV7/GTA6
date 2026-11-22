@@ -3,7 +3,7 @@
   "format": "explainer",
   "title": "GTA 6 cops remember you: the Heat system explained",
   "yt_title": "GTA 6 cops REMEMBER your face 👮 Heat explained",
-  "description": "GTA 6's new Heat system: red icons under your wanted stars show what the police know about you: your face, clothes, vehicle, weapon, accomplice or a security camera. Hide your weapon, change clothes, swap the car or split from your partner to wipe that Heat (GamesRadar, GameSpot, VGC). Rockstar's Rob Nelson says they wanted police with a more persistent memory. At six stars there's no way out: it only ends when you're caught or killed (GamesRadar, PC Gamer). No spoilers. What's your best escape? Comment below.",
+  "description": "Will GTA 6 cops remember your face? Yes: the new Heat system. red icons under your wanted stars show what the police know about you: your face, clothes, vehicle, weapon, accomplice or a security camera. Hide your weapon, change clothes, swap the car or split from your partner to wipe that Heat (GamesRadar, GameSpot, VGC). Rockstar's Rob Nelson says they wanted police with a more persistent memory. At six stars there's no way out: it only ends when you're caught or killed (GamesRadar, PC Gamer). No spoilers. What's your best escape? Comment below.",
   "rumor_note": "Rumor (unofficial): star colors meaning different police states, inferred by GamesRadar from preview footage.",
   "tiktok_caption": "GTA 6 cops REMEMBER your face 👮 What's your escape trick? 👇",
   "hashtags": [
@@ -16,7 +16,32 @@
   "lines": [
     {
       "fact": "F189",
-      "text": "Can GTA 6 cops remember your face? Yes. Rockstar wanted police with a more persistent memory.",
+      "text": "Wait, will GTA 6 cops remember your face?",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_07.jpg",
+      "focus": 0.45,
+      "dim": 0.1,
+      "scene": {
+        "type": "slam",
+        "pos": "low",
+        "lit": [
+          "wait,",
+          "will",
+          "gta",
+          "6",
+          "cops",
+          "remember",
+          "your",
+          "face?"
+        ],
+        "em": [
+          "remember",
+          "face?"
+        ]
+      }
+    },
+    {
+      "fact": "F189",
+      "text": "Rockstar says it wanted police with a more persistent memory.",
       "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_14.jpg",
       "focus": 0.5,
       "dim": 0.15,
@@ -24,7 +49,7 @@
       "scene": {
         "type": "quote",
         "title": "Rockstar",
-        "text": "Police with a <b>more persistent memory</b>",
+        "text": "A <b>more persistent memory</b>",
         "who": "Rob Nelson, Rockstar North",
         "word": "rockstar"
       }
@@ -32,8 +57,8 @@
     {
       "fact": "F189",
       "text": "Red icons under your stars show what they know: your face, your clothes, your car, your weapon, your partner, or a security camera.",
-      "visual": "screenshots/People/Jason Duval/Jason_Duval_07.jpg",
-      "focus": 0.45,
+      "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_07.jpg",
+      "focus": 0.5,
       "dim": 0.25,
       "headline": "2/4 · THE HEAT",
       "scene": {
@@ -42,10 +67,10 @@
         "items": [
           "Face",
           "Clothes",
-          "Vehicle",
+          "Car",
           "Weapon",
-          "Accomplice",
-          "CCTV camera"
+          "Partner",
+          "Camera"
         ],
         "active": "words",
         "item_words": [
@@ -60,7 +85,7 @@
     },
     {
       "fact": "F189",
-      "text": "And each one can be wiped. Hide the weapon, change clothes, swap the car, or split up.",
+      "text": "And most of it can be wiped. Hide the weapon, change clothes, swap the car, or split up.",
       "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_15.jpg",
       "focus": 0.4,
       "dim": 0.25,
@@ -115,15 +140,35 @@
       "dim": 0.22,
       "headline": "4/4 · SIX STARS",
       "scene": {
-        "type": "branch",
-        "root": "6 STARS · HEAT CAN'T BE WIPED",
-        "leaf": "CAUGHT OR KILLED",
-        "leaf_word": "caught"
+        "type": "cards",
+        "title": "At 6 stars",
+        "items": [
+          {
+            "t": "Change clothes",
+            "ok": false,
+            "word": "nothing"
+          },
+          {
+            "t": "Swap the car",
+            "ok": false,
+            "word": "disguise"
+          },
+          {
+            "t": "Hide the weapon",
+            "ok": false,
+            "word": "car"
+          },
+          {
+            "t": "Caught or killed",
+            "hl": true,
+            "word": "caught"
+          }
+        ]
       }
     },
     {
       "fact": "CTA",
-      "text": "So, can you still lose them? Comment your best escape.",
+      "text": "Will they remember your face? Comment your best escape.",
       "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_09.jpg",
       "focus": 0.6,
       "dim": 0.15,
