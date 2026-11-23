@@ -2,11 +2,11 @@
   "slug": "user-score-fake",
   "format": "explainer",
   "theme": "news",
-  "tag": "FAKE CHECK",
+  "tag": "GTA 6 NEWS",
   "kicker": "METACRITIC · USERS vs CRITICS",
   "title": "Is GTA 6 really a 5 out of 10?",
   "yt_title": "Is GTA 6 really a 5/10? 🤔 The truth",
-  "description": "Is GTA 6 really a 5 out of 10? That's its Metacritic user score (reported around 4.9 to 5.6) after a wave of negative reviews right when user ratings opened. Anyone can rate on Metacritic without owning the game, and many of those reviews admit they never played it (OpenCritic, GGRecon). Critics gave it a 99 (GameSpot). So do players hate it? Not true: Take-Two says its $3.79B day one is the biggest entertainment launch ever. Is it a 5 or a 99 for you? Comment below.",
+  "description": "Is GTA 6 really a 5 out of 10? That's its Metacritic user score (reported around 4.9 to 5.6) after a wave of negative reviews right when user ratings opened. Anyone can rate on Metacritic without owning the game, and many of those reviews admit they never played it (OpenCritic, GGRecon). Critics gave it a 99 (GameSpot). Do players hate it? Not true: many of those reviewers never played, and Take-Two says its $3.79B day one is the biggest entertainment launch ever. Is it a 5 or a 99 for you? Comment below.",
   "tiktok_caption": "Is GTA 6 really a 5/10? 🤔 5 or 99 for you? 👇",
   "hashtags": [
     "#GTA6",
@@ -36,11 +36,12 @@
           "of",
           "10?"
         ]
-      }
+      },
+      "receipt": false
     },
     {
       "fact": "F196",
-      "text": "That's where its Metacritic user score dropped, after a wave of angry reviews.",
+      "text": "That's what its Metacritic user score showed, after a wave of angry reviews.",
       "visual": "screenshots/People/Boobie Ike/Boobie_Ike_03.jpg",
       "focus": 0.45,
       "dim": 0.2,
@@ -53,7 +54,7 @@
         "suffix": "/10",
         "label": "user score",
         "sub": "Reported 4.9 to 5.6 · Nov 20-21",
-        "word": "dropped"
+        "word": "showed"
       }
     },
     {
@@ -110,8 +111,8 @@
         "F197",
         "F165"
       ],
-      "text": "Do players hate it? Not true. Take-Two says day one sales broke records.",
-      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_08.jpg",
+      "text": "Do players hate it? Not true. Many reviewers never played, and Take-Two says sales broke records.",
+      "visual": "screenshots/People/Cal Hampton/Cal_Hampton_04.jpg",
       "dim": 0.22,
       "headline": "REAL OR NOT?",
       "scene": {
@@ -135,7 +136,8 @@
             "word": "records"
           }
         ]
-      }
+      },
+      "focus": 0.5
     },
     {
       "fact": "CTA",
