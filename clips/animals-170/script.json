@@ -3,7 +3,7 @@
   "format": "explainer",
   "title": "GTA 6 has more than 170 animal species",
   "yt_title": "GTA 6 has 170+ animal species 🐊 Which did you meet first?",
-  "description": "Over 170 animal species live in GTA 6: Rockstar says Leonida has more than 170 animal species: about 60 birds and over 30 land mammals, plus fish and reptiles (Rockstar via Game Informer, reported by GameSpot). Tip: petting dogs and cats boosts your Focus (Kotaku, GamesRadar, which ties it to the Professional profile). Hunting reportedly rewards clean shots that keep the carcass pristine (unconfirmed). No spoilers. Which animal did you meet first? Comment below.",
+  "description": "Rockstar says Leonida has more than 170 animal species: about 60 birds and over 30 land mammals, plus fish and reptiles (Rockstar via Game Informer, reported by GameSpot). Tip: petting dogs and cats boosts your Focus (Kotaku, GamesRadar, which ties it to the Professional profile). Hunting reportedly rewards clean shots that keep the carcass pristine (unconfirmed). No spoilers. Which animal did you meet first? Comment below.",
   "rumor_note": "Rumor (unconfirmed): hunting details (clean shots keep the carcass pristine for a buyer) come from wiki-style guides.",
   "tiktok_caption": "GTA 6 has 170+ animal species 🐊 Which did you meet first? 👇",
   "hashtags": [
@@ -75,11 +75,12 @@
             "word": "iguanas"
           },
           {
-            "img": "screenshots/Places/Grassrivers/Grassrivers_01.jpg",
+            "img": "screenshots/Places/Grassrivers/Grassrivers_08.jpg",
             "label": "Alligator",
-            "focus": 0.25,
+            "focus": 0.5,
             "word": "alligators",
-            "fy": 0.92
+            "fy": 1.0,
+            "label_top": true
           },
           {
             "img": "screenshots/Places/Mount Kalaga National Park/Mount_Kalaga_National_Park_05.jpg",
@@ -115,7 +116,7 @@
     },
     {
       "fact": "F202",
-      "text": "And hunting reportedly rewards clean shots: a head or heart shot keeps the carcass pristine for a buyer.",
+      "text": "Hunting reportedly rewards clean shots: a head or heart shot keeps the carcass pristine for a buyer.",
       "visual": "screenshots/Places/Mount Kalaga National Park/Mount_Kalaga_National_Park_05.jpg",
       "focus": 0.4,
       "dim": 0.22,
