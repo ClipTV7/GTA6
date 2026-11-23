@@ -190,6 +190,18 @@ def resolve_voice(script, cfg, test_voice):
         cfg["_voice_id"] = "test"
 
 
+def trim_edges(a, sr, start_db=-55, end_db=-42, keep=0.06):
+    """Coupe le silence au début et à la fin d'un morceau de voix (garde 60 ms)."""
+    import numpy as np
+    env = np.abs(a if a.ndim == 1 else a.mean(axis=1))
+    on = np.nonzero(env > 10 ** (start_db / 20))[0]
+    off = np.nonzero(env > 10 ** (end_db / 20))[0]
+    if not len(on) or not len(off):
+        return a
+    k = int(keep * sr)
+    return a[max(0, on[0] - k):min(len(a), off[-1] + k)]
+
+
 def make_voice(lines, cfg, work, test_voice):
     cache = os.path.join(ROOT, ".cache", "tts")
     os.makedirs(cache, exist_ok=True)
@@ -198,7 +210,7 @@ def make_voice(lines, cfg, work, test_voice):
         text = ln["text"].strip()
         prev = lines[i - 1]["text"] if i else ""
         nxt = lines[i + 1]["text"] if i + 1 < len(lines) else ""
-        key = hashlib.sha1(json.dumps(["v4-tails", text, prev, nxt, test_voice, cfg.get("_voice_id"),
+        key = hashlib.sha1(json.dumps(["v5-gaps", text, prev, nxt, test_voice, cfg.get("_voice_id"),
                                        cfg["elevenlabs"] if cfg.get("_engine") == "elevenlabs" else cfg.get("tts")],
                                       sort_keys=True).encode()).hexdigest()[:16]
         cached = os.path.join(cache, key + ".wav")
@@ -218,7 +230,8 @@ def make_voice(lines, cfg, work, test_voice):
                         tts_kokoro(part, cfg, pf)
                         a, sr = sf.read(pf)
                         os.remove(pf)
-                        chunks += [a, np.zeros(int(0.2 * sr))]
+                        a = trim_edges(a, sr)
+                        chunks += [a, np.zeros(int(0.18 * sr))]
                     sf.write(tmp, np.concatenate(chunks[:-1]), sr)
                 else:
                     tts_kokoro(text, cfg, tmp)
@@ -274,7 +287,7 @@ def word_timings(wavs, lines, cfg, gap):
     words, segs, t0 = [], [], 0.0
     for i, (wav, ln) in enumerate(zip(wavs, lines)):
         d = duration(wav)
-        seg_len = d + gap + (0.3 if i == len(lines) - 1 else 0)
+        seg_len = d + gap + (0.2 if i == len(lines) - 1 else 0)
         segs.append((t0, seg_len))
         import numpy as np  # décodage via ffmpeg (évite les soucis de version PyAV)
         pcm = subprocess.run(["ffmpeg", "-v", "error", "-i", wav, "-f", "s16le", "-ac", "1", "-ar", "16000", "-"],
