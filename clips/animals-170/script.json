@@ -1,0 +1,168 @@
+{
+  "slug": "animals-170",
+  "format": "explainer",
+  "title": "GTA 6 has more than 170 animal species",
+  "yt_title": "How many animals are in GTA 6? 🐊 170+ species",
+  "description": "How many animals are in GTA 6? Rockstar says Leonida has more than 170 animal species: about 60 birds and over 30 land mammals, plus fish and reptiles (Rockstar via Game Informer, reported by GameSpot). Tip: petting dogs and cats boosts your Focus (GamesRadar, Kotaku). Hunting reportedly rewards clean shots that keep the carcass pristine (unconfirmed). No spoilers. What's your favorite animal? Comment below.",
+  "rumor_note": "Rumor (unconfirmed): hunting details (clean shots keep the carcass pristine for a buyer) come from wiki-style guides.",
+  "tiktok_caption": "How many animals are in GTA 6? 🐊 Favorite one? 👇",
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#GTA",
+    "#Leonida",
+    "#GTA6Tips"
+  ],
+  "lines": [
+    {
+      "fact": "F201",
+      "text": "How many animals are in GTA 6? Rockstar counts over 170 species.",
+      "visual": "screenshots/Places/Leonida Keys/Leonida_Keys_06.jpg",
+      "focus": 0.3,
+      "dim": 0.12,
+      "headline": "1/4 · WILDLIFE",
+      "scene": {
+        "type": "stat",
+        "title": "Leonida · per Rockstar",
+        "value": 170,
+        "suffix": "+",
+        "label": "animal species",
+        "sub": "Birds, mammals, fish, reptiles",
+        "word": "170"
+      },
+      "sticker": {
+        "name": "alligator",
+        "x": 830,
+        "y": 1000,
+        "w": 145,
+        "word": "species"
+      }
+    },
+    {
+      "fact": "F201",
+      "text": "About 60 of them are birds, and more than 30 are land mammals, plus fish and reptiles.",
+      "visual": "screenshots/Places/Grassrivers/Grassrivers_04.jpg",
+      "focus": 0.5,
+      "dim": 0.22,
+      "headline": "2/4 · THE MIX",
+      "scene": {
+        "type": "bars",
+        "title": "Of 170+ species",
+        "note": "Plus fish and reptiles · Rockstar via Game Informer",
+        "rows": [
+          {
+            "label": "Birds",
+            "value": 60,
+            "text": "~60",
+            "word": "birds"
+          },
+          {
+            "label": "Land mammals",
+            "value": 30,
+            "text": "30+",
+            "word": "mammals"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "F201",
+      "text": "In Rockstar's screenshots, you can spot iguanas in the Keys, alligators in the swamp, deer in the woods, and tropical fish.",
+      "visual": "screenshots/Places/Grassrivers/Grassrivers_02.jpg",
+      "dim": 0.25,
+      "headline": "3/4 · WHO YOU'LL MEET",
+      "scene": {
+        "type": "grid",
+        "title": "In official screenshots",
+        "tiles": [
+          {
+            "img": "screenshots/Places/Leonida Keys/Leonida_Keys_06.jpg",
+            "label": "Iguana",
+            "focus": 0.3,
+            "word": "iguanas"
+          },
+          {
+            "img": "screenshots/Places/Grassrivers/Grassrivers_01.jpg",
+            "label": "Alligator",
+            "focus": 0.5,
+            "word": "alligators"
+          },
+          {
+            "img": "screenshots/Places/Mount Kalaga National Park/Mount_Kalaga_National_Park_05.jpg",
+            "label": "Deer",
+            "focus": 0.35,
+            "word": "deer"
+          },
+          {
+            "img": "screenshots/Places/Leonida Keys/Leonida_Keys_07.jpg",
+            "label": "Tropical fish",
+            "focus": 0.7,
+            "word": "tropical"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "F180",
+      "text": "Here's a tip: petting dogs and cats boosts your Focus. Just hold the left trigger near them first.",
+      "visual": "screenshots/Places/Vice City/Vice_City_19.jpg",
+      "focus": 0.3,
+      "dim": 0.22,
+      "headline": "4/4 · PET TIP",
+      "scene": {
+        "type": "route",
+        "kicker": "Confirmed tip",
+        "title": "Pet them",
+        "sub": "Hold L2 / LT near them",
+        "from": "DOG OR CAT",
+        "to": "FOCUS BOOST",
+        "go_word": "boosts"
+      }
+    },
+    {
+      "fact": "F202",
+      "text": "And hunting reportedly rewards clean shots: a head or heart shot keeps the carcass pristine for a buyer.",
+      "visual": "screenshots/Places/Mount Kalaga National Park/Mount_Kalaga_National_Park_05.jpg",
+      "focus": 0.4,
+      "dim": 0.22,
+      "headline": "HUNTING?",
+      "scene": {
+        "type": "cards",
+        "title": "Not confirmed",
+        "items": [
+          {
+            "t": "Clean shot = pristine carcass",
+            "status": "RUMOR",
+            "word": "clean"
+          },
+          {
+            "t": "A buyer pays for it",
+            "status": "RUMOR",
+            "word": "buyer"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "CTA",
+      "text": "Have you met them all? Comment your favorite animal.",
+      "visual": "screenshots/Places/Leonida Keys/Leonida_Keys_06.jpg",
+      "focus": 0.3,
+      "dim": 0.15,
+      "headline": "YOUR FAVORITE?",
+      "scene": {
+        "type": "list",
+        "title": "Your favorite?",
+        "items": [
+          "Alligator",
+          "Iguana",
+          "Deer",
+          "Dog"
+        ],
+        "letters": true,
+        "active": "cycle",
+        "cta": "COMMENT BELOW ↓"
+      }
+    }
+  ]
+}

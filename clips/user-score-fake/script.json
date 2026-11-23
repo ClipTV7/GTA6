@@ -1,0 +1,157 @@
+{
+  "slug": "user-score-fake",
+  "format": "explainer",
+  "theme": "news",
+  "tag": "FAKE CHECK",
+  "kicker": "METACRITIC · USERS vs CRITICS",
+  "title": "Is GTA 6 really a 5 out of 10?",
+  "yt_title": "Is GTA 6 really a 5/10? 🤔 The truth",
+  "description": "Is GTA 6 really a 5 out of 10? That's its Metacritic user score (reported around 4.9 to 5.6) after a wave of negative reviews right when user ratings opened. Anyone can rate on Metacritic without owning the game, and many of those reviews admit they never played it (OpenCritic, GGRecon). Critics gave it a 99 (GameSpot). So do players hate it? Not true: Take-Two says its $3.79B day one is the biggest entertainment launch ever. Is it a 5 or a 99 for you? Comment below.",
+  "tiktok_caption": "Is GTA 6 really a 5/10? 🤔 5 or 99 for you? 👇",
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#GTA",
+    "#Metacritic",
+    "#Rockstar"
+  ],
+  "lines": [
+    {
+      "fact": "F196",
+      "text": "Is GTA 6 really a 5 out of 10?",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_17.jpg",
+      "focus": 0.5,
+      "dim": 0.12,
+      "scene": {
+        "type": "slam",
+        "pos": "low",
+        "em": [
+          "5",
+          "10?"
+        ],
+        "lit": [
+          "really",
+          "5",
+          "out",
+          "of",
+          "10?"
+        ]
+      }
+    },
+    {
+      "fact": "F196",
+      "text": "That's where its Metacritic user score dropped, after a wave of angry reviews.",
+      "visual": "screenshots/People/Boobie Ike/Boobie_Ike_03.jpg",
+      "focus": 0.45,
+      "dim": 0.2,
+      "headline": "USER SCORE",
+      "scene": {
+        "type": "stat",
+        "title": "Metacritic · users",
+        "value": 5,
+        "prefix": "~",
+        "suffix": "/10",
+        "label": "user score",
+        "sub": "Reported 4.9 to 5.6 · Nov 20-21",
+        "word": "dropped"
+      }
+    },
+    {
+      "fact": "F105",
+      "text": "Critics gave it a 99.",
+      "visual": "screenshots/Places/Vice City/Vice_City_01.jpg",
+      "dim": 0.2,
+      "headline": "VS CRITICS",
+      "scene": {
+        "type": "bars",
+        "title": "Metacritic",
+        "note": "Users: open to anyone · Critics: Metascore",
+        "rows": [
+          {
+            "label": "Users",
+            "value": 50,
+            "text": "~5/10"
+          },
+          {
+            "label": "Critics",
+            "value": 99,
+            "text": "99/100",
+            "word": "99"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "F196",
+      "text": "But anyone can rate it without owning the game, and many of those reviews admit they never played.",
+      "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_01.jpg",
+      "focus": 0.5,
+      "dim": 0.22,
+      "headline": "THE CATCH",
+      "scene": {
+        "type": "cards",
+        "focus": "current",
+        "items": [
+          {
+            "t": "Anyone can rate, no game needed",
+            "status": "CONFIRMED",
+            "word": "anyone"
+          },
+          {
+            "t": "Many admit they never played",
+            "status": "CONFIRMED",
+            "word": "never"
+          }
+        ]
+      }
+    },
+    {
+      "fact": [
+        "F197",
+        "F165"
+      ],
+      "text": "Do players hate it? Not true. Take-Two says day one sales broke records.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_08.jpg",
+      "dim": 0.22,
+      "headline": "REAL OR NOT?",
+      "scene": {
+        "type": "cards",
+        "focus": "current",
+        "items": [
+          {
+            "t": "Critics: 99",
+            "status": "CONFIRMED",
+            "pre": true
+          },
+          {
+            "t": "Players hate GTA 6",
+            "status": "FALSE",
+            "word": "hate",
+            "reveal_word": "not"
+          },
+          {
+            "t": "Record $3.79B day one",
+            "status": "CONFIRMED",
+            "word": "records"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "CTA",
+      "text": "Is it a 5 or a 99 for you? Comment below.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_17.jpg",
+      "focus": 0.5,
+      "dim": 0.12,
+      "scene": {
+        "type": "slam",
+        "pos": "low",
+        "em": [
+          "5",
+          "99",
+          "comment"
+        ]
+      }
+    }
+  ]
+}

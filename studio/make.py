@@ -231,7 +231,7 @@ def make_voice(lines, cfg, work, test_voice):
                         a, sr = sf.read(pf)
                         os.remove(pf)
                         a = trim_edges(a, sr)
-                        chunks += [a, np.zeros(int(0.18 * sr))]
+                        chunks += [a, np.zeros(int(0.25 * sr))]
                     sf.write(tmp, np.concatenate(chunks[:-1]), sr)
                 else:
                     tts_kokoro(text, cfg, tmp)
