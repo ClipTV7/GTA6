@@ -277,7 +277,7 @@ def canon(w, heard=False):
         return ROMAN[t]
     t = {"isnt": "isnot", "dont": "donot", "doesnt": "doesnot", "cant": "cannot", "wont": "willnot",
          "didnt": "didnot", "hasnt": "hasnot", "havent": "havenot", "wasnt": "wasnot", "arent": "arenot",
-         "taketwo": "take2", "taketwos": "take2s"}.get(t, t)
+         "taketwo": "take2", "taketwos": "take2s", "whether": "weather"}.get(t, t)
     return NUMW.get(t, t)
 
 

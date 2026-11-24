@@ -1,0 +1,143 @@
+{
+  "slug": "weather-explained",
+  "format": "explainer",
+  "title": "GTA 6 weather explained: storms, hurricanes, puddles",
+  "yt_title": "Will a HURRICANE hit your GTA 6 game? 🌀 Weather explained",
+  "description": "Will a hurricane hit your GTA 6 game? Rockstar confirmed tropical storms and hurricanes, plus persistent weather: areas that just got rain stay wet, with puddles that last (Dexerto, GamingBolt). GamesRadar reports storms rock boats, damage planes and send people running for shelter. A bug that froze the weather for long stretches was fixed in the November 23 patch. How often hurricanes hit hasn't been revealed. No spoilers. Have you been caught in a storm yet? Comment below.",
+  "tiktok_caption": "Will a HURRICANE hit your GTA 6 game? 🌀 Caught in a storm yet? 👇",
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#GTA",
+    "#Leonida",
+    "#GTA6Tips"
+  ],
+  "lines": [
+    {
+      "fact": "F212",
+      "text": "Will a hurricane hit your GTA 6 game? Rockstar confirmed tropical storms, and even full hurricanes.",
+      "visual": "screenshots/Places/Vice City/Vice_City_11.jpg",
+      "focus": 0.5,
+      "dim": 0.12,
+      "headline": "1/4 · STORMS",
+      "scene": {
+        "type": "meter",
+        "title": "Leonida weather",
+        "left": "SUNNY",
+        "right": "HURRICANE",
+        "from_word": "will",
+        "to_word": "hurricanes",
+        "hint": "Confirmed by Rockstar"
+      }
+    },
+    {
+      "fact": "F212",
+      "text": "The weather also sticks around: after a rain shower, the streets stay wet, with puddles that last.",
+      "visual": "screenshots/Places/Port Gellhorn/Port_Gellhorn_01.jpg",
+      "focus": 0.5,
+      "dim": 0.22,
+      "headline": "2/4 · IT STAYS",
+      "scene": {
+        "type": "route",
+        "kicker": "Persistent weather",
+        "title": "Rain leaves a mark",
+        "sub": "Recently showered areas stay wet",
+        "from": "RAIN SHOWER",
+        "to": "LASTING PUDDLES",
+        "go_word": "puddles"
+      }
+    },
+    {
+      "fact": "F212",
+      "text": "When a storm hits, it rocks boats, damages planes, and sends people running for shelter.",
+      "visual": "screenshots/Places/Vice City/Vice_City_15.jpg",
+      "focus": 0.5,
+      "dim": 0.22,
+      "headline": "3/4 · STORM EFFECTS",
+      "scene": {
+        "type": "list",
+        "title": "In a storm",
+        "items": [
+          "Boats rock",
+          "Planes take damage",
+          "People take shelter"
+        ],
+        "active": "words",
+        "item_words": [
+          "rocks",
+          "damages",
+          "shelter"
+        ]
+      }
+    },
+    {
+      "fact": "F206",
+      "text": "One bug: the weather could get stuck for long stretches. The November 23rd patch fixed it, on PS5 and Xbox.",
+      "visual": "screenshots/Places/Ambrosia/Ambrosia_02.jpg",
+      "focus": 0.5,
+      "dim": 0.2,
+      "headline": "4/4 · STUCK WEATHER",
+      "scene": {
+        "type": "date",
+        "title": "Stuck weather: fixed",
+        "month": "NOVEMBER",
+        "day": "23",
+        "weekday": "MONDAY",
+        "chips": [
+          {
+            "t": "PS5",
+            "word": "ps5"
+          },
+          {
+            "t": "XBOX SERIES X|S",
+            "word": "xbox"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "F212",
+      "text": "How often do hurricanes hit? Rockstar hasn't said yet, so keep an eye on the sky.",
+      "visual": "screenshots/Places/Mount Kalaga National Park/Mount_Kalaga_National_Park_02.jpg",
+      "focus": 0.45,
+      "dim": 0.2,
+      "headline": "UNKNOWN",
+      "scene": {
+        "type": "cards",
+        "title": "Hurricanes",
+        "items": [
+          {
+            "t": "Storms + hurricanes: confirmed",
+            "ok": true,
+            "pre": true
+          },
+          {
+            "t": "How often: not revealed yet",
+            "ok": false,
+            "word": "said"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "CTA",
+      "text": "Have you been caught in a storm yet? Comment below.",
+      "visual": "screenshots/Places/Vice City/Vice_City_11.jpg",
+      "focus": 0.5,
+      "dim": 0.15,
+      "headline": "CAUGHT YET?",
+      "scene": {
+        "type": "list",
+        "title": "Caught in a storm?",
+        "items": [
+          "Yes, a hurricane",
+          "Just rain",
+          "Not yet"
+        ],
+        "letters": true,
+        "active": "cycle",
+        "cta": "COMMENT BELOW ↓"
+      }
+    }
+  ]
+}

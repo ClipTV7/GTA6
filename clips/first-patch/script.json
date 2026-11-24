@@ -1,0 +1,70 @@
+{
+  "slug": "first-patch",
+  "format": "explainer",
+  "theme": "news",
+  "tag": "GTA 6 NEWS",
+  "kicker": "FIRST PATCH · NOV 23",
+  "title": "GTA 6's first real patch: what it fixed",
+  "yt_title": "GTA 6's first REAL patch is out 🛠️ Is your bug fixed?",
+  "description": "Is your GTA 6 bug fixed? The first post-launch patch (01.002.002 on PS5, 1.0.2.2 on Xbox) landed November 23 with real patch notes. It fixes some crashes, weather that stopped changing, autosaves, phone calls that failed to trigger, and a wanted level you couldn't lose (PlayStation LifeStyle, Vice, Push Square). Not in the notes: a first-person mode or a performance mode. A viral post claims a big fix and an apology on November 25: Rockstar hasn't confirmed either, so it's still a rumor. Is your game fixed? Comment below.",
+  "rumor_note": "Rumor (unconfirmed): a viral X post claims a big fix and a Rockstar apology on Nov 25.",
+  "tiktok_caption": "GTA 6's first REAL patch is out 🛠️ Is your game fixed? 👇",
+  "hashtags": ["#GTA6", "#GTAVI", "#GTA", "#GTA6Update", "#Rockstar"],
+  "lines": [
+    {
+      "fact": "F049",
+      "text": "Is your GTA 6 bug fixed? The first real patch is out.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_18.jpg",
+      "focus": 0.55,
+      "dim": 0.12,
+      "receipt": false,
+      "scene": {"type": "slam", "pos": "low", "em": ["bug", "fixed?"], "lit": ["is", "your", "gta", "6", "bug", "fixed?"]}
+    },
+    {
+      "fact": "F049",
+      "text": "It landed November 23rd, with real patch notes this time.",
+      "visual": "screenshots/Places/Vice City/Vice_City_11.jpg",
+      "dim": 0.2,
+      "headline": "PATCH 01.002.002",
+      "scene": {"type": "stat", "title": "First post-launch patch", "value": 604, "suffix": "MB", "label": "on PS5 · ~1.6 GB on Xbox", "sub": "Released Nov 23 · with patch notes", "word": "landed"}
+    },
+    {
+      "fact": "F206",
+      "text": "It fixes some crashes, weather that stopped changing, autosaves, missed phone calls, and a wanted level you couldn't lose.",
+      "visual": "screenshots/People/Raul Bautista/Raul_Bautista_01.jpg",
+      "focus": 0.6,
+      "dim": 0.22,
+      "headline": "FIXED",
+      "scene": {"type": "list", "title": "Patch notes", "items": ["Some crashes", "Stuck weather", "Autosaves", "Missed phone calls", "Stuck wanted level"], "active": "words", "item_words": ["crashes", "weather", "autosaves", "phone", "wanted"]}
+    },
+    {
+      "fact": "F208",
+      "text": "Not in the notes: a first-person mode, or a performance mode.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_02.jpg",
+      "focus": 0.45,
+      "dim": 0.22,
+      "headline": "NOT IN IT",
+      "scene": {"type": "cards", "title": "Not in the notes", "items": [
+        {"t": "First-person mode", "ok": false, "word": "first-person"},
+        {"t": "Performance mode", "ok": false, "word": "performance"}]}
+    },
+    {
+      "fact": ["F173", "F206"],
+      "text": "A viral post claims a big fix and an apology on November 25th. Rockstar hasn't confirmed either.",
+      "visual": "screenshots/People/Jason and Lucia/Jason_and_Lucia_12.jpg",
+      "dim": 0.22,
+      "headline": "REAL OR NOT?",
+      "scene": {"type": "cards", "focus": "current", "items": [
+        {"t": "Patch out Nov 23 · bug fixes", "status": "CONFIRMED", "pre": true},
+        {"t": "Big fix + apology on Nov 25", "status": "RUMOR", "word": "confirmed"}]}
+    },
+    {
+      "fact": "CTA",
+      "text": "Is your game fixed? Comment below.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_18.jpg",
+      "focus": 0.55,
+      "dim": 0.12,
+      "scene": {"type": "slam", "pos": "low", "em": ["fixed?", "comment"]}
+    }
+  ]
+}
