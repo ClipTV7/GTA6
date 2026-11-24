@@ -49,10 +49,11 @@
       "scene": {
         "type": "stat",
         "title": "Patch 01.002.002",
-        "value": 5,
-        "label": "fixes in the notes",
-        "sub": "Released Nov 23 · PS5 + Xbox",
-        "word": "notes"
+        "value": 1,
+        "suffix": "st",
+        "label": "post-launch patch with notes",
+        "sub": "Nov 23 · PS5 + Xbox",
+        "word": "landed"
       }
     },
     {
@@ -84,7 +85,7 @@
     },
     {
       "fact": "F208",
-      "text": "Not in the notes: a first-person mode, or a performance mode.",
+      "text": "Not in the notes: first-person or performance mode.",
       "visual": "screenshots/People/Jason Duval/Jason_Duval_02.jpg",
       "focus": 0.45,
       "dim": 0.22,
