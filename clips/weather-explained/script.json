@@ -2,9 +2,9 @@
   "slug": "weather-explained",
   "format": "explainer",
   "title": "GTA 6 weather explained: storms, hurricanes, puddles",
-  "yt_title": "Will a HURRICANE hit your GTA 6 game? 🌀 Weather explained",
-  "description": "Will a hurricane hit your GTA 6 game? Rockstar confirmed tropical storms and hurricanes, plus persistent weather: areas that just got rain stay wet, with puddles that last (Dexerto, GamingBolt). GamesRadar reports storms rock boats, damage planes and send people running for shelter. A bug that froze the weather for long stretches was fixed in the November 23 patch. How often hurricanes hit hasn't been revealed. No spoilers. Have you been caught in a storm yet? Comment below.",
-  "tiktok_caption": "Will a HURRICANE hit your GTA 6 game? 🌀 Caught in a storm yet? 👇",
+  "yt_title": "Will hurricanes hit your GTA 6 game? 🌀 Weather explained",
+  "description": "Will hurricanes hit your GTA 6 game? Rockstar confirmed tropical storms and hurricanes, plus persistent weather: areas that just got rain stay wet, with puddles that last (Dexerto, GamingBolt). GamesRadar reports storms rock boats, damage planes and send people running for shelter. A bug that froze the weather for long stretches was fixed in the November 23 patch. How often hurricanes hit hasn't been revealed. No spoilers. Has a hurricane hit your game yet? Comment below.",
+  "tiktok_caption": "Will hurricanes hit your GTA 6 game? 🌀 Has one hit yours yet? 👇",
   "hashtags": [
     "#GTA6",
     "#GTAVI",
@@ -15,7 +15,7 @@
   "lines": [
     {
       "fact": "F212",
-      "text": "Will a hurricane hit your GTA 6 game? Rockstar confirmed tropical storms, and even full hurricanes.",
+      "text": "Will hurricanes hit your GTA 6 game? Rockstar confirmed tropical storms, and even full hurricanes.",
       "visual": "screenshots/Places/Vice City/Vice_City_11.jpg",
       "focus": 0.5,
       "dim": 0.12,
@@ -26,14 +26,14 @@
         "left": "SUNNY",
         "right": "HURRICANE",
         "from_word": "will",
-        "to_word": "hurricanes",
+        "to_word": "full",
         "hint": "Confirmed by Rockstar"
       }
     },
     {
       "fact": "F212",
-      "text": "The weather also sticks around: after a rain shower, the streets stay wet, with puddles that last.",
-      "visual": "screenshots/Places/Port Gellhorn/Port_Gellhorn_01.jpg",
+      "text": "The weather also sticks around: after it rains, the streets stay wet, with puddles that last.",
+      "visual": "screenshots/Places/Vice City/Vice_City_22.jpg",
       "focus": 0.5,
       "dim": 0.22,
       "headline": "2/4 · IT STAYS",
@@ -50,7 +50,7 @@
     {
       "fact": "F212",
       "text": "When a storm hits, it rocks boats, damages planes, and sends people running for shelter.",
-      "visual": "screenshots/Places/Vice City/Vice_City_15.jpg",
+      "visual": "screenshots/Places/Ambrosia/Ambrosia_02.jpg",
       "focus": 0.5,
       "dim": 0.22,
       "headline": "3/4 · STORM EFFECTS",
@@ -73,7 +73,7 @@
     {
       "fact": "F206",
       "text": "One bug: the weather could get stuck for long stretches. The November 23rd patch fixed it, on PS5 and Xbox.",
-      "visual": "screenshots/Places/Ambrosia/Ambrosia_02.jpg",
+      "visual": "screenshots/Places/Grassrivers/Grassrivers_08.jpg",
       "focus": 0.5,
       "dim": 0.2,
       "headline": "4/4 · STUCK WEATHER",
@@ -113,7 +113,7 @@
           },
           {
             "t": "How often: not revealed yet",
-            "ok": false,
+            "hl": true,
             "word": "said"
           }
         ]
@@ -121,14 +121,14 @@
     },
     {
       "fact": "CTA",
-      "text": "Have you been caught in a storm yet? Comment below.",
+      "text": "Has a hurricane hit your game yet? Comment below.",
       "visual": "screenshots/Places/Vice City/Vice_City_11.jpg",
       "focus": 0.5,
       "dim": 0.15,
-      "headline": "CAUGHT YET?",
+      "headline": "HIT YET?",
       "scene": {
         "type": "list",
-        "title": "Caught in a storm?",
+        "title": "Hit by a storm?",
         "items": [
           "Yes, a hurricane",
           "Just rain",
