@@ -3,9 +3,9 @@
   "format": "explainer",
   "title": "GTA 6 topped the UK physical chart with no disc",
   "yt_title": "GTA 6 is No. 1 in UK stores… with NO disc? 📦",
-  "description": "How did a game with no disc top the UK's physical chart? GTA 6's boxed edition has no disc, just a download code (Vice), and Rockstar recommends up to 212 GB of free space. Still, it debuted at No. 1 on the UK boxed chart (GfK) for launch week, ahead of EA Sports FC 27 (VGChartz, Nintendo Life). No UK sales figure was published. Worldwide, Take-Two says it made $3.79B in day-one sales. On Amazon UK alone, the PS5 version reportedly passed 40,000 sales (Games Asylum, unconfirmed). Box or digital: which did you buy? Comment below.",
+  "description": "How did a game with no disc top the UK's physical chart? GTA 6's boxed edition has no disc, just a download code (Vice). But GfK's UK chart counts boxed copies sold in shops, and that box still counts: GTA 6 debuted at No. 1 for launch week, ahead of EA Sports FC 27 (VGChartz, Nintendo Life). No UK sales figure was published. Worldwide, Take-Two says it made $3.79B in day-one sales. On Amazon UK alone, the PS5 version reportedly passed 40,000 sales (Games Asylum, unconfirmed). Does a box with no disc still count as physical? Comment below.",
   "rumor_note": "Rumor (one outlet, Games Asylum): over 40,000 PS5 copies sold on Amazon UK.",
-  "tiktok_caption": "GTA 6 is No. 1 in UK stores… with NO disc? 📦 Box or digital? 👇",
+  "tiktok_caption": "GTA 6 is No. 1 in UK stores… with NO disc? 📦 Still physical? 👇",
   "hashtags": [
     "#GTA6",
     "#GTAVI",
@@ -20,7 +20,7 @@
       "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_03.jpg",
       "focus": 0.4,
       "dim": 0.12,
-      "headline": "1/5 · NO. 1",
+      "headline": "NO DISC. STILL #1?",
       "scene": {
         "type": "stat",
         "title": "UK boxed chart · GfK",
@@ -37,7 +37,7 @@
       "visual": "screenshots/People/Jason Duval/Jason_Duval_08.jpg",
       "focus": 0.5,
       "dim": 0.22,
-      "headline": "2/5 · IN THE BOX",
+      "headline": "IN THE BOX",
       "scene": {
         "type": "route",
         "kicker": "Physical edition",
@@ -49,29 +49,32 @@
       }
     },
     {
-      "fact": "F010",
-      "text": "Then you download the game. Rockstar recommends keeping up to 212 gigabytes free.",
+      "fact": [
+        "F218",
+        "F009"
+      ],
+      "text": "The answer: it's a chart of boxed copies sold in shops, and a box with just a code still counts.",
       "visual": "screenshots/People/Jason Duval/Jason_Duval_13.jpg",
       "focus": 0.5,
       "dim": 0.22,
-      "headline": "3/5 · THE DOWNLOAD",
+      "headline": "THE ANSWER",
       "scene": {
-        "type": "stat",
-        "title": "Free space · per Rockstar",
-        "value": 212,
-        "suffix": " GB",
-        "label": "recommended, up to",
-        "sub": "Rockstar's recommendation",
-        "word": "212"
+        "type": "route",
+        "kicker": "GfK · UK boxed chart",
+        "title": "Boxes, not discs",
+        "sub": "The box holds a download code",
+        "from": "BOX SOLD IN SHOPS",
+        "to": "COUNTS ON THE CHART",
+        "go_word": "counts"
       }
     },
     {
       "fact": "F218",
-      "text": "Still, it debuted at number one, ahead of EA Sports FC 27. No sales figure was published.",
+      "text": "Still, it debuted at number one, ahead of EA Sports FC 27. No UK sales figure was published.",
       "visual": "screenshots/People/Cal Hampton/Cal_Hampton_01.jpg",
       "focus": 0.6,
       "dim": 0.22,
-      "headline": "4/5 · THE CHART",
+      "headline": "THE CHART",
       "scene": {
         "type": "cards",
         "title": "UK boxed chart · GfK",
@@ -82,8 +85,7 @@
             "word": "number"
           },
           {
-            "t": "Unit sales published",
-            "ok": false,
+            "t": "UK sales figure: not published",
             "word": "figure"
           }
         ]
@@ -92,10 +94,10 @@
     {
       "fact": "F165",
       "text": "Worldwide, Take-Two says the game made 3.79 billion dollars in day one sales.",
-      "visual": "screenshots/Places/Ambrosia/Ambrosia_05.jpg",
+      "visual": "screenshots/Places/Vice City/Vice_City_03.jpg",
       "focus": 0.5,
       "dim": 0.22,
-      "headline": "5/5 · WORLDWIDE",
+      "headline": "WORLDWIDE",
       "scene": {
         "type": "stat",
         "title": "Day one · Take-Two",
@@ -122,22 +124,23 @@
         "suffix": "+",
         "label": "PS5 sales on Amazon UK",
         "sub": "Per Games Asylum · not official",
-        "word": "passed"
+        "word": "passed",
+        "count": false
       }
     },
     {
       "fact": "CTA",
-      "text": "Box or digital: which did you buy? Comment below.",
+      "text": "Does a box with no disc still count as physical? Comment below.",
       "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_03.jpg",
       "focus": 0.4,
       "dim": 0.15,
-      "headline": "YOUR COPY?",
+      "headline": "STILL PHYSICAL?",
       "scene": {
         "type": "list",
-        "title": "You bought…",
+        "title": "Box with a code…",
         "items": [
-          "The box (code inside)",
-          "Digital"
+          "Still physical",
+          "Basically digital"
         ],
         "letters": true,
         "active": "cycle",

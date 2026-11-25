@@ -5,10 +5,10 @@
   "tag": "GTA 6 NEWS",
   "kicker": "BLACK FRIDAY · NOV 25",
   "title": "Is GTA 6 on sale for Black Friday?",
-  "yt_title": "Is GTA 6 really on sale this Black Friday? 🏷️ Careful",
-  "description": "Is GTA 6 really on sale this Black Friday? Take-Two CEO Strauss Zelnick says there's no plan to discount it over the holidays (GamingBolt). Reportedly, the PlayStation and Xbox stores still charge full price ($79.99 / $99.99), with only small retailer offers. Have you seen an 'official Black Friday deal'? It's fake: the Best Buy offer is reward points, not a lower price. Is it worth full price? Comment below.",
+  "yt_title": "Is GTA 6 actually cheaper this Black Friday? 🏷️",
+  "description": "Is GTA 6 actually cheaper this Black Friday? Take-Two CEO Strauss Zelnick says there's no plan to discount it over the holidays (GamingBolt). Reportedly, the PlayStation and Xbox stores still charge full price ($79.99 / $99.99), with only small retailer offers. Have you seen an official Black Friday price cut? It's fake: the Best Buy offer is reward points, not a lower price. Is it worth full price? Comment below.",
   "rumor_note": "Reported (store pages not checked live): no price cut on the PS Store or Xbox Store, only small retailer offers.",
-  "tiktok_caption": "Is GTA 6 really on sale this Black Friday? 🏷️ Worth full price? 👇",
+  "tiktok_caption": "Is GTA 6 actually cheaper this Black Friday? 🏷️ Worth full price? 👇",
   "hashtags": [
     "#GTA6",
     "#GTAVI",
@@ -19,7 +19,7 @@
   "lines": [
     {
       "fact": "F220",
-      "text": "Is GTA 6 really on sale this Black Friday?",
+      "text": "Is GTA 6 actually cheaper this Black Friday?",
       "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_08.jpg",
       "focus": 0.5,
       "dim": 0.12,
@@ -28,13 +28,15 @@
         "type": "slam",
         "pos": "low",
         "em": [
-          "sale",
-          "friday?"
+          "cheaper"
         ],
         "lit": [
-          "really",
-          "on",
-          "sale",
+          "is",
+          "gta",
+          "6",
+          "actually",
+          "cheaper",
+          "this",
           "black",
           "friday?"
         ]
@@ -74,7 +76,7 @@
         "decimals": 2,
         "prefix": "$",
         "label": "Standard edition · still full price",
-        "sub": "Ultimate $99.99 · reported",
+        "sub": "Some shops: about 5% off · reported",
         "word": "full"
       }
     },
@@ -83,9 +85,9 @@
         "F222",
         "F220"
       ],
-      "text": "Have you seen an official Black Friday deal? It's fake. Best Buy is offering reward points, not a lower price.",
+      "text": "Have you seen an official Black Friday price cut? It's fake. Best Buy is offering reward points, not a lower price.",
       "visual": "screenshots/People/Boobie Ike/Boobie_Ike_02.jpg",
-      "focus": 0.4,
+      "focus": 0.3,
       "dim": 0.22,
       "headline": "REAL OR NOT?",
       "scene": {
@@ -98,7 +100,7 @@
             "pre": true
           },
           {
-            "t": "Official Black Friday sale",
+            "t": "Official PS / Xbox price cut",
             "status": "FALSE",
             "word": "official",
             "reveal_word": "fake"

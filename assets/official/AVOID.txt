@@ -12,3 +12,4 @@ screenshots/Places/Port Gellhorn/Port_Gellhorn_07.jpg
 screenshots/People/Boobie Ike/Boobie_Ike_04.jpg
 screenshots/People/DreQuan Priest/DreQuan_Priest_01.jpg
 screenshots/People/Real Dimez/Real_Dimez_02.jpg
+screenshots/Places/Ambrosia/Ambrosia_05.jpg
