@@ -1,0 +1,125 @@
+{
+  "slug": "black-friday-fake",
+  "format": "explainer",
+  "theme": "news",
+  "tag": "GTA 6 NEWS",
+  "kicker": "BLACK FRIDAY · NOV 25",
+  "title": "Is GTA 6 on sale for Black Friday?",
+  "yt_title": "Is GTA 6 really on sale this Black Friday? 🏷️ Careful",
+  "description": "Is GTA 6 really on sale this Black Friday? Take-Two CEO Strauss Zelnick says there's no plan to discount it over the holidays (GamingBolt). Reportedly, the PlayStation and Xbox stores still charge full price ($79.99 / $99.99), with only small retailer offers. Have you seen an 'official Black Friday deal'? It's fake: the Best Buy offer is reward points, not a lower price. Is it worth full price? Comment below.",
+  "rumor_note": "Reported (store pages not checked live): no price cut on the PS Store or Xbox Store, only small retailer offers.",
+  "tiktok_caption": "Is GTA 6 really on sale this Black Friday? 🏷️ Worth full price? 👇",
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#GTA",
+    "#BlackFriday",
+    "#Rockstar"
+  ],
+  "lines": [
+    {
+      "fact": "F220",
+      "text": "Is GTA 6 really on sale this Black Friday?",
+      "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_08.jpg",
+      "focus": 0.5,
+      "dim": 0.12,
+      "receipt": false,
+      "scene": {
+        "type": "slam",
+        "pos": "low",
+        "em": [
+          "sale",
+          "friday?"
+        ],
+        "lit": [
+          "really",
+          "on",
+          "sale",
+          "black",
+          "friday?"
+        ]
+      }
+    },
+    {
+      "fact": "F220",
+      "text": "The CEO of Take-Two says there's no plan to discount it over the holidays.",
+      "visual": "screenshots/People/Raul Bautista/Raul_Bautista_02.jpg",
+      "focus": 0.4,
+      "dim": 0.2,
+      "headline": "TAKE-TWO",
+      "scene": {
+        "type": "cards",
+        "title": "Strauss Zelnick, Take-Two CEO",
+        "items": [
+          {
+            "t": "No holiday discount planned",
+            "status": "CONFIRMED",
+            "hl": true,
+            "word": "discount"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "F221",
+      "text": "Reportedly, the PlayStation and Xbox stores still charge full price. Only a few shops knock off a little.",
+      "visual": "screenshots/People/Real Dimez/Real_Dimez_01.jpg",
+      "focus": 0.5,
+      "dim": 0.22,
+      "headline": "STORE PRICE",
+      "scene": {
+        "type": "stat",
+        "title": "PS Store · Xbox Store",
+        "value": 79.99,
+        "decimals": 2,
+        "prefix": "$",
+        "label": "Standard edition · still full price",
+        "sub": "Ultimate $99.99 · reported",
+        "word": "full"
+      }
+    },
+    {
+      "fact": [
+        "F222",
+        "F220"
+      ],
+      "text": "Have you seen an official Black Friday deal? It's fake. Best Buy is offering reward points, not a lower price.",
+      "visual": "screenshots/People/Boobie Ike/Boobie_Ike_02.jpg",
+      "focus": 0.4,
+      "dim": 0.22,
+      "headline": "REAL OR NOT?",
+      "scene": {
+        "type": "cards",
+        "focus": "current",
+        "items": [
+          {
+            "t": "No Take-Two holiday discount",
+            "status": "CONFIRMED",
+            "pre": true
+          },
+          {
+            "t": "Official Black Friday sale",
+            "status": "FALSE",
+            "word": "official",
+            "reveal_word": "fake"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "CTA",
+      "text": "Is it worth full price? Comment below.",
+      "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_08.jpg",
+      "focus": 0.5,
+      "dim": 0.12,
+      "scene": {
+        "type": "slam",
+        "pos": "low",
+        "em": [
+          "worth",
+          "comment"
+        ]
+      }
+    }
+  ]
+}
