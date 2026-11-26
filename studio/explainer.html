@@ -48,6 +48,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#000;color:#fff;
 .li .lt{font-weight:800;font-size:46px;letter-spacing:-.5px}
 .li .tag{margin-left:auto;font-weight:900;font-size:22px;letter-spacing:2px;padding:8px 12px;border-radius:8px;background:#000;color:#fff}
 .lcompact .li{padding:10px 18px;margin-top:9px}.lcompact .li .num{width:50px;height:50px}.lcompact .li .lt{font-size:40px}
+.slam .nw{white-space:nowrap;display:inline-block}
 .li.on{background:#fff;color:#000}.li.on .num{border-color:#000;background:#000;color:#fff}
 .cta{margin:26px auto 0;width:max-content;font-weight:900;font-size:34px;letter-spacing:2px;padding:14px 22px;border-radius:12px;
   background:#fff;color:#000}
@@ -239,7 +240,7 @@ B.date=(sc,root)=>{const p=sc.scene;const panel=el('div','panel',null,root);el('
   return lt=>{enter(panel,lt,sc);const a=ap(lt,.2,.35);cal.style.transform=`scale(${.85+.15*a}) rotate(${(1-a)*-6}deg)`;cal.style.opacity=a;
     chips.forEach(c=>{const b=ap(lt,c.t-.05,.25);c.e.style.opacity=b;c.e.style.transform=`translateY(${(1-b)*20}px)`;c.e.classList.toggle('on',b>.99)})}};
 B.slam=(sc,root)=>{const p=sc.scene;const box=el('div','slam',null,root);const em=(p.em||[]).map(norm);
-  const lit=(p.lit||[]).map(norm);if(p.pos==='low')box.classList.add('low');const spans=sc.words.map(w=>{const o={s:el('span',em.includes(norm(w.w))?'em':null,w.w.replace(/[;:]+$/,''),box),t:w.s-sc.start};
+  const lit=(p.lit||[]).map(norm);if(p.pos==='low')box.classList.add('low');let nw=null;const spans=sc.words.map((w,i)=>{const nx=sc.words[i+1];const par=nw||((/^gta$/i.test(w.w)&&nx&&/^\d/.test(nx.w))?(nw=el('span','nw',null,box)):box);const o={s:el('span',em.includes(norm(w.w))?'em':null,w.w.replace(/[;:]+$/,''),par),t:w.s-sc.start};if(par!==box&&!/^gta$/i.test(w.w))nw=null;
     if(/[.!?]$/.test(w.w))el('br',null,null,box);return o});
   spans.forEach(o=>o.lit=lit.includes(norm(o.s.textContent)));
   return lt=>{spans.forEach(o=>{const a=(sc.index===0&&o.t<.3)||o.lit?1:ap(lt,o.t-.08,.14);const on=a>0;
