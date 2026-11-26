@@ -1,0 +1,164 @@
+{
+  "slug": "free-gta-scam",
+  "format": "explainer",
+  "title": "Free GTA 6 is a scam: how the trap works",
+  "yt_title": "Free GTA 6? It's a SCAM 🚨 Here's how the trap works",
+  "description": "Have you seen a free GTA 6 offer? It's a scam. Malwarebytes found a 'free copy' site that asks for an account verification, then sends you to a fake Google sign-in page to steal your login (McAfee and GB News repeat the warning). There's no PC or mobile version of GTA 6 at all, and NordVPN even found GTA 6 scam kits sold on the dark web. Have you seen this scam yet? Comment where you saw it.",
+  "tiktok_caption": "Free GTA 6? It's a SCAM 🚨 Seen it yet? 👇",
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#GTA",
+    "#ScamAlert",
+    "#BlackFriday"
+  ],
+  "lines": [
+    {
+      "fact": "F223",
+      "text": "Have you seen a free GTA 6 offer? It's a scam. Here's how it works.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_10.jpg",
+      "focus": 0.5,
+      "dim": 0.12,
+      "headline": "SCAM ALERT",
+      "scene": {
+        "type": "cards",
+        "title": "Free GTA 6 copy",
+        "items": [
+          {
+            "t": "Free GTA 6 after a quick account check",
+            "status": "FALSE",
+            "word": "free",
+            "reveal_word": "scam"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "F223",
+      "text": "Step one: a fake site promises a free copy after an account check.",
+      "visual": "screenshots/People/DreQuan Priest/DreQuan_Priest_03.jpg",
+      "focus": 0.5,
+      "dim": 0.22,
+      "headline": "STEP 1",
+      "scene": {
+        "type": "route",
+        "kicker": "The trap",
+        "title": "The bait",
+        "sub": "Found by Malwarebytes",
+        "from": "FREE COPY SITE",
+        "to": "ACCOUNT CHECK",
+        "go_word": "check"
+      }
+    },
+    {
+      "fact": "F223",
+      "text": "Step two: that check sends you to a fake Google sign-in page.",
+      "visual": "screenshots/People/Raul Bautista/Raul_Bautista_03.jpg",
+      "focus": 0.6,
+      "dim": 0.22,
+      "headline": "STEP 2",
+      "scene": {
+        "type": "route",
+        "kicker": "The trap",
+        "title": "The fake login",
+        "sub": "It looks like Google. It isn't.",
+        "from": "ACCOUNT CHECK",
+        "to": "FAKE GOOGLE PAGE",
+        "go_word": "google"
+      }
+    },
+    {
+      "fact": "F223",
+      "text": "Step three: you type your password, and the scam steals your login.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_06.jpg",
+      "focus": 0.5,
+      "dim": 0.22,
+      "headline": "STEP 3",
+      "scene": {
+        "type": "route",
+        "kicker": "The trap",
+        "title": "Account stolen",
+        "sub": "Your Google login goes to the scammers",
+        "from": "YOUR PASSWORD",
+        "to": "STOLEN LOGIN",
+        "go_word": "steals"
+      }
+    },
+    {
+      "fact": [
+        "F005",
+        "F142"
+      ],
+      "text": "And there's no PC or mobile version at all. NordVPN even found GTA 6 scam kits sold on the dark web.",
+      "visual": "screenshots/Places/Ambrosia/Ambrosia_04.jpg",
+      "focus": 0.5,
+      "dim": 0.22,
+      "headline": "THE TRUTH",
+      "scene": {
+        "type": "cards",
+        "title": "Confirmed",
+        "items": [
+          {
+            "t": "No PC or mobile version",
+            "status": "CONFIRMED",
+            "word": "version"
+          },
+          {
+            "t": "Scam kits sold on the dark web",
+            "status": "CONFIRMED",
+            "word": "kits"
+          }
+        ]
+      }
+    },
+    {
+      "fact": [
+        "F223",
+        "F005"
+      ],
+      "text": "Red flags: a free copy, an account check, a Google sign-in, or a PC download. McAfee says any free download is a scam.",
+      "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_04.jpg",
+      "focus": 0.5,
+      "dim": 0.22,
+      "headline": "RED FLAGS",
+      "scene": {
+        "type": "list",
+        "title": "Red flags",
+        "items": [
+          "\"Free copy\"",
+          "\"Account check\"",
+          "Google sign-in pop-up",
+          "PC download"
+        ],
+        "active": "words",
+        "item_words": [
+          "free",
+          "account",
+          "google",
+          "pc"
+        ]
+      }
+    },
+    {
+      "fact": "CTA",
+      "text": "Have you seen this scam yet? Comment where you saw it.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_10.jpg",
+      "focus": 0.5,
+      "dim": 0.15,
+      "headline": "SEEN IT?",
+      "scene": {
+        "type": "list",
+        "title": "Where did you see it?",
+        "items": [
+          "TikTok",
+          "YouTube",
+          "Discord",
+          "Not yet"
+        ],
+        "letters": true,
+        "active": "cycle",
+        "cta": "COMMENT BELOW ↓"
+      }
+    }
+  ]
+}
