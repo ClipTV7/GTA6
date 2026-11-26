@@ -5,9 +5,9 @@
   "tag": "GTA 6 NEWS",
   "kicker": "APOLOGY PATCH? · NOV 26",
   "title": "Rockstar's GTA 6 apology patch was fake",
-  "yt_title": "Rockstar's GTA 6 'apology patch'? It never came ❌",
-  "description": "Did Rockstar really apologize with a big GTA 6 fix? No. A viral post claimed a major fix and a Rockstar apology on November 25: nothing shipped and Rockstar posted nothing. The last update is still patch 01.002.002 from November 23, which fixed some crashes, stuck weather, and a wanted level you couldn't lose, with no apology (PlayStation LifeStyle, PC Games Hardware). Is your game still crashing? Comment below.",
-  "tiktok_caption": "Rockstar's GTA 6 'apology patch'? It never came ❌ Still crashing? 👇",
+  "yt_title": "Did Rockstar apologize for GTA 6 lag? ❌ Fake",
+  "description": "Did Rockstar apologize for GTA 6 lag? No. A viral post promised an apology and a big fix on November 25: it's fake. Nothing shipped and Rockstar posted no apology. The last update is still patch 01.002.002 from November 23, with bug fixes only (PlayStation LifeStyle, PC Games Hardware). Do you want an apology from Rockstar? Comment below.",
+  "tiktok_caption": "Did Rockstar apologize for GTA 6 lag? ❌ Want one? 👇",
   "hashtags": [
     "#GTA6",
     "#GTAVI",
@@ -18,7 +18,7 @@
   "lines": [
     {
       "fact": "F049",
-      "text": "Did Rockstar really apologize with a big GTA 6 fix?",
+      "text": "Wait, did Rockstar apologize for GTA 6 lag?",
       "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_11.jpg",
       "focus": 0.6,
       "dim": 0.12,
@@ -28,30 +28,52 @@
         "pos": "low",
         "em": [
           "apologize",
-          "fix?"
+          "lag?"
         ],
         "lit": [
+          "wait,",
           "did",
           "rockstar",
-          "really",
           "apologize",
-          "big",
           "gta",
           "6",
-          "fix?"
+          "lag?"
         ]
       }
     },
     {
-      "fact": "F049",
-      "text": "The last update is still the November 23rd patch.",
+      "fact": "F173",
+      "text": "A viral post promised an apology and a big fix on November 25th. Real, or fake? Let's check.",
       "visual": "screenshots/People/Raul Bautista/Raul_Bautista_04.jpg",
       "focus": 0.4,
+      "dim": 0.2,
+      "headline": "THE CLAIM",
+      "scene": {
+        "type": "cards",
+        "title": "Viral post",
+        "items": [
+          {
+            "t": "Apology + big fix on Nov 25",
+            "hl": true,
+            "word": "promised"
+          }
+        ]
+      },
+      "receipt": false
+    },
+    {
+      "fact": [
+        "F049",
+        "F206"
+      ],
+      "text": "The last update is still the November 23rd patch, with bug fixes only.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_12.jpg",
+      "focus": 0.5,
       "dim": 0.2,
       "headline": "LATEST PATCH",
       "scene": {
         "type": "date",
-        "title": "Still the latest update",
+        "title": "Latest update · as of Nov 26",
         "month": "NOVEMBER",
         "day": "23",
         "weekday": "MONDAY",
@@ -65,38 +87,10 @@
     },
     {
       "fact": [
-        "F206",
-        "F173"
-      ],
-      "text": "It fixed some crashes, stuck weather, and a wanted level you couldn't lose. It never mentioned an apology.",
-      "visual": "screenshots/People/Jason Duval/Jason_Duval_12.jpg",
-      "focus": 0.5,
-      "dim": 0.22,
-      "headline": "WHAT IT FIXED",
-      "scene": {
-        "type": "list",
-        "title": "Nov 23 patch notes",
-        "items": [
-          "Some crashes",
-          "Stuck weather",
-          "Stuck wanted level",
-          "Apology: none"
-        ],
-        "active": "words",
-        "item_words": [
-          "crashes",
-          "weather",
-          "wanted",
-          "apology"
-        ]
-      }
-    },
-    {
-      "fact": [
         "F173",
         "F049"
       ],
-      "text": "The viral apology patch never existed. It's fake: Rockstar posted nothing.",
+      "text": "No apology, and no new fix. It's fake.",
       "visual": "screenshots/People/Brian Heder/Brian_Heder_03.jpg",
       "focus": 0.5,
       "dim": 0.22,
@@ -106,14 +100,14 @@
         "focus": "current",
         "items": [
           {
-            "t": "Patch 01.002.002 · Nov 23",
+            "t": "Nov 23 patch",
             "status": "CONFIRMED",
             "pre": true
           },
           {
             "t": "Big fix + apology on Nov 25",
             "status": "FALSE",
-            "word": "viral",
+            "word": "apology",
             "reveal_word": "fake"
           }
         ]
@@ -121,7 +115,7 @@
     },
     {
       "fact": "CTA",
-      "text": "Is your game still crashing? Comment below.",
+      "text": "Do you want an apology from Rockstar? Comment below.",
       "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_11.jpg",
       "focus": 0.6,
       "dim": 0.12,
@@ -129,7 +123,7 @@
         "type": "slam",
         "pos": "low",
         "em": [
-          "crashing?",
+          "apology",
           "comment"
         ]
       }

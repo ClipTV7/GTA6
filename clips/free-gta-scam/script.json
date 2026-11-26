@@ -2,86 +2,77 @@
   "slug": "free-gta-scam",
   "format": "explainer",
   "title": "Free GTA 6 is a scam: how the trap works",
-  "yt_title": "Free GTA 6? It's a SCAM 🚨 Here's how the trap works",
-  "description": "Have you seen a free GTA 6 offer? It's a scam. Malwarebytes found a 'free copy' site that asks for an account verification, then sends you to a fake Google sign-in page to steal your login (McAfee and GB News repeat the warning). There's no PC or mobile version of GTA 6 at all, and NordVPN even found GTA 6 scam kits sold on the dark web. Have you seen this scam yet? Comment where you saw it.",
-  "tiktok_caption": "Free GTA 6? It's a SCAM 🚨 Seen it yet? 👇",
+  "yt_title": "Want free GTA 6? It's a SCAM 🚨 How the trap works",
+  "description": "Want free GTA 6? It's a scam that steals your Google login. Malwarebytes found a 'free copy' site that asks for an account check, then sends you to a fake Google sign-in page built to steal your login. There's no PC or mobile version of GTA 6 yet, and NordVPN even found GTA 6 scam kits sold on the dark web. Red flags: a free copy, an account check, a Google sign-in, or a PC download. Have you seen this scam yet? Send this to a friend who'd click it.",
+  "tiktok_caption": "Want free GTA 6? It's a SCAM 🚨 Send this to a friend who'd click it 👇",
   "hashtags": [
     "#GTA6",
     "#GTAVI",
     "#GTA",
     "#ScamAlert",
-    "#BlackFriday"
+    "#Rockstar"
   ],
   "lines": [
     {
       "fact": "F223",
-      "text": "Have you seen a free GTA 6 offer? It's a scam. Here's how it works.",
-      "visual": "screenshots/People/Jason Duval/Jason_Duval_10.jpg",
-      "focus": 0.5,
+      "text": "Want free GTA 6? It's a scam that steals your Google login.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_04.jpg",
+      "focus": 0.4,
       "dim": 0.12,
-      "headline": "SCAM ALERT",
+      "receipt": false,
       "scene": {
-        "type": "cards",
-        "title": "Free GTA 6 copy",
-        "items": [
-          {
-            "t": "Free GTA 6 after a quick account check",
-            "status": "FALSE",
-            "word": "free",
-            "reveal_word": "scam"
-          }
+        "type": "slam",
+        "pos": "low",
+        "em": [
+          "free",
+          "scam"
+        ],
+        "lit": [
+          "want",
+          "free",
+          "gta",
+          "6?"
         ]
       }
     },
     {
-      "fact": "F223",
-      "text": "Step one: a fake site promises a free copy after an account check.",
+      "fact": "F235",
+      "text": "Step one: a site promises a free copy after an account check.",
       "visual": "screenshots/People/DreQuan Priest/DreQuan_Priest_03.jpg",
       "focus": 0.5,
       "dim": 0.22,
-      "headline": "STEP 1",
+      "headline": "STEP 1 · THE BAIT",
       "scene": {
         "type": "route",
-        "kicker": "The trap",
+        "kicker": "Found by Malwarebytes",
         "title": "The bait",
-        "sub": "Found by Malwarebytes",
-        "from": "FREE COPY SITE",
+        "sub": "\"Verify your account\"",
+        "from": "FREE COPY",
         "to": "ACCOUNT CHECK",
         "go_word": "check"
       }
     },
     {
-      "fact": "F223",
-      "text": "Step two: that check sends you to a fake Google sign-in page.",
+      "fact": "F235",
+      "text": "Step two, the trap: a fake Google page, you type your password, and your login is gone.",
       "visual": "screenshots/People/Raul Bautista/Raul_Bautista_03.jpg",
       "focus": 0.6,
       "dim": 0.22,
-      "headline": "STEP 2",
+      "headline": "STEP 2 · THE TRAP",
       "scene": {
-        "type": "route",
-        "kicker": "The trap",
-        "title": "The fake login",
-        "sub": "It looks like Google. It isn't.",
-        "from": "ACCOUNT CHECK",
-        "to": "FAKE GOOGLE PAGE",
-        "go_word": "google"
-      }
-    },
-    {
-      "fact": "F223",
-      "text": "Step three: you type your password, and the scam steals your login.",
-      "visual": "screenshots/People/Jason Duval/Jason_Duval_06.jpg",
-      "focus": 0.5,
-      "dim": 0.22,
-      "headline": "STEP 3",
-      "scene": {
-        "type": "route",
-        "kicker": "The trap",
-        "title": "Account stolen",
-        "sub": "Your Google login goes to the scammers",
-        "from": "YOUR PASSWORD",
-        "to": "STOLEN LOGIN",
-        "go_word": "steals"
+        "type": "list",
+        "title": "What happens next",
+        "items": [
+          "Fake Google sign-in page",
+          "You type your password",
+          "Login stolen"
+        ],
+        "active": "words",
+        "item_words": [
+          "google",
+          "password",
+          "gone"
+        ]
       }
     },
     {
@@ -89,7 +80,7 @@
         "F005",
         "F142"
       ],
-      "text": "And there's no PC or mobile version at all. NordVPN even found GTA 6 scam kits sold on the dark web.",
+      "text": "And there's no PC or mobile version of GTA 6 yet. Security researchers even found GTA 6 scam kits sold on the dark web.",
       "visual": "screenshots/Places/Ambrosia/Ambrosia_04.jpg",
       "focus": 0.5,
       "dim": 0.22,
@@ -99,12 +90,12 @@
         "title": "Confirmed",
         "items": [
           {
-            "t": "No PC or mobile version",
+            "t": "No PC or mobile version yet",
             "status": "CONFIRMED",
             "word": "version"
           },
           {
-            "t": "Scam kits sold on the dark web",
+            "t": "Scam kits on the dark web (NordVPN)",
             "status": "CONFIRMED",
             "word": "kits"
           }
@@ -141,7 +132,7 @@
     },
     {
       "fact": "CTA",
-      "text": "Have you seen this scam yet? Comment where you saw it.",
+      "text": "Have you seen this scam yet? Send this to a friend who'd click it.",
       "visual": "screenshots/People/Jason Duval/Jason_Duval_10.jpg",
       "focus": 0.5,
       "dim": 0.15,
@@ -157,7 +148,7 @@
         ],
         "letters": true,
         "active": "cycle",
-        "cta": "COMMENT BELOW ↓"
+        "cta": "SEND TO A FRIEND ↗"
       }
     }
   ]
