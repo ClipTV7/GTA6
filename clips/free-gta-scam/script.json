@@ -3,8 +3,8 @@
   "format": "explainer",
   "title": "Free GTA 6 is a scam: how the trap works",
   "yt_title": "Want free GTA 6? It's a SCAM 🚨 How the trap works",
-  "description": "Want free GTA 6? It's a scam that steals your Google login. Malwarebytes found a 'free copy' site that asks for an account check, then sends you to a fake Google sign-in page built to steal your login. There's no PC or mobile version of GTA 6 yet, and NordVPN even found GTA 6 scam kits sold on the dark web. Red flags: a free copy, an account check, a Google sign-in, or a PC download. Have you seen this scam yet? Send this to a friend who'd click it.",
-  "tiktok_caption": "Want free GTA 6? It's a SCAM 🚨 Send this to a friend who'd click it 👇",
+  "description": "Want free GTA 6? It's a scam that steals your Google login. Malwarebytes found a 'free copy' site that asks for an account check, then sends you to a fake Google sign-in page built to steal your login. There's no PC or mobile version of GTA 6 yet, and NordVPN even found GTA 6 scam kits sold on the dark web. Red flags: a free copy, an account check, a Google sign-in, or a PC download. Still want free GTA 6? Send this to a friend who'd click it.",
+  "tiktok_caption": "Want free GTA 6? It's a SCAM 🚨 Send this to a friend who'd click it",
   "hashtags": [
     "#GTA6",
     "#GTAVI",
@@ -19,10 +19,8 @@
       "visual": "screenshots/People/Jason Duval/Jason_Duval_04.jpg",
       "focus": 0.4,
       "dim": 0.12,
-      "receipt": false,
       "scene": {
         "type": "slam",
-        "pos": "low",
         "em": [
           "free",
           "scam"
@@ -105,9 +103,9 @@
     {
       "fact": [
         "F223",
-        "F005"
+        "F142"
       ],
-      "text": "Red flags: a free copy, an account check, a Google sign-in, or a PC download. McAfee says any free download is a scam.",
+      "text": "Red flags: a free copy, an account check, a Google sign-in, or a PC download. Security experts agree: any free download is a scam.",
       "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_04.jpg",
       "focus": 0.5,
       "dim": 0.22,
@@ -132,23 +130,16 @@
     },
     {
       "fact": "CTA",
-      "text": "Have you seen this scam yet? Send this to a friend who'd click it.",
-      "visual": "screenshots/People/Jason Duval/Jason_Duval_10.jpg",
-      "focus": 0.5,
-      "dim": 0.15,
-      "headline": "SEEN IT?",
+      "text": "Still want free GTA 6? Send this to a friend who'd click it.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_04.jpg",
+      "focus": 0.4,
+      "dim": 0.12,
       "scene": {
-        "type": "list",
-        "title": "Where did you see it?",
-        "items": [
-          "TikTok",
-          "YouTube",
-          "Discord",
-          "Not yet"
-        ],
-        "letters": true,
-        "active": "cycle",
-        "cta": "SEND TO A FRIEND ↗"
+        "type": "slam",
+        "em": [
+          "free",
+          "friend"
+        ]
       }
     }
   ]
