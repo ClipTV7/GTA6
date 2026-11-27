@@ -6,7 +6,7 @@
   "kicker": "ROCKSTAR UK VOTE · NOV 26",
   "title": "Rockstar UK staff voted no on a union",
   "yt_title": "GTA 6's UK team voted on a union… 75% said no 🗳️",
-  "description": "Did the GTA 6 UK team just reject a union? Rockstar UK staff voted on recognising the IWGB union right through the GTA 6 launch, and about 75% said no: 1,163 to 381, on a 93% turnout (result announced Nov 26 · Kotaku). Rockstar says the result reflects support for direct dialogue; the IWGB says it will keep organizing without recognition. Was it the right call? Comment below.",
+  "description": "Did the GTA 6 UK team reject a union? Rockstar UK staff voted on recognising the IWGB union right through the GTA 6 launch, and about 75% said no: 1,163 to 381, on a 93% turnout (result announced Nov 26 · Kotaku). Rockstar says the result reflects support for direct dialogue; the IWGB says it will keep organizing without recognition. Was it the right call? Comment below.",
   "tiktok_caption": "GTA 6's UK team voted on a union… 75% said no 🗳️ Right call? 👇",
   "hashtags": [
     "#GTA6",
@@ -18,7 +18,7 @@
   "lines": [
     {
       "fact": "F236",
-      "text": "Wait, did the GTA 6 UK team just reject a union?",
+      "text": "Did the GTA 6 UK team reject a union?",
       "visual": "screenshots/Places/Vice City/Vice_City_08.jpg",
       "focus": 0.5,
       "dim": 0.12,
@@ -56,8 +56,7 @@
         "suffix": "%",
         "label": "voted against recognition",
         "sub": "IWGB ballot · result Nov 26",
-        "word": "voted",
-        "count": false
+        "word": "about"
       }
     },
     {
@@ -106,7 +105,7 @@
           {
             "t": "IWGB: will keep organizing",
             "status": "CONFIRMED",
-            "word": "union"
+            "word": "dialogue"
           }
         ]
       }

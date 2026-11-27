@@ -3,9 +3,9 @@
   "format": "explainer",
   "title": "How hard is the GTA 6 Platinum trophy?",
   "yt_title": "How hard is the GTA 6 Platinum? 🏆 55 trophies explained",
-  "description": "How hard is the GTA 6 Platinum? GTA 6 has 55 trophies on PS5: 46 bronze, 6 silver, 2 gold and 1 platinum, and the same 55 achievements worth 1,000 Gamerscore on Xbox. Every one is single-player, and the Platinum needs all the others (GGRecon). Guides reportedly say 28 are hidden, mostly story ones, and PowerPyx estimates about 200 hours for the Platinum, more than double the 45 to 80 hours of the story, while rating the difficulty just 4 out of 10 (unofficial). No spoilers. Long or hard: will you go for it? Comment below.",
+  "description": "How hard is the GTA 6 Platinum? GTA 6 has 55 trophies on PS5: 46 bronze, 6 silver, 2 gold and 1 platinum, and the same 55 achievements worth 1,000 Gamerscore on Xbox. Every one is single-player, and the Platinum needs all the others (GGRecon). Guides reportedly say 28 are hidden, mostly story ones, and PowerPyx estimates about 200 hours for the Platinum, more than double the 45 to 80 hours of the story, while rating the difficulty just 4 out of 10 (unofficial). No spoilers. Is it worth the grind? Will you go for it? Comment below.",
   "rumor_note": "Rumor (guides only): 28 hidden trophies and a ~200-hour Platinum estimate (PowerPyx).",
-  "tiktok_caption": "How hard is the GTA 6 Platinum? 🏆 Going for it? 👇",
+  "tiktok_caption": "How hard is the GTA 6 Platinum? 🏆 Worth the grind? 👇",
   "hashtags": [
     "#GTA6",
     "#GTAVI",
@@ -16,7 +16,7 @@
   "lines": [
     {
       "fact": "F240",
-      "text": "How hard is the GTA 6 Platinum? The answer is surprising. You need all 54 other trophies.",
+      "text": "How hard is the GTA 6 Platinum? The answer isn't what you think. You need all 54 other trophies.",
       "visual": "screenshots/People/Jason Duval/Jason_Duval_15.jpg",
       "focus": 0.45,
       "dim": 0.12,
@@ -40,31 +40,35 @@
       "scene": {
         "type": "bars",
         "title": "55 trophies",
-        "note": "Vice · Insider Gaming · GGRecon",
+        "note": "GGRecon",
         "rows": [
           {
             "label": "Bronze",
             "value": 46,
             "text": "46",
-            "word": "bronze"
+            "word": "bronze",
+            "color": "#cd7f32"
           },
           {
             "label": "Silver",
             "value": 6,
             "text": "6",
-            "word": "silver"
+            "word": "silver",
+            "color": "#c0c0c0"
           },
           {
             "label": "Gold",
             "value": 2,
             "text": "2",
-            "word": "gold"
+            "word": "gold",
+            "color": "#ffd700"
           },
           {
             "label": "Platinum",
             "value": 1,
             "text": "1",
-            "word": "platinum"
+            "word": "platinum",
+            "color": "#e5e4e2"
           }
         ]
       }
@@ -159,9 +163,9 @@
     },
     {
       "fact": "CTA",
-      "text": "Long or hard: will you go for it? Comment below.",
-      "visual": "screenshots/People/Jason Duval/Jason_Duval_15.jpg",
-      "focus": 0.45,
+      "text": "Is it worth the grind? Will you go for it? Comment below.",
+      "visual": "screenshots/Places/Ambrosia/Ambrosia_06.jpg",
+      "focus": 0.5,
       "dim": 0.15,
       "headline": "GOING FOR IT?",
       "scene": {
