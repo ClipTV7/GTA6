@@ -277,7 +277,7 @@ const S=D.scenes.map((sc,i)=>{sc.index=i;const root=el('div','scene',null,stage)
   let head=null;if(sc.headline){head=el('div','headline',sc.headline,root)}
   let rec=null;if(sc.status&&sc.receipt!==false){rec=el('div','receipt',null,root);
     const cls=sc.status==='CONFIRMED'?'ok':sc.status==='RUMOR'?'rumor':'fake';
-    if(!sc.multi)el('div','chip '+cls,sc.badge||(sc.status==='CONFIRMED'?'✓ CONFIRMED':sc.status==='RUMOR'?'RUMOR':'FAKE CLAIM'),rec);
+    if(!sc.multi||sc.status!=='CONFIRMED')el('div','chip '+cls,sc.badge||(sc.status==='CONFIRMED'?'✓ CONFIRMED':sc.status==='RUMOR'?'RUMOR':'FAKE CLAIM'),rec);
     if(sc.source)el('div','src',(sc.sources_label||'SOURCE: ')+sc.source,rec)}
   return {sc,root,upd,head,rec}});
 window.layout=()=>S.forEach(s=>{s.root.style.display='block';

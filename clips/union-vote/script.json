@@ -5,9 +5,9 @@
   "tag": "GTA 6 NEWS",
   "kicker": "ROCKSTAR UK VOTE · NOV 26",
   "title": "Rockstar UK staff voted no on a union",
-  "yt_title": "GTA 6's makers voted on a union… 75% said NO 🗳️",
-  "description": "Do the people who made GTA 6 want a union? Rockstar UK staff voted on recognising the IWGB union, and about 75% said no: 1,163 against and 381 for, on a 93% turnout (result announced Nov 26 · Kotaku, Engadget). Rockstar says the result reflects support for direct dialogue; the IWGB says it will keep organizing without recognition. Do game studios need unions? Comment below.",
-  "tiktok_caption": "GTA 6's makers voted on a union… 75% said NO 🗳️ Do studios need unions? 👇",
+  "yt_title": "GTA 6's UK team voted on a union… 75% said no 🗳️",
+  "description": "Did the GTA 6 UK team just reject a union? Rockstar UK staff voted on recognising the IWGB union right through the GTA 6 launch, and about 75% said no: 1,163 to 381, on a 93% turnout (result announced Nov 26 · Kotaku). Rockstar says the result reflects support for direct dialogue; the IWGB says it will keep organizing without recognition. Was it the right call? Comment below.",
+  "tiktok_caption": "GTA 6's UK team voted on a union… 75% said no 🗳️ Right call? 👇",
   "hashtags": [
     "#GTA6",
     "#GTAVI",
@@ -18,7 +18,7 @@
   "lines": [
     {
       "fact": "F236",
-      "text": "Do the people who made GTA 6 want a union?",
+      "text": "Wait, did the GTA 6 UK team just reject a union?",
       "visual": "screenshots/Places/Vice City/Vice_City_08.jpg",
       "focus": 0.5,
       "dim": 0.12,
@@ -27,25 +27,23 @@
         "type": "slam",
         "pos": "low",
         "em": [
+          "reject",
           "union?"
         ],
         "lit": [
-          "do",
-          "the",
-          "people",
-          "who",
-          "made",
           "gta",
           "6",
-          "want",
-          "a",
-          "union?"
+          "uk",
+          "team"
         ]
       }
     },
     {
-      "fact": "F236",
-      "text": "Rockstar's UK staff voted, and about 75 percent said no.",
+      "fact": [
+        "F236",
+        "F226"
+      ],
+      "text": "They voted right through the GTA 6 launch, and about 75 percent said no.",
       "visual": "screenshots/Places/Vice City/Vice_City_27.jpg",
       "focus": 0.5,
       "dim": 0.2,
@@ -64,7 +62,7 @@
     },
     {
       "fact": "F236",
-      "text": "That's 1,163 against and 381 for, on a 93 percent turnout.",
+      "text": "That's 1,163 to 381, on a 93 percent turnout.",
       "visual": "screenshots/Places/Port Gellhorn/Port_Gellhorn_06.jpg",
       "focus": 0.5,
       "dim": 0.22,
@@ -78,7 +76,7 @@
             "label": "No",
             "value": 1163,
             "text": "1,163",
-            "word": "against"
+            "word": "1,163"
           },
           {
             "label": "Yes",
@@ -115,7 +113,7 @@
     },
     {
       "fact": "CTA",
-      "text": "Do game studios need unions? Comment below.",
+      "text": "Was it the right call? Comment below.",
       "visual": "screenshots/Places/Vice City/Vice_City_08.jpg",
       "focus": 0.5,
       "dim": 0.12,
@@ -123,7 +121,7 @@
         "type": "slam",
         "pos": "low",
         "em": [
-          "unions?",
+          "right",
           "comment"
         ]
       }
