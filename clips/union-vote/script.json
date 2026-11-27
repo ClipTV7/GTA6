@@ -1,0 +1,132 @@
+{
+  "slug": "union-vote",
+  "format": "explainer",
+  "theme": "news",
+  "tag": "GTA 6 NEWS",
+  "kicker": "ROCKSTAR UK VOTE · NOV 26",
+  "title": "Rockstar UK staff voted no on a union",
+  "yt_title": "GTA 6's makers voted on a union… 75% said NO 🗳️",
+  "description": "Do the people who made GTA 6 want a union? Rockstar UK staff voted on recognising the IWGB union, and about 75% said no: 1,163 against and 381 for, on a 93% turnout (result announced Nov 26 · Kotaku, Engadget). Rockstar says the result reflects support for direct dialogue; the IWGB says it will keep organizing without recognition. Do game studios need unions? Comment below.",
+  "tiktok_caption": "GTA 6's makers voted on a union… 75% said NO 🗳️ Do studios need unions? 👇",
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#GTA",
+    "#Rockstar",
+    "#GameDev"
+  ],
+  "lines": [
+    {
+      "fact": "F236",
+      "text": "Do the people who made GTA 6 want a union?",
+      "visual": "screenshots/Places/Vice City/Vice_City_08.jpg",
+      "focus": 0.5,
+      "dim": 0.12,
+      "receipt": false,
+      "scene": {
+        "type": "slam",
+        "pos": "low",
+        "em": [
+          "union?"
+        ],
+        "lit": [
+          "do",
+          "the",
+          "people",
+          "who",
+          "made",
+          "gta",
+          "6",
+          "want",
+          "a",
+          "union?"
+        ]
+      }
+    },
+    {
+      "fact": "F236",
+      "text": "Rockstar's UK staff voted, and about 75 percent said no.",
+      "visual": "screenshots/Places/Vice City/Vice_City_27.jpg",
+      "focus": 0.5,
+      "dim": 0.2,
+      "headline": "THE RESULT",
+      "scene": {
+        "type": "stat",
+        "title": "Rockstar UK · union vote",
+        "value": 75,
+        "prefix": "~",
+        "suffix": "%",
+        "label": "voted against recognition",
+        "sub": "IWGB ballot · result Nov 26",
+        "word": "voted",
+        "count": false
+      }
+    },
+    {
+      "fact": "F236",
+      "text": "That's 1,163 against and 381 for, on a 93 percent turnout.",
+      "visual": "screenshots/Places/Port Gellhorn/Port_Gellhorn_06.jpg",
+      "focus": 0.5,
+      "dim": 0.22,
+      "headline": "THE COUNT",
+      "scene": {
+        "type": "bars",
+        "title": "Union recognition vote",
+        "note": "1,544 voters · 93.2% turnout",
+        "rows": [
+          {
+            "label": "No",
+            "value": 1163,
+            "text": "1,163",
+            "word": "against"
+          },
+          {
+            "label": "Yes",
+            "value": 381,
+            "text": "381",
+            "word": "381"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "F236",
+      "text": "Rockstar says it backs direct dialogue. The union says it will keep organizing.",
+      "visual": "screenshots/Places/Vice City/Vice_City_10.jpg",
+      "focus": 0.5,
+      "dim": 0.22,
+      "headline": "WHAT'S NEXT",
+      "scene": {
+        "type": "cards",
+        "focus": "current",
+        "items": [
+          {
+            "t": "Rockstar: support for direct dialogue",
+            "status": "CONFIRMED",
+            "word": "rockstar"
+          },
+          {
+            "t": "IWGB: will keep organizing",
+            "status": "CONFIRMED",
+            "word": "union"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "CTA",
+      "text": "Do game studios need unions? Comment below.",
+      "visual": "screenshots/Places/Vice City/Vice_City_08.jpg",
+      "focus": 0.5,
+      "dim": 0.12,
+      "scene": {
+        "type": "slam",
+        "pos": "low",
+        "em": [
+          "unions?",
+          "comment"
+        ]
+      }
+    }
+  ]
+}

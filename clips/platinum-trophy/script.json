@@ -1,0 +1,170 @@
+{
+  "slug": "platinum-trophy",
+  "format": "explainer",
+  "title": "How hard is the GTA 6 Platinum trophy?",
+  "yt_title": "How hard is the GTA 6 Platinum? 🏆 55 trophies explained",
+  "description": "How hard is the GTA 6 Platinum? GTA 6 has 55 trophies on PS5: 46 bronze, 6 silver, 2 gold and 1 platinum, and the same 55 achievements worth 1,000 Gamerscore on Xbox. Every one is single-player, and the Platinum needs all the others (Vice, Insider Gaming, GGRecon). Guides reportedly say 28 are hidden, mostly story ones, and PowerPyx estimates about 200 hours for the Platinum, more than double the 45 to 80 hours of the story, while rating the difficulty just 4 out of 10 (unofficial). No spoilers. Will you go for the Platinum? Comment below.",
+  "rumor_note": "Rumor (guides only): 28 hidden trophies and a ~200-hour Platinum estimate (PowerPyx).",
+  "tiktok_caption": "How hard is the GTA 6 Platinum? 🏆 Going for it? 👇",
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#GTA",
+    "#Platinum",
+    "#Trophies"
+  ],
+  "lines": [
+    {
+      "fact": "F240",
+      "text": "How hard is the GTA 6 Platinum? You need all 54 other trophies, on PS5 or Xbox.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_15.jpg",
+      "focus": 0.45,
+      "dim": 0.12,
+      "headline": "1/5 · THE PLATINUM",
+      "scene": {
+        "type": "stat",
+        "title": "GTA 6 · PS5 trophies",
+        "value": 55,
+        "label": "trophies in total",
+        "sub": "1,000 Gamerscore on Xbox",
+        "word": "how"
+      }
+    },
+    {
+      "fact": "F240",
+      "text": "There are 46 bronze, 6 silver, 2 gold, and 1 platinum.",
+      "visual": "screenshots/People/Cal Hampton/Cal_Hampton_03.jpg",
+      "focus": 0.5,
+      "dim": 0.22,
+      "headline": "2/5 · THE SPLIT",
+      "scene": {
+        "type": "bars",
+        "title": "55 trophies",
+        "note": "Vice · Insider Gaming · GGRecon",
+        "rows": [
+          {
+            "label": "Bronze",
+            "value": 46,
+            "text": "46",
+            "word": "bronze"
+          },
+          {
+            "label": "Silver",
+            "value": 6,
+            "text": "6",
+            "word": "silver"
+          },
+          {
+            "label": "Gold",
+            "value": 2,
+            "text": "2",
+            "word": "gold"
+          },
+          {
+            "label": "Platinum",
+            "value": 1,
+            "text": "1",
+            "word": "platinum"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "F240",
+      "text": "Good news: every single trophy is single-player, so there's no online grind at all.",
+      "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_09.jpg",
+      "focus": 0.5,
+      "dim": 0.22,
+      "headline": "3/5 · SOLO ONLY",
+      "scene": {
+        "type": "cards",
+        "title": "Trophy list",
+        "items": [
+          {
+            "t": "All single-player",
+            "ok": true,
+            "word": "single-player"
+          },
+          {
+            "t": "Online trophies",
+            "ok": false,
+            "word": "online"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "F241",
+      "text": "Guides reportedly say 28 of them are hidden, mostly story ones.",
+      "visual": "screenshots/People/Brian Heder/Brian_Heder_04.jpg",
+      "focus": 0.45,
+      "dim": 0.22,
+      "headline": "HIDDEN?",
+      "scene": {
+        "type": "stat",
+        "title": "Hidden trophies · guides",
+        "value": 28,
+        "label": "of 55, mostly story",
+        "sub": "Not official",
+        "word": "hidden"
+      }
+    },
+    {
+      "fact": [
+        "F241",
+        "F176"
+      ],
+      "text": "One guide reportedly estimates about 200 hours for the Platinum. That's more than double the 45 to 80 hours of the story.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_09.jpg",
+      "focus": 0.5,
+      "dim": 0.22,
+      "headline": "4/5 · THE GRIND",
+      "scene": {
+        "type": "meter",
+        "title": "Time needed",
+        "left": "STORY 45-80 H",
+        "right": "PLATINUM ~200 H",
+        "from_word": "estimates",
+        "to_word": "200",
+        "hint": "PowerPyx estimate · unofficial"
+      }
+    },
+    {
+      "fact": "F241",
+      "text": "But that guide reportedly rates the difficulty just 4 out of 10. It's long, not hard.",
+      "visual": "screenshots/People/Real Dimez/Real_Dimez_03.jpg",
+      "focus": 0.5,
+      "dim": 0.22,
+      "headline": "5/5 · DIFFICULTY",
+      "scene": {
+        "type": "stat",
+        "title": "Difficulty · PowerPyx",
+        "value": 4,
+        "suffix": "/10",
+        "label": "long, not hard",
+        "sub": "Guide estimate · not official",
+        "word": "rates"
+      }
+    },
+    {
+      "fact": "CTA",
+      "text": "Will you go for the Platinum? Comment below.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_15.jpg",
+      "focus": 0.45,
+      "dim": 0.15,
+      "headline": "GOING FOR IT?",
+      "scene": {
+        "type": "list",
+        "title": "The Platinum?",
+        "items": [
+          "Already going for it",
+          "Maybe after the story",
+          "No way"
+        ],
+        "letters": true,
+        "active": "cycle",
+        "cta": "COMMENT BELOW ↓"
+      }
+    }
+  ]
+}
