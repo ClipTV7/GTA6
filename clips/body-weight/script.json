@@ -1,0 +1,148 @@
+{
+  "slug": "body-weight",
+  "format": "explainer",
+  "title": "Jason can get fat in GTA 6: the body system explained",
+  "yt_title": "Jason can get FAT in GTA 6? 🍔 The body system explained",
+  "description": "Can Jason really get fat in GTA 6? Yes. Food and exercise change Jason's and Lucia's bodies: eat a lot and they get heavier, hit the gym and they build muscle (Rockstar to Dazed, reported by Kotaku and TweakTown). One player even reached a max-weight 'True Fat Jason' on a burger and taco diet (Kotaku). The system comes back from San Andreas: GTA 5 tracked stats, but Michael, Franklin and Trevor never changed shape. Skipping sleep reportedly makes them look exhausted too (unconfirmed). No spoilers. Will your Jason be fat or ripped? Comment below.",
+  "rumor_note": "Rumor (partly unconfirmed): skipping sleep makes the characters look exhausted; any stamina effect is speculation.",
+  "tiktok_caption": "Jason can get FAT in GTA 6? 🍔 Fat or ripped? 👇",
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#GTA",
+    "#SanAndreas",
+    "#GTA6Tips"
+  ],
+  "lines": [
+    {
+      "fact": "F246",
+      "text": "Can Jason really get fat in GTA 6? Yes. Eat a lot, and he gets heavier.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_06.jpg",
+      "focus": 0.55,
+      "dim": 0.12,
+      "headline": "1/4 · FOOD",
+      "scene": {
+        "type": "meter",
+        "title": "Jason's body",
+        "left": "SLIM",
+        "right": "HEAVY",
+        "from_word": "eat",
+        "to_word": "heavier",
+        "hint": "Confirmed by Rockstar"
+      }
+    },
+    {
+      "fact": "F246",
+      "text": "Hit the gym instead, and Jason and Lucia build and tone muscle.",
+      "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_09.jpg",
+      "focus": 0.5,
+      "dim": 0.2,
+      "headline": "2/4 · GYM",
+      "scene": {
+        "type": "route",
+        "kicker": "Exercise",
+        "title": "Train it",
+        "sub": "Works for Jason and Lucia",
+        "from": "GYM",
+        "to": "MORE MUSCLE",
+        "go_word": "muscle"
+      }
+    },
+    {
+      "fact": "F246",
+      "text": "One player even reached a max weight True Fat Jason, on a burger and taco diet. Another mixed max weight and max muscle.",
+      "visual": "screenshots/People/Brian Heder/Brian_Heder_01.jpg",
+      "focus": 0.5,
+      "dim": 0.22,
+      "headline": "3/4 · MAX WEIGHT",
+      "scene": {
+        "type": "cards",
+        "title": "Player builds · Kotaku",
+        "items": [
+          {
+            "t": "\"True Fat Jason\": max weight",
+            "status": "CONFIRMED",
+            "word": "true"
+          },
+          {
+            "t": "Diet: burgers + tacos",
+            "status": "CONFIRMED",
+            "word": "burger"
+          },
+          {
+            "t": "\"Overweight Strong\": max weight + muscle",
+            "status": "CONFIRMED",
+            "word": "mixed"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "F247",
+      "text": "San Andreas had it. GTA 5 didn't: Michael, Franklin and Trevor never changed shape. GTA 6 brings it back.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_01.jpg",
+      "focus": 0.5,
+      "dim": 0.22,
+      "headline": "4/4 · VS GTA 5",
+      "scene": {
+        "type": "list",
+        "title": "Body changes?",
+        "items": [
+          "San Andreas (2004): yes",
+          "GTA 5 (2013): no",
+          "GTA 6 (2026): yes"
+        ],
+        "active": "words",
+        "item_words": [
+          "andreas",
+          "michael",
+          "back"
+        ]
+      }
+    },
+    {
+      "fact": "F248",
+      "text": "Skipping sleep reportedly makes them look exhausted too, and guides say the whole system is optional.",
+      "visual": "screenshots/People/Lucia Caminos/Lucia_Caminos_02.jpg",
+      "focus": 0.5,
+      "dim": 0.22,
+      "headline": "SLEEP?",
+      "scene": {
+        "type": "cards",
+        "title": "Not fully confirmed",
+        "items": [
+          {
+            "t": "No sleep = exhausted look",
+            "status": "RUMOR",
+            "word": "exhausted"
+          },
+          {
+            "t": "Body system optional (guides)",
+            "status": "RUMOR",
+            "word": "optional"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "CTA",
+      "text": "Will your Jason be fat or ripped? Comment below.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_06.jpg",
+      "focus": 0.55,
+      "dim": 0.15,
+      "headline": "YOUR JASON?",
+      "scene": {
+        "type": "list",
+        "title": "Your Jason",
+        "items": [
+          "Fat",
+          "Ripped",
+          "Both"
+        ],
+        "letters": true,
+        "active": "cycle",
+        "cta": "COMMENT BELOW ↓"
+      }
+    }
+  ]
+}

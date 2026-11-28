@@ -1,0 +1,146 @@
+{
+  "slug": "motion-blur",
+  "format": "explainer",
+  "theme": "news",
+  "tag": "GTA 6 TIP",
+  "kicker": "SETTINGS · MOTION BLUR",
+  "title": "GTA 6 too blurry? Change this setting",
+  "yt_title": "GTA 6 too blurry? Change THIS setting 👀",
+  "description": "Does GTA 6 look blurry to you? Go to Settings > Display > Motion Blur Strength: it runs from 0 to 10 and the default is 3. Set it to 0 to switch it off; blur can even cause motion sickness (Engadget, BGR). On OLED screens, some players reportedly prefer between 4 and 6 so 30 fps looks smoother (player reports via TechRadar). Those console guides promising 60 fps are fake: there's no frame-rate unlock on PS5 or Xbox, and Rockstar targets 30 fps. Is your blur on or off? Comment below.",
+  "rumor_note": "Rumor (player anecdotes): a motion blur of 4-6 looks smoother on OLED TVs.",
+  "tiktok_caption": "GTA 6 too blurry? Change THIS setting 👀 Blur on or off? 👇",
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#GTA",
+    "#GTA6Tips",
+    "#PS5"
+  ],
+  "lines": [
+    {
+      "fact": "F249",
+      "text": "Does GTA 6 look blurry to you? Change this one setting.",
+      "visual": "screenshots/People/Real Dimez/Real_Dimez_04.jpg",
+      "focus": 0.45,
+      "dim": 0.12,
+      "receipt": false,
+      "scene": {
+        "type": "slam",
+        "pos": "low",
+        "em": [
+          "blurry",
+          "setting."
+        ],
+        "lit": [
+          "gta",
+          "6",
+          "look",
+          "blurry"
+        ]
+      }
+    },
+    {
+      "fact": "F249",
+      "text": "Go to Settings, Display, Motion Blur Strength. It runs from 0 to 10, and 3 is the default.",
+      "visual": "screenshots/Places/Vice City/Vice_City_09.jpg",
+      "focus": 0.5,
+      "dim": 0.22,
+      "headline": "THE SETTING",
+      "scene": {
+        "type": "stat",
+        "title": "Settings › Display › Motion Blur Strength",
+        "value": 3,
+        "label": "default · slider 0 to 10",
+        "sub": "Engadget · BGR",
+        "word": "runs"
+      }
+    },
+    {
+      "fact": "F249",
+      "text": "Set it to 0 to switch it off. Blur can even cause motion sickness.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_19.jpg",
+      "focus": 0.5,
+      "dim": 0.22,
+      "headline": "TURN IT OFF",
+      "scene": {
+        "type": "cards",
+        "title": "Motion blur",
+        "items": [
+          {
+            "t": "0 = blur off",
+            "status": "CONFIRMED",
+            "word": "off"
+          },
+          {
+            "t": "Blur can cause motion sickness",
+            "status": "CONFIRMED",
+            "word": "sickness"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "F250",
+      "text": "On OLED screens, some players reportedly prefer between 4 and 6, so 30 frames looks smoother.",
+      "visual": "screenshots/Places/Vice City/Vice_City_27.jpg",
+      "focus": 0.5,
+      "dim": 0.22,
+      "headline": "OLED?",
+      "scene": {
+        "type": "cards",
+        "title": "Player reports",
+        "items": [
+          {
+            "t": "OLED: blur 4-6 feels smoother",
+            "status": "RUMOR",
+            "word": "prefer"
+          }
+        ]
+      }
+    },
+    {
+      "fact": [
+        "F216",
+        "F051"
+      ],
+      "text": "Those console guides promising 60 frames per second are fake.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_19.jpg",
+      "focus": 0.5,
+      "dim": 0.22,
+      "headline": "REAL OR NOT?",
+      "scene": {
+        "type": "cards",
+        "focus": "current",
+        "items": [
+          {
+            "t": "Blur slider 0-10",
+            "status": "CONFIRMED",
+            "pre": true
+          },
+          {
+            "t": "60 fps unlock on PS5 / Xbox",
+            "status": "FALSE",
+            "word": "promising",
+            "reveal_word": "fake"
+          }
+        ]
+      }
+    },
+    {
+      "fact": "CTA",
+      "text": "Is your blur on or off? Comment below.",
+      "visual": "screenshots/People/Real Dimez/Real_Dimez_04.jpg",
+      "focus": 0.45,
+      "dim": 0.12,
+      "scene": {
+        "type": "slam",
+        "pos": "low",
+        "em": [
+          "on",
+          "off?",
+          "comment"
+        ]
+      }
+    }
+  ]
+}
