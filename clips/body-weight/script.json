@@ -16,9 +16,9 @@
   "lines": [
     {
       "fact": "F246",
-      "text": "Can Jason really get fat in GTA 6? Yes. Eat a lot, and he gets heavier.",
-      "visual": "screenshots/People/Jason Duval/Jason_Duval_06.jpg",
-      "focus": 0.55,
+      "text": "Can Jason really get fat in GTA 6? Rockstar says yes. Eat a lot, and he gets heavier.",
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_15.jpg",
+      "focus": 0.42,
       "dim": 0.12,
       "headline": "1/4 · FOOD",
       "scene": {
@@ -51,8 +51,8 @@
     {
       "fact": "F246",
       "text": "One player even reached a max weight True Fat Jason, on a burger and taco diet. Another mixed max weight and max muscle.",
-      "visual": "screenshots/People/Brian Heder/Brian_Heder_01.jpg",
-      "focus": 0.5,
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_06.jpg",
+      "focus": 0.55,
       "dim": 0.22,
       "headline": "3/4 · MAX WEIGHT",
       "scene": {
@@ -81,14 +81,14 @@
       "fact": "F247",
       "text": "San Andreas had it. GTA 5 didn't: Michael, Franklin and Trevor never changed shape. GTA 6 brings it back.",
       "visual": "screenshots/People/Jason Duval/Jason_Duval_01.jpg",
-      "focus": 0.5,
+      "focus": 0.8,
       "dim": 0.22,
       "headline": "4/4 · VS GTA 5",
       "scene": {
         "type": "list",
         "title": "Body changes?",
         "items": [
-          "San Andreas (2004): yes",
+          "San Andreas (2004): yes, CJ",
           "GTA 5 (2013): no",
           "GTA 6 (2026): yes"
         ],
@@ -127,8 +127,8 @@
     {
       "fact": "CTA",
       "text": "Will your Jason be fat or ripped? Comment below.",
-      "visual": "screenshots/People/Jason Duval/Jason_Duval_06.jpg",
-      "focus": 0.55,
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_15.jpg",
+      "focus": 0.42,
       "dim": 0.15,
       "headline": "YOUR JASON?",
       "scene": {

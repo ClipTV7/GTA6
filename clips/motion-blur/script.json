@@ -3,7 +3,7 @@
   "format": "explainer",
   "theme": "news",
   "tag": "GTA 6 TIP",
-  "kicker": "SETTINGS · MOTION BLUR",
+  "kicker": "SETTINGS · NOV 28",
   "title": "GTA 6 too blurry? Change this setting",
   "yt_title": "GTA 6 too blurry? Change THIS setting 👀",
   "description": "Does GTA 6 look blurry to you? Go to Settings > Display > Motion Blur Strength: it runs from 0 to 10 and the default is 3. Set it to 0 to switch it off; blur can even cause motion sickness (Engadget, BGR). On OLED screens, some players reportedly prefer between 4 and 6 so 30 fps looks smoother (player reports via TechRadar). Those console guides promising 60 fps are fake: there's no frame-rate unlock on PS5 or Xbox, and Rockstar targets 30 fps. Is your blur on or off? Comment below.",
@@ -20,8 +20,8 @@
     {
       "fact": "F249",
       "text": "Does GTA 6 look blurry to you? Change this one setting.",
-      "visual": "screenshots/People/Real Dimez/Real_Dimez_04.jpg",
-      "focus": 0.45,
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_19.jpg",
+      "focus": 0.5,
       "dim": 0.12,
       "receipt": false,
       "scene": {
@@ -41,7 +41,7 @@
     },
     {
       "fact": "F249",
-      "text": "Go to Settings, Display, Motion Blur Strength. It runs from 0 to 10, and 3 is the default.",
+      "text": "Go to Settings, Display, Motion Blur Strength. Default is 3.",
       "visual": "screenshots/Places/Vice City/Vice_City_09.jpg",
       "focus": 0.5,
       "dim": 0.22,
@@ -52,13 +52,13 @@
         "value": 3,
         "label": "default · slider 0 to 10",
         "sub": "Engadget · BGR",
-        "word": "runs"
+        "word": "default"
       }
     },
     {
       "fact": "F249",
       "text": "Set it to 0 to switch it off. Blur can even cause motion sickness.",
-      "visual": "screenshots/People/Jason Duval/Jason_Duval_19.jpg",
+      "visual": "screenshots/Places/Vice City/Vice_City_03.jpg",
       "focus": 0.5,
       "dim": 0.22,
       "headline": "TURN IT OFF",
@@ -81,7 +81,7 @@
     },
     {
       "fact": "F250",
-      "text": "On OLED screens, some players reportedly prefer between 4 and 6, so 30 frames looks smoother.",
+      "text": "On OLED screens, some players reportedly prefer between 4 and 6, so 30 frames per second feels smoother.",
       "visual": "screenshots/Places/Vice City/Vice_City_27.jpg",
       "focus": 0.5,
       "dim": 0.22,
@@ -103,7 +103,7 @@
         "F216",
         "F051"
       ],
-      "text": "Those console guides promising 60 frames per second are fake.",
+      "text": "Those 60 frames per second console guides are fake. Rockstar targets 30 on every console.",
       "visual": "screenshots/People/Jason Duval/Jason_Duval_19.jpg",
       "focus": 0.5,
       "dim": 0.22,
@@ -129,8 +129,8 @@
     {
       "fact": "CTA",
       "text": "Is your blur on or off? Comment below.",
-      "visual": "screenshots/People/Real Dimez/Real_Dimez_04.jpg",
-      "focus": 0.45,
+      "visual": "screenshots/People/Jason Duval/Jason_Duval_19.jpg",
+      "focus": 0.5,
       "dim": 0.12,
       "scene": {
         "type": "slam",
