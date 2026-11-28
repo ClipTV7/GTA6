@@ -6,7 +6,7 @@
   "kicker": "SETTINGS · NOV 28",
   "title": "GTA 6 too blurry? Change this setting",
   "yt_title": "GTA 6 too blurry? Change THIS setting 👀",
-  "description": "Does GTA 6 look blurry to you? Go to Settings > Display > Motion Blur Strength: it runs from 0 to 10 and the default is 3. Set it to 0 to switch it off; blur can even cause motion sickness (Engadget, BGR). On OLED screens, some players reportedly prefer between 4 and 6 so 30 fps looks smoother (player reports via TechRadar). Those console guides promising 60 fps are fake: there's no frame-rate unlock on PS5 or Xbox, and Rockstar targets 30 fps. Is your blur on or off? Comment below.",
+  "description": "Does GTA 6 look blurry to you? Go to Settings > Display > Motion Blur Strength: it runs from 0 to 10 and the default is 3. Set it to 0 to switch it off; blur can even cause motion sickness (Engadget, BGR). On OLED TVs, some players reportedly prefer between 4 and 6 so 30 fps looks smoother (player reports via TechRadar). Those console guides promising 60 fps are fake: there's no frame-rate unlock on PS5 or Xbox, and Rockstar targets 30 fps. Is your blur on or off? Comment below.",
   "rumor_note": "Rumor (player anecdotes): a motion blur of 4-6 looks smoother on OLED TVs.",
   "tiktok_caption": "GTA 6 too blurry? Change THIS setting 👀 Blur on or off? 👇",
   "hashtags": [
@@ -22,7 +22,7 @@
       "text": "Does GTA 6 look blurry to you? Change this one setting.",
       "visual": "screenshots/People/Jason Duval/Jason_Duval_19.jpg",
       "focus": 0.5,
-      "dim": 0.12,
+      "dim": 0.05,
       "receipt": false,
       "scene": {
         "type": "slam",
@@ -81,7 +81,7 @@
     },
     {
       "fact": "F250",
-      "text": "On OLED screens, some players reportedly prefer between 4 and 6, so 30 frames per second feels smoother.",
+      "text": "On OLED, some players reportedly prefer between 4 and 6, so 30 frames per second feels smoother.",
       "visual": "screenshots/Places/Vice City/Vice_City_27.jpg",
       "focus": 0.5,
       "dim": 0.22,
@@ -104,8 +104,8 @@
         "F051"
       ],
       "text": "Those 60 frames per second console guides are fake. Rockstar targets 30 on every console.",
-      "visual": "screenshots/People/Jason Duval/Jason_Duval_19.jpg",
-      "focus": 0.5,
+      "visual": "screenshots/People/Raul Bautista/Raul_Bautista_02.jpg",
+      "focus": 0.45,
       "dim": 0.22,
       "headline": "REAL OR NOT?",
       "scene": {

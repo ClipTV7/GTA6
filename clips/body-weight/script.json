@@ -39,18 +39,18 @@
       "dim": 0.2,
       "headline": "2/4 · GYM",
       "scene": {
-        "type": "route",
-        "kicker": "Exercise",
-        "title": "Train it",
-        "sub": "Works for Jason and Lucia",
-        "from": "GYM",
-        "to": "MORE MUSCLE",
-        "go_word": "muscle"
+        "type": "meter",
+        "title": "Muscle",
+        "left": "SOFT",
+        "right": "RIPPED",
+        "from_word": "hit",
+        "to_word": "muscle",
+        "hint": "Works for Jason and Lucia"
       }
     },
     {
       "fact": "F246",
-      "text": "One player even reached a max weight True Fat Jason, on a burger and taco diet. Another mixed max weight and max muscle.",
+      "text": "One player even reached a max weight True Fat Jason, on a burger and taco diet. Another went max weight plus max muscle.",
       "visual": "screenshots/People/Jason Duval/Jason_Duval_06.jpg",
       "focus": 0.55,
       "dim": 0.22,
@@ -72,7 +72,7 @@
           {
             "t": "\"Overweight Strong\": max weight + muscle",
             "status": "CONFIRMED",
-            "word": "mixed"
+            "word": "another"
           }
         ]
       }
